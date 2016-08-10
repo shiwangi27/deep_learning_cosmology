@@ -1,0 +1,60 @@
+    1  ls
+    2  pwd 
+    3  cd $SCRATCH
+    4  cd /project/projectdirs/dasrepo
+    5  ls
+    6  cd pcl_dnn/
+    7  ls
+    8  cd cori 
+    9  ls
+   10  cd .
+   11  cd ..
+   12  salloc -N 1 -t 1 
+   13  cd ..
+   14  ls
+   15  exit
+   16  ls
+   17  cd DeepLearningTutorials-master/
+   18  ls
+   19  cd code/
+   20  ls
+   21  module load python
+   22  module load theano
+   23  python logistic_sgd.py 
+   24  salloc -N 1 -t 2
+   25  vi runme.sl
+   26  sbatch runme.sl 
+   27  squeue -u ssingh79 
+   28  ls
+   29  cat slurm-2333572.out 
+   30  ls
+   31  pwd
+   32  cd /projects/projectdirs
+   33  cd /project/projectdirs
+   34  ls
+   35  cd ssingh79
+   36  cd s
+   37  cd dasrepo/
+   38  ls
+   39  cd ..
+   40  ls
+   41  cd s 
+   42  cd global/
+   43  ls
+   44  cd homes
+   45  ls
+   46  cd s
+   47  ls
+   48  cd ssingh79
+   49  ls
+   50  cd DeepLearningTutorials-master/
+   51  history
+
+-------------------------------------------------------------
+
+scp -r <copyfrom> <copyto>:< ~ or filename>
+
+scp -r ~/Downloads/DeepLearningTutorials-master ssingh79@cori.nersc.gov:/global/cscratch1/sd/ssingh79/
+scp -r ssingh79@cori.nersc.gov:/global/cscratch1/sd/ssingh79/DeepLearningTutorials-master ~/Downloads/
+
+/global/homes/s/ssingh79/DeepLearningTutorials-master/

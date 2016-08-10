@@ -1,0 +1,3092 @@
+/global/u1/s/ssingh79/convolutional_autoencoder-master/Models/Validate_DCAE/embed_tsne.py:45: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  if(G[embed_x,embed_y]!=1.0):
+/global/u1/s/ssingh79/convolutional_autoencoder-master/Models/Validate_DCAE/embed_tsne.py:57: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  G[embed_x:embed_x+s, embed_y:embed_y+s] = I
+Loading data...
+('Calling ', 'train_data_64k.h5', '......')
+('Printing Train set ', array([[-0.01032324,  0.00679525,  0.0022744 , ..., -0.00186596,
+        -0.00139782, -0.00295408],
+       [ 0.03064897,  0.00953815,  0.03919139, ..., -0.04416131,
+        -0.01501628, -0.03169146],
+       [-0.00054488,  0.03779386,  0.03071115, ...,  0.03494589,
+        -0.00192948, -0.01491482],
+       ..., 
+       [-0.01792001, -0.0332757 , -0.03511935, ..., -0.02660589,
+        -0.02870286, -0.0296263 ],
+       [-0.01097497, -0.01258439, -0.03759458, ...,  0.01413019,
+        -0.02485162, -0.02055037],
+       [-0.04255074, -0.04967483, -0.02673387, ...,  0.01248583,
+         0.0289001 , -0.00986743]]))
+('X_train shape ', (64000, 16384))
+('Training Set : ', array([[ 0.01116568, -0.01811678, -0.02197395, ..., -0.03806609,
+         0.02375958,  0.0005464 ],
+       [ 0.01730526,  0.02777698,  0.01889958, ...,  0.00464189,
+         0.00630386,  0.00750189],
+       [ 0.00809199,  0.03539715,  0.03508098, ..., -0.0119679 ,
+        -0.02738933, -0.02789634],
+       ..., 
+       [-0.02431562, -0.02107478, -0.0188728 , ..., -0.04252872,
+        -0.05010628, -0.04162106],
+       [ 0.04247404,  0.01749165,  0.02345994, ...,  0.01108165,
+        -0.02044762, -0.02676239],
+       [ 0.00914074, -0.02372378, -0.00136039, ...,  0.02302332,
+         0.02299031,  0.01052411]]))
+(8000, 16384)
+('Validation Set : ', array([[ 0.17554078,  0.09614331,  0.10840224, ...,  0.08265939,
+         0.08212481,  0.04100829],
+       [-0.0333201 , -0.03842827, -0.04966387, ...,  0.00998733,
+         0.05162555,  0.01462578],
+       [-0.0012013 ,  0.03206867,  0.01986117, ...,  0.01845472,
+        -0.02244179, -0.01111713],
+       ..., 
+       [-0.01933471, -0.00750185, -0.00393642, ..., -0.02721126,
+        -0.01075076, -0.01741907],
+       [-0.02233945, -0.02537894, -0.0278712 , ..., -0.04886096,
+        -0.03565595, -0.02858444],
+       [-0.01595937, -0.04268472, -0.0325822 , ...,  0.11063284,
+         0.13767119,  0.10039707]]))
+(1000, 16384)
+('Test Set : ', array([[ -1.10754957e-02,  -2.14986969e-02,  -3.78654413e-02, ...,
+          1.23605467e-02,  -1.90045424e-02,  -2.05940045e-02],
+       [  1.60503909e-01,   2.82760650e-01,   1.52034461e-01, ...,
+         -5.88051137e-03,   4.37252969e-03,   2.39389087e-03],
+       [ -4.57154866e-03,   1.83708295e-02,   2.64723562e-02, ...,
+          1.54100135e-02,   9.15038027e-03,   1.88235939e-02],
+       ..., 
+       [  9.56401974e-03,   5.71425911e-03,  -1.54239796e-02, ...,
+         -3.81945372e-02,  -2.91351900e-02,  -2.73865126e-02],
+       [  1.46977927e-05,   9.86026600e-02,   3.10074836e-02, ...,
+          1.22537157e-02,  -4.84494772e-03,   3.82475392e-03],
+       [ -3.57302502e-02,  -3.67161185e-02,  -2.45139170e-02, ...,
+         -3.68676521e-02,  -3.39136496e-02,  -4.80543301e-02]]))
+(1000, 16384)
+Saving Training image .............
+Saving histogram of raw image.....
+[  8.44594893e-04   3.85814280e-04   1.41010560e-05 ...,  -2.62189200e-04
+  -5.55466972e-05  -7.05958708e-04]
+[ 0.00140864  0.00134518  0.00131897 ...,  0.00143462  0.00144922
+  0.00132657]
+('Normalized Training data : ', array([[ 0.2749957 , -0.50447845, -0.60543694, ..., -0.99808518,
+         0.62558408,  0.03438444],
+       [ 0.43857919,  0.74682799,  0.52000827, ...,  0.12947565,
+         0.1670511 ,  0.22535315],
+       [ 0.19310001,  0.95459424,  0.96556019, ..., -0.30905004,
+        -0.71801364, -0.74653373],
+       ..., 
+       [-0.67037036, -0.58512916, -0.52004744, ..., -1.11590604,
+        -1.31475051, -1.12335696],
+       [ 1.10917762,  0.46639563,  0.64557688, ...,  0.299496  ,
+        -0.5356662 , -0.71540021],
+       [ 0.22104295, -0.65735516, -0.03784647, ...,  0.61477578,
+         0.6053768 ,  0.30833053]]))
+('Mean : ', -1.994931997373328e-18)
+('Variance', 1.0000000000000009)
+('min : ', -2.7393398034931402)
+('max : ', 34.4660291612403)
+('Valid set min : ', -2.4640608386348957)
+('Valid set max : ', 34.620730299553266)
+('Test set min : ', -2.5653088768621326)
+('Test set max : ', 32.214253618563895)
+Saving normalized training image ...........
+Creating hdf5 file for 100 norm images and saving to ./output_files/.......
+Saving histogram of normalized image.....
+(8000, 1, 128, 128)
+(1000, 1, 128, 128)
+(1000, 1, 128, 128)
+Saving sampled training images.......
+Building model and compiling functions.........
+('Input shape : ', (None, 1, 128, 128))
+('Conv layer 1 : ', (None, 32, 64, 64))
+('Conv layer 2 : ', (None, 32, 32, 32))
+('Conv layer 3 : ', (None, 64, 16, 16))
+('Conv layer 4 : ', (None, 64, 8, 8))
+('Bottleneck layer: ', (None, 2048))
+('Bottleneck layer: ', (None, 4096))
+('Reshape Layer : ', (None, 64, 8, 8))
+('Deconv layer 1 : ', (None, 64, 16, 16))
+('Deconv layer 2 : ', (None, 32, 32, 32))
+('Deconv layer 3 : ', (None, 32, 64, 64))
+('Deconv layer 4 : ', (None, 1, 128, 128))
+('Final layer Shape : ', (None, 1, 128, 128))
+Created Lasagne Layers & Network established !!! 
+('Get the output layer : ', Elemwise{add,no_inplace}.0)
+('Get all the parameters : ', [W, b, W, b, W, b, W, b, W, b, W, b, W, b, W, b, W, b, W, b])
+Starting training...
+('Slurm output :', 'Sample size : ', 10000, 'Learning Rate : ', 0.05)
+Epoch 1 of 800 took 257.209s
+  training loss:		0.999797
+  validation loss:		1.001441
+('Average Reconstruction Error -- ', 0.99979652962258614)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 2 of 800 took 209.241s
+  training loss:		0.999243
+  validation loss:		0.999221
+Epoch 3 of 800 took 207.834s
+  training loss:		0.971192
+  validation loss:		0.912392
+Epoch 4 of 800 took 206.436s
+  training loss:		0.869722
+  validation loss:		0.839858
+Epoch 5 of 800 took 205.897s
+  training loss:		0.814340
+  validation loss:		0.773926
+Epoch 6 of 800 took 206.333s
+  training loss:		0.781712
+  validation loss:		0.742917
+Epoch 7 of 800 took 205.713s
+  training loss:		0.744358
+  validation loss:		0.713020
+Epoch 8 of 800 took 207.228s
+  training loss:		0.718617
+  validation loss:		0.790349
+Epoch 9 of 800 took 205.375s
+  training loss:		0.703534
+  validation loss:		0.686887
+Epoch 10 of 800 took 257.182s
+  training loss:		0.685164
+  validation loss:		0.662327
+Epoch 11 of 800 took 206.737s
+  training loss:		0.671779
+  validation loss:		0.655467
+('Average Reconstruction Error -- ', 0.81449620549178403)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 12 of 800 took 207.683s
+  training loss:		0.659554
+  validation loss:		0.664915
+Epoch 13 of 800 took 208.191s
+  training loss:		0.650062
+  validation loss:		0.640810
+Epoch 14 of 800 took 207.277s
+  training loss:		0.641353
+  validation loss:		0.675048
+Epoch 15 of 800 took 207.202s
+  training loss:		0.632484
+  validation loss:		0.664108
+Epoch 16 of 800 took 207.428s
+  training loss:		0.624039
+  validation loss:		0.605439
+Epoch 17 of 800 took 207.084s
+  training loss:		0.618218
+  validation loss:		0.599200
+Epoch 18 of 800 took 203.361s
+  training loss:		0.608560
+  validation loss:		0.622797
+Epoch 19 of 800 took 207.515s
+  training loss:		0.604301
+  validation loss:		0.592593
+Epoch 20 of 800 took 205.628s
+  training loss:		0.598952
+  validation loss:		0.583190
+Epoch 21 of 800 took 207.369s
+  training loss:		0.591541
+  validation loss:		0.662945
+('Average Reconstruction Error -- ', 0.72326293222956983)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 22 of 800 took 207.166s
+  training loss:		0.587755
+  validation loss:		0.616665
+Epoch 23 of 800 took 206.827s
+  training loss:		0.577593
+  validation loss:		0.581530
+Epoch 24 of 800 took 203.481s
+  training loss:		0.577274
+  validation loss:		0.627761
+Epoch 25 of 800 took 203.894s
+  training loss:		0.568828
+  validation loss:		0.578064
+Epoch 26 of 800 took 207.720s
+  training loss:		0.565729
+  validation loss:		0.559856
+Epoch 27 of 800 took 207.645s
+  training loss:		0.560502
+  validation loss:		0.550966
+Epoch 28 of 800 took 207.568s
+  training loss:		0.559024
+  validation loss:		0.555486
+Epoch 29 of 800 took 207.537s
+  training loss:		0.553481
+  validation loss:		0.548741
+Epoch 30 of 800 took 207.901s
+  training loss:		0.547396
+  validation loss:		0.548189
+Epoch 31 of 800 took 207.054s
+  training loss:		0.548317
+  validation loss:		0.537914
+('Average Reconstruction Error -- ', 0.67207803036093883)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 32 of 800 took 207.660s
+  training loss:		0.546006
+  validation loss:		0.542759
+Epoch 33 of 800 took 207.462s
+  training loss:		0.539337
+  validation loss:		0.549667
+Epoch 34 of 800 took 207.634s
+  training loss:		0.538161
+  validation loss:		0.526591
+Epoch 35 of 800 took 207.730s
+  training loss:		0.536406
+  validation loss:		0.549383
+Epoch 36 of 800 took 207.530s
+  training loss:		0.536923
+  validation loss:		0.560387
+Epoch 37 of 800 took 207.323s
+  training loss:		0.530830
+  validation loss:		0.524094
+Epoch 38 of 800 took 203.480s
+  training loss:		0.527363
+  validation loss:		0.533793
+Epoch 39 of 800 took 203.763s
+  training loss:		0.525453
+  validation loss:		0.542952
+Epoch 40 of 800 took 207.618s
+  training loss:		0.524643
+  validation loss:		0.534875
+Epoch 41 of 800 took 207.600s
+  training loss:		0.524136
+  validation loss:		0.520932
+('Average Reconstruction Error -- ', 0.63813849083942698)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 42 of 800 took 207.441s
+  training loss:		0.517208
+  validation loss:		0.520676
+Epoch 43 of 800 took 207.556s
+  training loss:		0.519672
+  validation loss:		0.518656
+Epoch 44 of 800 took 207.627s
+  training loss:		0.517272
+  validation loss:		0.511109
+Epoch 45 of 800 took 204.824s
+  training loss:		0.513546
+  validation loss:		0.509899
+Epoch 46 of 800 took 205.266s
+  training loss:		0.512092
+  validation loss:		0.507690
+Epoch 47 of 800 took 205.358s
+  training loss:		0.509478
+  validation loss:		0.507362
+Epoch 48 of 800 took 207.846s
+  training loss:		0.509797
+  validation loss:		0.588012
+Epoch 49 of 800 took 203.278s
+  training loss:		0.505713
+  validation loss:		0.510369
+Epoch 50 of 800 took 207.299s
+  training loss:		0.503324
+  validation loss:		0.507273
+Epoch 51 of 800 took 207.464s
+  training loss:		0.504164
+  validation loss:		0.523657
+('Average Reconstruction Error -- ', 0.61325378819084508)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 52 of 800 took 206.852s
+  training loss:		0.503587
+  validation loss:		0.497435
+Epoch 53 of 800 took 207.504s
+  training loss:		0.500095
+  validation loss:		0.505855
+Epoch 54 of 800 took 207.030s
+  training loss:		0.496446
+  validation loss:		0.510348
+Epoch 55 of 800 took 206.771s
+  training loss:		0.499427
+  validation loss:		0.503326
+Epoch 56 of 800 took 202.995s
+  training loss:		0.493499
+  validation loss:		0.520117
+Epoch 57 of 800 took 204.593s
+  training loss:		0.494750
+  validation loss:		0.532717
+Epoch 58 of 800 took 206.926s
+  training loss:		0.491238
+  validation loss:		0.503497
+Epoch 59 of 800 took 206.689s
+  training loss:		0.489608
+  validation loss:		0.530630
+Epoch 60 of 800 took 206.573s
+  training loss:		0.490541
+  validation loss:		0.514123
+Epoch 61 of 800 took 206.971s
+  training loss:		0.485890
+  validation loss:		0.505971
+('Average Reconstruction Error -- ', 0.59378728145869353)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 62 of 800 took 207.698s
+  training loss:		0.484897
+  validation loss:		0.524039
+Epoch 63 of 800 took 203.068s
+  training loss:		0.483550
+  validation loss:		0.478846
+Epoch 64 of 800 took 204.646s
+  training loss:		0.481948
+  validation loss:		0.482221
+Epoch 65 of 800 took 203.186s
+  training loss:		0.481479
+  validation loss:		0.479160
+Epoch 66 of 800 took 203.771s
+  training loss:		0.480322
+  validation loss:		0.511443
+Epoch 67 of 800 took 206.341s
+  training loss:		0.478581
+  validation loss:		0.500984
+Epoch 68 of 800 took 203.183s
+  training loss:		0.475782
+  validation loss:		0.477895
+Epoch 69 of 800 took 206.198s
+  training loss:		0.473201
+  validation loss:		0.492061
+Epoch 70 of 800 took 204.983s
+  training loss:		0.473990
+  validation loss:		0.481777
+Epoch 71 of 800 took 204.895s
+  training loss:		0.471818
+  validation loss:		0.475872
+('Average Reconstruction Error -- ', 0.57755764458394987)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 72 of 800 took 203.501s
+  training loss:		0.471014
+  validation loss:		0.487384
+Epoch 73 of 800 took 203.490s
+  training loss:		0.469558
+  validation loss:		0.474634
+Epoch 74 of 800 took 204.993s
+  training loss:		0.467007
+  validation loss:		0.487070
+Epoch 75 of 800 took 203.528s
+  training loss:		0.468458
+  validation loss:		0.473314
+Epoch 76 of 800 took 203.413s
+  training loss:		0.466722
+  validation loss:		0.484288
+Epoch 77 of 800 took 205.142s
+  training loss:		0.465245
+  validation loss:		0.492961
+Epoch 78 of 800 took 205.885s
+  training loss:		0.466062
+  validation loss:		0.472507
+Epoch 79 of 800 took 209.283s
+  training loss:		0.462686
+  validation loss:		0.472957
+Epoch 80 of 800 took 207.450s
+  training loss:		0.459693
+  validation loss:		0.469455
+Epoch 81 of 800 took 207.550s
+  training loss:		0.459979
+  validation loss:		0.459593
+('Average Reconstruction Error -- ', 0.56374095165893623)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 82 of 800 took 207.830s
+  training loss:		0.459155
+  validation loss:		0.461668
+Epoch 83 of 800 took 206.545s
+  training loss:		0.456657
+  validation loss:		0.459962
+Epoch 84 of 800 took 208.362s
+  training loss:		0.455616
+  validation loss:		0.455059
+Epoch 85 of 800 took 204.828s
+  training loss:		0.455877
+  validation loss:		0.468015
+Epoch 86 of 800 took 206.959s
+  training loss:		0.453828
+  validation loss:		0.453635
+Epoch 87 of 800 took 207.033s
+  training loss:		0.451985
+  validation loss:		0.473575
+Epoch 88 of 800 took 202.849s
+  training loss:		0.451695
+  validation loss:		0.448749
+Epoch 89 of 800 took 206.068s
+  training loss:		0.451911
+  validation loss:		0.449178
+Epoch 90 of 800 took 203.693s
+  training loss:		0.449495
+  validation loss:		0.448909
+Epoch 91 of 800 took 207.228s
+  training loss:		0.446958
+  validation loss:		0.448550
+('Average Reconstruction Error -- ', 0.55160652194970305)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 92 of 800 took 258.924s
+  training loss:		0.448838
+  validation loss:		0.455360
+Epoch 93 of 800 took 210.408s
+  training loss:		0.448840
+  validation loss:		0.447731
+Epoch 94 of 800 took 208.951s
+  training loss:		0.444647
+  validation loss:		0.492588
+Epoch 95 of 800 took 206.438s
+  training loss:		0.447511
+  validation loss:		0.442690
+Epoch 96 of 800 took 205.491s
+  training loss:		0.443497
+  validation loss:		0.453501
+Epoch 97 of 800 took 208.401s
+  training loss:		0.441151
+  validation loss:		0.457255
+Epoch 98 of 800 took 205.908s
+  training loss:		0.442053
+  validation loss:		0.464506
+Epoch 99 of 800 took 208.771s
+  training loss:		0.439545
+  validation loss:		0.454313
+Epoch 100 of 800 took 208.007s
+  training loss:		0.440096
+  validation loss:		0.440797
+Epoch 101 of 800 took 204.502s
+  training loss:		0.439345
+  validation loss:		0.438377
+('Average Reconstruction Error -- ', 0.54090808630793508)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 102 of 800 took 207.192s
+  training loss:		0.436942
+  validation loss:		0.439084
+Epoch 103 of 800 took 207.408s
+  training loss:		0.436038
+  validation loss:		0.501758
+Epoch 104 of 800 took 208.065s
+  training loss:		0.435128
+  validation loss:		0.441839
+Epoch 105 of 800 took 204.763s
+  training loss:		0.435030
+  validation loss:		0.445258
+Epoch 106 of 800 took 207.997s
+  training loss:		0.433075
+  validation loss:		0.448537
+Epoch 107 of 800 took 207.535s
+  training loss:		0.432362
+  validation loss:		0.431815
+Epoch 108 of 800 took 203.705s
+  training loss:		0.431298
+  validation loss:		0.458057
+Epoch 109 of 800 took 207.262s
+  training loss:		0.433101
+  validation loss:		0.438263
+Epoch 110 of 800 took 208.267s
+  training loss:		0.430131
+  validation loss:		0.435633
+Epoch 111 of 800 took 209.552s
+  training loss:		0.430026
+  validation loss:		0.434916
+('Average Reconstruction Error -- ', 0.53121485085687792)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 112 of 800 took 257.266s
+  training loss:		0.426622
+  validation loss:		0.446943
+Epoch 113 of 800 took 256.930s
+  training loss:		0.427749
+  validation loss:		0.430323
+Epoch 114 of 800 took 209.063s
+  training loss:		0.425984
+  validation loss:		0.449075
+Epoch 115 of 800 took 258.510s
+  training loss:		0.426705
+  validation loss:		0.436538
+Epoch 116 of 800 took 205.323s
+  training loss:		0.423465
+  validation loss:		0.454665
+Epoch 117 of 800 took 207.231s
+  training loss:		0.424797
+  validation loss:		0.428960
+Epoch 118 of 800 took 207.860s
+  training loss:		0.424130
+  validation loss:		0.442375
+Epoch 119 of 800 took 207.837s
+  training loss:		0.424350
+  validation loss:		0.426387
+Epoch 120 of 800 took 207.878s
+  training loss:		0.421131
+  validation loss:		0.450254
+Epoch 121 of 800 took 207.895s
+  training loss:		0.421308
+  validation loss:		0.436974
+('Average Reconstruction Error -- ', 0.52240569967393558)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 122 of 800 took 208.797s
+  training loss:		0.420750
+  validation loss:		0.420212
+Epoch 123 of 800 took 208.967s
+  training loss:		0.419672
+  validation loss:		0.420731
+Epoch 124 of 800 took 209.421s
+  training loss:		0.418614
+  validation loss:		0.430706
+Epoch 125 of 800 took 209.193s
+  training loss:		0.416619
+  validation loss:		0.434984
+Epoch 126 of 800 took 209.365s
+  training loss:		0.417214
+  validation loss:		0.423959
+Epoch 127 of 800 took 209.184s
+  training loss:		0.416469
+  validation loss:		0.422378
+Epoch 128 of 800 took 209.188s
+  training loss:		0.415657
+  validation loss:		0.420851
+Epoch 129 of 800 took 209.291s
+  training loss:		0.415574
+  validation loss:		0.425011
+Epoch 130 of 800 took 208.245s
+  training loss:		0.412784
+  validation loss:		0.434136
+Epoch 131 of 800 took 208.832s
+  training loss:		0.413851
+  validation loss:		0.424287
+('Average Reconstruction Error -- ', 0.51433812076840091)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 132 of 800 took 206.410s
+  training loss:		0.413880
+  validation loss:		0.421342
+Epoch 133 of 800 took 209.050s
+  training loss:		0.410572
+  validation loss:		0.435764
+Epoch 134 of 800 took 205.016s
+  training loss:		0.412041
+  validation loss:		0.425921
+Epoch 135 of 800 took 205.969s
+  training loss:		0.411648
+  validation loss:		0.414298
+Epoch 136 of 800 took 209.096s
+  training loss:		0.411109
+  validation loss:		0.419638
+Epoch 137 of 800 took 209.129s
+  training loss:		0.407349
+  validation loss:		0.411913
+Epoch 138 of 800 took 208.791s
+  training loss:		0.412046
+  validation loss:		0.415085
+Epoch 139 of 800 took 209.451s
+  training loss:		0.408146
+  validation loss:		0.415293
+Epoch 140 of 800 took 209.181s
+  training loss:		0.408578
+  validation loss:		0.411750
+Epoch 141 of 800 took 208.688s
+  training loss:		0.407375
+  validation loss:		0.432447
+('Average Reconstruction Error -- ', 0.50695771069389195)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 142 of 800 took 207.555s
+  training loss:		0.406922
+  validation loss:		0.413488
+Epoch 143 of 800 took 207.666s
+  training loss:		0.403605
+  validation loss:		0.409349
+Epoch 144 of 800 took 207.068s
+  training loss:		0.406038
+  validation loss:		0.419572
+Epoch 145 of 800 took 206.979s
+  training loss:		0.406023
+  validation loss:		0.405713
+Epoch 146 of 800 took 206.275s
+  training loss:		0.402769
+  validation loss:		0.421771
+Epoch 147 of 800 took 207.179s
+  training loss:		0.405043
+  validation loss:		0.406821
+Epoch 148 of 800 took 203.626s
+  training loss:		0.403302
+  validation loss:		0.412133
+Epoch 149 of 800 took 207.301s
+  training loss:		0.401480
+  validation loss:		0.410636
+Epoch 150 of 800 took 203.379s
+  training loss:		0.401778
+  validation loss:		0.411006
+Epoch 151 of 800 took 206.180s
+  training loss:		0.402994
+  validation loss:		0.409704
+('Average Reconstruction Error -- ', 0.50013901661692572)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 152 of 800 took 206.561s
+  training loss:		0.398884
+  validation loss:		0.404777
+Epoch 153 of 800 took 208.362s
+  training loss:		0.401863
+  validation loss:		0.406000
+Epoch 154 of 800 took 207.552s
+  training loss:		0.398649
+  validation loss:		0.427735
+Epoch 155 of 800 took 207.546s
+  training loss:		0.400104
+  validation loss:		0.404883
+Epoch 156 of 800 took 207.462s
+  training loss:		0.401133
+  validation loss:		0.401105
+Epoch 157 of 800 took 207.516s
+  training loss:		0.397955
+  validation loss:		0.410101
+Epoch 158 of 800 took 207.176s
+  training loss:		0.396645
+  validation loss:		0.405781
+Epoch 159 of 800 took 204.281s
+  training loss:		0.397407
+  validation loss:		0.397769
+Epoch 160 of 800 took 207.965s
+  training loss:		0.397469
+  validation loss:		0.399461
+Epoch 161 of 800 took 207.788s
+  training loss:		0.396734
+  validation loss:		0.403333
+('Average Reconstruction Error -- ', 0.49383747298339542)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 162 of 800 took 207.609s
+  training loss:		0.392968
+  validation loss:		0.398590
+Epoch 163 of 800 took 207.630s
+  training loss:		0.397037
+  validation loss:		0.400782
+Epoch 164 of 800 took 207.411s
+  training loss:		0.394900
+  validation loss:		0.398462
+Epoch 165 of 800 took 207.051s
+  training loss:		0.393502
+  validation loss:		0.418560
+Epoch 166 of 800 took 203.532s
+  training loss:		0.393325
+  validation loss:		0.403124
+Epoch 167 of 800 took 207.518s
+  training loss:		0.393687
+  validation loss:		0.401857
+Epoch 168 of 800 took 203.372s
+  training loss:		0.393542
+  validation loss:		0.402105
+Epoch 169 of 800 took 208.200s
+  training loss:		0.391961
+  validation loss:		0.413896
+Epoch 170 of 800 took 208.558s
+  training loss:		0.392996
+  validation loss:		0.426739
+Epoch 171 of 800 took 208.656s
+  training loss:		0.392137
+  validation loss:		0.393765
+('Average Reconstruction Error -- ', 0.48797594107746689)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 172 of 800 took 210.128s
+  training loss:		0.391068
+  validation loss:		0.402670
+Epoch 173 of 800 took 209.894s
+  training loss:		0.390100
+  validation loss:		0.403503
+Epoch 174 of 800 took 210.081s
+  training loss:		0.390627
+  validation loss:		0.396755
+Epoch 175 of 800 took 209.971s
+  training loss:		0.390046
+  validation loss:		0.406901
+Epoch 176 of 800 took 209.098s
+  training loss:		0.389412
+  validation loss:		0.395348
+Epoch 177 of 800 took 204.806s
+  training loss:		0.389195
+  validation loss:		0.397389
+Epoch 178 of 800 took 208.925s
+  training loss:		0.388759
+  validation loss:		0.402647
+Epoch 179 of 800 took 209.203s
+  training loss:		0.388098
+  validation loss:		0.402804
+Epoch 180 of 800 took 209.640s
+  training loss:		0.387498
+  validation loss:		0.389518
+Epoch 181 of 800 took 209.570s
+  training loss:		0.387510
+  validation loss:		0.402305
+('Average Reconstruction Error -- ', 0.48252043476686296)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 182 of 800 took 208.776s
+  training loss:		0.386365
+  validation loss:		0.400254
+Epoch 183 of 800 took 208.587s
+  training loss:		0.387510
+  validation loss:		0.399604
+Epoch 184 of 800 took 209.231s
+  training loss:		0.385604
+  validation loss:		0.395877
+Epoch 185 of 800 took 209.134s
+  training loss:		0.385532
+  validation loss:		0.402025
+Epoch 186 of 800 took 209.113s
+  training loss:		0.387753
+  validation loss:		0.390047
+Epoch 187 of 800 took 205.290s
+  training loss:		0.385029
+  validation loss:		0.401776
+Epoch 188 of 800 took 208.952s
+  training loss:		0.386043
+  validation loss:		0.392773
+Epoch 189 of 800 took 208.571s
+  training loss:		0.383679
+  validation loss:		0.401902
+Epoch 190 of 800 took 204.725s
+  training loss:		0.385033
+  validation loss:		0.403745
+Epoch 191 of 800 took 204.774s
+  training loss:		0.383465
+  validation loss:		0.389596
+('Average Reconstruction Error -- ', 0.47744613755269927)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 192 of 800 took 202.356s
+  training loss:		0.385089
+  validation loss:		0.393706
+Epoch 193 of 800 took 202.586s
+  training loss:		0.383895
+  validation loss:		0.387192
+Epoch 194 of 800 took 202.580s
+  training loss:		0.383009
+  validation loss:		0.393787
+Epoch 195 of 800 took 202.650s
+  training loss:		0.382082
+  validation loss:		0.392102
+Epoch 196 of 800 took 202.668s
+  training loss:		0.383553
+  validation loss:		0.387030
+Epoch 197 of 800 took 202.603s
+  training loss:		0.381361
+  validation loss:		0.392119
+Epoch 198 of 800 took 202.856s
+  training loss:		0.381064
+  validation loss:		0.393068
+Epoch 199 of 800 took 205.332s
+  training loss:		0.382256
+  validation loss:		0.391607
+Epoch 200 of 800 took 202.800s
+  training loss:		0.380902
+  validation loss:		0.386550
+Epoch 201 of 800 took 202.754s
+  training loss:		0.381140
+  validation loss:		0.413369
+('Average Reconstruction Error -- ', 0.47271921864651884)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 202 of 800 took 203.635s
+  training loss:		0.381360
+  validation loss:		0.393888
+Epoch 203 of 800 took 203.635s
+  training loss:		0.380055
+  validation loss:		0.385419
+Epoch 204 of 800 took 204.598s
+  training loss:		0.380945
+  validation loss:		0.384895
+Epoch 205 of 800 took 203.475s
+  training loss:		0.379415
+  validation loss:		0.391681
+Epoch 206 of 800 took 203.531s
+  training loss:		0.379585
+  validation loss:		0.403041
+Epoch 207 of 800 took 203.754s
+  training loss:		0.379120
+  validation loss:		0.388854
+Epoch 208 of 800 took 203.687s
+  training loss:		0.378698
+  validation loss:		0.393060
+Epoch 209 of 800 took 203.877s
+  training loss:		0.378813
+  validation loss:		0.385449
+Epoch 210 of 800 took 203.909s
+  training loss:		0.378828
+  validation loss:		0.388724
+Epoch 211 of 800 took 203.831s
+  training loss:		0.378110
+  validation loss:		0.384457
+('Average Reconstruction Error -- ', 0.46830091572554)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 212 of 800 took 203.667s
+  training loss:		0.378882
+  validation loss:		0.393811
+Epoch 213 of 800 took 203.750s
+  training loss:		0.377131
+  validation loss:		0.384128
+Epoch 214 of 800 took 203.795s
+  training loss:		0.377073
+  validation loss:		0.385484
+Epoch 215 of 800 took 203.751s
+  training loss:		0.375604
+  validation loss:		0.380735
+Epoch 216 of 800 took 203.860s
+  training loss:		0.376667
+  validation loss:		0.418990
+Epoch 217 of 800 took 203.939s
+  training loss:		0.376615
+  validation loss:		0.389949
+Epoch 218 of 800 took 203.958s
+  training loss:		0.376677
+  validation loss:		0.391108
+Epoch 219 of 800 took 204.014s
+  training loss:		0.375545
+  validation loss:		0.383222
+Epoch 220 of 800 took 204.029s
+  training loss:		0.376683
+  validation loss:		0.383963
+Epoch 221 of 800 took 204.040s
+  training loss:		0.375527
+  validation loss:		0.379348
+('Average Reconstruction Error -- ', 0.46415338151484847)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 222 of 800 took 203.915s
+  training loss:		0.374500
+  validation loss:		0.389274
+Epoch 223 of 800 took 204.068s
+  training loss:		0.374633
+  validation loss:		0.385312
+Epoch 224 of 800 took 204.208s
+  training loss:		0.374993
+  validation loss:		0.380192
+Epoch 225 of 800 took 204.273s
+  training loss:		0.374250
+  validation loss:		0.385403
+Epoch 226 of 800 took 204.286s
+  training loss:		0.373913
+  validation loss:		0.402388
+Epoch 227 of 800 took 204.442s
+  training loss:		0.374457
+  validation loss:		0.387774
+Epoch 228 of 800 took 204.271s
+  training loss:		0.373518
+  validation loss:		0.379571
+Epoch 229 of 800 took 204.429s
+  training loss:		0.373282
+  validation loss:		0.380852
+Epoch 230 of 800 took 204.469s
+  training loss:		0.372539
+  validation loss:		0.382110
+Epoch 231 of 800 took 204.350s
+  training loss:		0.372421
+  validation loss:		0.388501
+('Average Reconstruction Error -- ', 0.46024417009877888)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 232 of 800 took 204.116s
+  training loss:		0.372010
+  validation loss:		0.383200
+Epoch 233 of 800 took 204.315s
+  training loss:		0.372148
+  validation loss:		0.385213
+Epoch 234 of 800 took 204.357s
+  training loss:		0.372385
+  validation loss:		0.385331
+Epoch 235 of 800 took 204.403s
+  training loss:		0.372116
+  validation loss:		0.385746
+Epoch 236 of 800 took 204.305s
+  training loss:		0.370424
+  validation loss:		0.377853
+Epoch 237 of 800 took 204.245s
+  training loss:		0.371429
+  validation loss:		0.385965
+Epoch 238 of 800 took 204.285s
+  training loss:		0.371139
+  validation loss:		0.379092
+Epoch 239 of 800 took 204.345s
+  training loss:		0.371474
+  validation loss:		0.395731
+Epoch 240 of 800 took 204.357s
+  training loss:		0.370279
+  validation loss:		0.396626
+Epoch 241 of 800 took 204.468s
+  training loss:		0.371113
+  validation loss:		0.377370
+('Average Reconstruction Error -- ', 0.45655982904968745)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 242 of 800 took 205.936s
+  training loss:		0.370507
+  validation loss:		0.378010
+Epoch 243 of 800 took 205.887s
+  training loss:		0.369772
+  validation loss:		0.381294
+Epoch 244 of 800 took 205.786s
+  training loss:		0.369726
+  validation loss:		0.383742
+Epoch 245 of 800 took 205.795s
+  training loss:		0.369426
+  validation loss:		0.376972
+Epoch 246 of 800 took 206.075s
+  training loss:		0.368507
+  validation loss:		0.374462
+Epoch 247 of 800 took 205.941s
+  training loss:		0.369300
+  validation loss:		0.376051
+Epoch 248 of 800 took 206.118s
+  training loss:		0.368663
+  validation loss:		0.384088
+Epoch 249 of 800 took 206.038s
+  training loss:		0.367559
+  validation loss:		0.379085
+Epoch 250 of 800 took 206.062s
+  training loss:		0.367910
+  validation loss:		0.377941
+Epoch 251 of 800 took 206.264s
+  training loss:		0.367488
+  validation loss:		0.372763
+('Average Reconstruction Error -- ', 0.45306683958292604)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 252 of 800 took 206.253s
+  training loss:		0.368252
+  validation loss:		0.378785
+Epoch 253 of 800 took 206.317s
+  training loss:		0.368351
+  validation loss:		0.377568
+Epoch 254 of 800 took 210.142s
+  training loss:		0.366577
+  validation loss:		0.384584
+Epoch 255 of 800 took 206.440s
+  training loss:		0.366871
+  validation loss:		0.389195
+Epoch 256 of 800 took 206.431s
+  training loss:		0.366137
+  validation loss:		0.388145
+Epoch 257 of 800 took 206.496s
+  training loss:		0.366395
+  validation loss:		0.385974
+Epoch 258 of 800 took 206.434s
+  training loss:		0.366095
+  validation loss:		0.398627
+Epoch 259 of 800 took 206.720s
+  training loss:		0.366399
+  validation loss:		0.387299
+Epoch 260 of 800 took 206.497s
+  training loss:		0.367349
+  validation loss:		0.387451
+Epoch 261 of 800 took 206.839s
+  training loss:		0.366070
+  validation loss:		0.371182
+('Average Reconstruction Error -- ', 0.44976350057576786)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 262 of 800 took 206.726s
+  training loss:		0.366381
+  validation loss:		0.371460
+Epoch 263 of 800 took 206.677s
+  training loss:		0.364892
+  validation loss:		0.380324
+Epoch 264 of 800 took 206.847s
+  training loss:		0.365523
+  validation loss:		0.383979
+Epoch 265 of 800 took 207.211s
+  training loss:		0.364624
+  validation loss:		0.380407
+Epoch 266 of 800 took 206.988s
+  training loss:		0.365327
+  validation loss:		0.374679
+Epoch 267 of 800 took 207.082s
+  training loss:		0.363068
+  validation loss:		0.375375
+Epoch 268 of 800 took 207.212s
+  training loss:		0.364102
+  validation loss:		0.373441
+Epoch 269 of 800 took 207.236s
+  training loss:		0.363930
+  validation loss:		0.374061
+Epoch 270 of 800 took 207.296s
+  training loss:		0.362872
+  validation loss:		0.386575
+Epoch 271 of 800 took 207.220s
+  training loss:		0.362801
+  validation loss:		0.376715
+('Average Reconstruction Error -- ', 0.44661178573005877)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 272 of 800 took 211.791s
+  training loss:		0.363112
+  validation loss:		0.374192
+Epoch 273 of 800 took 207.303s
+  training loss:		0.362594
+  validation loss:		0.372174
+Epoch 274 of 800 took 207.361s
+  training loss:		0.362421
+  validation loss:		0.379431
+Epoch 275 of 800 took 207.265s
+  training loss:		0.361780
+  validation loss:		0.377477
+Epoch 276 of 800 took 207.535s
+  training loss:		0.363398
+  validation loss:		0.377569
+Epoch 277 of 800 took 207.672s
+  training loss:		0.361886
+  validation loss:		0.374715
+Epoch 278 of 800 took 207.778s
+  training loss:		0.361742
+  validation loss:		0.372191
+Epoch 279 of 800 took 207.818s
+  training loss:		0.361761
+  validation loss:		0.376164
+Epoch 280 of 800 took 207.943s
+  training loss:		0.361577
+  validation loss:		0.371351
+Epoch 281 of 800 took 210.725s
+  training loss:		0.360998
+  validation loss:		0.368988
+('Average Reconstruction Error -- ', 0.44360521038357076)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 282 of 800 took 206.276s
+  training loss:		0.360895
+  validation loss:		0.368546
+Epoch 283 of 800 took 206.368s
+  training loss:		0.362441
+  validation loss:		0.367266
+Epoch 284 of 800 took 206.273s
+  training loss:		0.359850
+  validation loss:		0.373484
+Epoch 285 of 800 took 206.453s
+  training loss:		0.360092
+  validation loss:		0.372516
+Epoch 286 of 800 took 206.453s
+  training loss:		0.360297
+  validation loss:		0.374005
+Epoch 287 of 800 took 206.376s
+  training loss:		0.360112
+  validation loss:		0.390744
+Epoch 288 of 800 took 206.479s
+  training loss:		0.360593
+  validation loss:		0.371933
+Epoch 289 of 800 took 206.645s
+  training loss:		0.359380
+  validation loss:		0.369721
+Epoch 290 of 800 took 206.576s
+  training loss:		0.359615
+  validation loss:		0.375586
+Epoch 291 of 800 took 206.663s
+  training loss:		0.359822
+  validation loss:		0.370444
+('Average Reconstruction Error -- ', 0.44074282130035208)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 292 of 800 took 208.205s
+  training loss:		0.358556
+  validation loss:		0.369831
+Epoch 293 of 800 took 208.112s
+  training loss:		0.359292
+  validation loss:		0.386913
+Epoch 294 of 800 took 208.422s
+  training loss:		0.358252
+  validation loss:		0.374849
+Epoch 295 of 800 took 208.367s
+  training loss:		0.358059
+  validation loss:		0.374506
+Epoch 296 of 800 took 208.498s
+  training loss:		0.358470
+  validation loss:		0.376939
+Epoch 297 of 800 took 208.495s
+  training loss:		0.357439
+  validation loss:		0.374638
+Epoch 298 of 800 took 208.444s
+  training loss:		0.358774
+  validation loss:		0.364165
+Epoch 299 of 800 took 208.597s
+  training loss:		0.357399
+  validation loss:		0.364495
+Epoch 300 of 800 took 208.529s
+  training loss:		0.358106
+  validation loss:		0.365846
+Epoch 301 of 800 took 208.694s
+  training loss:		0.357303
+  validation loss:		0.370604
+('Average Reconstruction Error -- ', 0.43799937167875591)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 302 of 800 took 207.565s
+  training loss:		0.356495
+  validation loss:		0.366576
+Epoch 303 of 800 took 207.601s
+  training loss:		0.357066
+  validation loss:		0.364596
+Epoch 304 of 800 took 207.668s
+  training loss:		0.356374
+  validation loss:		0.363334
+Epoch 305 of 800 took 207.692s
+  training loss:		0.357175
+  validation loss:		0.367883
+Epoch 306 of 800 took 207.663s
+  training loss:		0.355921
+  validation loss:		0.363938
+Epoch 307 of 800 took 207.808s
+  training loss:		0.355888
+  validation loss:		0.363780
+Epoch 308 of 800 took 207.739s
+  training loss:		0.354935
+  validation loss:		0.365715
+Epoch 309 of 800 took 207.845s
+  training loss:		0.356178
+  validation loss:		0.369827
+Epoch 310 of 800 took 207.953s
+  training loss:		0.355206
+  validation loss:		0.376314
+Epoch 311 of 800 took 207.887s
+  training loss:		0.354832
+  validation loss:		0.371700
+('Average Reconstruction Error -- ', 0.43536295681548398)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 312 of 800 took 208.652s
+  training loss:		0.355415
+  validation loss:		0.365300
+Epoch 313 of 800 took 208.779s
+  training loss:		0.354236
+  validation loss:		0.367878
+Epoch 314 of 800 took 208.867s
+  training loss:		0.354091
+  validation loss:		0.365300
+Epoch 315 of 800 took 208.808s
+  training loss:		0.354686
+  validation loss:		0.363005
+Epoch 316 of 800 took 208.876s
+  training loss:		0.354060
+  validation loss:		0.362669
+Epoch 317 of 800 took 208.898s
+  training loss:		0.353708
+  validation loss:		0.391780
+Epoch 318 of 800 took 208.845s
+  training loss:		0.354267
+  validation loss:		0.365106
+Epoch 319 of 800 took 208.832s
+  training loss:		0.353808
+  validation loss:		0.369544
+Epoch 320 of 800 took 209.081s
+  training loss:		0.353008
+  validation loss:		0.368509
+Epoch 321 of 800 took 208.904s
+  training loss:		0.353047
+  validation loss:		0.366142
+('Average Reconstruction Error -- ', 0.43282929953081051)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 322 of 800 took 207.840s
+  training loss:		0.353797
+  validation loss:		0.382067
+Epoch 323 of 800 took 207.653s
+  training loss:		0.353041
+  validation loss:		0.385926
+Epoch 324 of 800 took 207.769s
+  training loss:		0.353109
+  validation loss:		0.364121
+Epoch 325 of 800 took 207.735s
+  training loss:		0.352501
+  validation loss:		0.363309
+Epoch 326 of 800 took 208.005s
+  training loss:		0.351855
+  validation loss:		0.362809
+Epoch 327 of 800 took 207.856s
+  training loss:		0.352651
+  validation loss:		0.361854
+Epoch 328 of 800 took 207.677s
+  training loss:		0.352386
+  validation loss:		0.366834
+Epoch 329 of 800 took 207.763s
+  training loss:		0.351056
+  validation loss:		0.367413
+Epoch 330 of 800 took 207.719s
+  training loss:		0.352162
+  validation loss:		0.365578
+Epoch 331 of 800 took 207.990s
+  training loss:		0.351036
+  validation loss:		0.367039
+('Average Reconstruction Error -- ', 0.43039818969502308)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 332 of 800 took 209.054s
+  training loss:		0.351497
+  validation loss:		0.368388
+Epoch 333 of 800 took 209.068s
+  training loss:		0.350449
+  validation loss:		0.365674
+Epoch 334 of 800 took 209.081s
+  training loss:		0.352314
+  validation loss:		0.359866
+Epoch 335 of 800 took 209.130s
+  training loss:		0.350973
+  validation loss:		0.358454
+Epoch 336 of 800 took 209.291s
+  training loss:		0.350845
+  validation loss:		0.365808
+Epoch 337 of 800 took 209.169s
+  training loss:		0.350114
+  validation loss:		0.362491
+Epoch 338 of 800 took 209.238s
+  training loss:		0.349440
+  validation loss:		0.362040
+Epoch 339 of 800 took 209.302s
+  training loss:		0.349532
+  validation loss:		0.372391
+Epoch 340 of 800 took 209.242s
+  training loss:		0.350030
+  validation loss:		0.371040
+Epoch 341 of 800 took 209.167s
+  training loss:		0.349829
+  validation loss:		0.363975
+('Average Reconstruction Error -- ', 0.42805519945496601)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 342 of 800 took 209.571s
+  training loss:		0.350788
+  validation loss:		0.356450
+Epoch 343 of 800 took 209.731s
+  training loss:		0.349020
+  validation loss:		0.360319
+Epoch 344 of 800 took 209.806s
+  training loss:		0.348495
+  validation loss:		0.362206
+Epoch 345 of 800 took 209.660s
+  training loss:		0.349764
+  validation loss:		0.359054
+Epoch 346 of 800 took 209.776s
+  training loss:		0.349159
+  validation loss:		0.358799
+Epoch 347 of 800 took 209.978s
+  training loss:		0.348661
+  validation loss:		0.365010
+Epoch 348 of 800 took 209.882s
+  training loss:		0.348226
+  validation loss:		0.356829
+Epoch 349 of 800 took 210.047s
+  training loss:		0.349434
+  validation loss:		0.362481
+Epoch 350 of 800 took 209.942s
+  training loss:		0.347908
+  validation loss:		0.361579
+Epoch 351 of 800 took 210.008s
+  training loss:		0.347199
+  validation loss:		0.359681
+('Average Reconstruction Error -- ', 0.42579907720125848)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 352 of 800 took 209.971s
+  training loss:		0.347752
+  validation loss:		0.357459
+Epoch 353 of 800 took 209.942s
+  training loss:		0.347460
+  validation loss:		0.355985
+Epoch 354 of 800 took 209.931s
+  training loss:		0.348074
+  validation loss:		0.369176
+Epoch 355 of 800 took 209.978s
+  training loss:		0.346883
+  validation loss:		0.359212
+Epoch 356 of 800 took 209.877s
+  training loss:		0.346625
+  validation loss:		0.361015
+Epoch 357 of 800 took 209.996s
+  training loss:		0.346926
+  validation loss:		0.359578
+Epoch 358 of 800 took 210.045s
+  training loss:		0.347101
+  validation loss:		0.362853
+Epoch 359 of 800 took 210.042s
+  training loss:		0.346351
+  validation loss:		0.357268
+Epoch 360 of 800 took 210.166s
+  training loss:		0.346492
+  validation loss:		0.360842
+Epoch 361 of 800 took 210.081s
+  training loss:		0.346270
+  validation loss:		0.356336
+('Average Reconstruction Error -- ', 0.42361609492863722)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 362 of 800 took 209.895s
+  training loss:		0.346223
+  validation loss:		0.362341
+Epoch 363 of 800 took 209.893s
+  training loss:		0.345588
+  validation loss:		0.358684
+Epoch 364 of 800 took 209.959s
+  training loss:		0.347145
+  validation loss:		0.356064
+Epoch 365 of 800 took 210.095s
+  training loss:		0.345610
+  validation loss:		0.360396
+Epoch 366 of 800 took 210.202s
+  training loss:		0.345157
+  validation loss:		0.357734
+Epoch 367 of 800 took 210.219s
+  training loss:		0.345249
+  validation loss:		0.364717
+Epoch 368 of 800 took 210.263s
+  training loss:		0.345076
+  validation loss:		0.356429
+Epoch 369 of 800 took 210.259s
+  training loss:		0.344912
+  validation loss:		0.358056
+Epoch 370 of 800 took 210.241s
+  training loss:		0.344507
+  validation loss:		0.355357
+Epoch 371 of 800 took 210.214s
+  training loss:		0.345684
+  validation loss:		0.353092
+('Average Reconstruction Error -- ', 0.42151094740849515)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 372 of 800 took 209.027s
+  training loss:		0.344574
+  validation loss:		0.354334
+Epoch 373 of 800 took 209.140s
+  training loss:		0.344186
+  validation loss:		0.357928
+Epoch 374 of 800 took 209.055s
+  training loss:		0.343630
+  validation loss:		0.355700
+Epoch 375 of 800 took 211.352s
+  training loss:		0.344384
+  validation loss:		0.354227
+Epoch 376 of 800 took 209.164s
+  training loss:		0.344087
+  validation loss:		0.359540
+Epoch 377 of 800 took 209.201s
+  training loss:		0.343808
+  validation loss:		0.357115
+Epoch 378 of 800 took 209.247s
+  training loss:		0.343159
+  validation loss:		0.363364
+Epoch 379 of 800 took 209.179s
+  training loss:		0.342759
+  validation loss:		0.354125
+Epoch 380 of 800 took 209.386s
+  training loss:		0.344532
+  validation loss:		0.353777
+Epoch 381 of 800 took 209.245s
+  training loss:		0.343097
+  validation loss:		0.355260
+('Average Reconstruction Error -- ', 0.4194718594578602)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 382 of 800 took 210.584s
+  training loss:		0.342902
+  validation loss:		0.355723
+Epoch 383 of 800 took 210.488s
+  training loss:		0.343132
+  validation loss:		0.367142
+Epoch 384 of 800 took 210.502s
+  training loss:		0.343097
+  validation loss:		0.364723
+Epoch 385 of 800 took 210.659s
+  training loss:		0.342905
+  validation loss:		0.358285
+Epoch 386 of 800 took 210.687s
+  training loss:		0.343133
+  validation loss:		0.352237
+Epoch 387 of 800 took 210.733s
+  training loss:		0.342581
+  validation loss:		0.355165
+Epoch 388 of 800 took 210.596s
+  training loss:		0.341869
+  validation loss:		0.354246
+Epoch 389 of 800 took 210.667s
+  training loss:		0.341712
+  validation loss:		0.355147
+Epoch 390 of 800 took 210.594s
+  training loss:		0.341578
+  validation loss:		0.363052
+Epoch 391 of 800 took 211.744s
+  training loss:		0.341900
+  validation loss:		0.351349
+('Average Reconstruction Error -- ', 0.41750278353429593)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 392 of 800 took 213.740s
+  training loss:		0.342387
+  validation loss:		0.349177
+Epoch 393 of 800 took 209.803s
+  training loss:		0.342041
+  validation loss:		0.352022
+Epoch 394 of 800 took 209.745s
+  training loss:		0.341571
+  validation loss:		0.354360
+Epoch 395 of 800 took 209.759s
+  training loss:		0.340525
+  validation loss:		0.361466
+Epoch 396 of 800 took 209.932s
+  training loss:		0.341275
+  validation loss:		0.354085
+Epoch 397 of 800 took 209.885s
+  training loss:		0.341265
+  validation loss:		0.367628
+Epoch 398 of 800 took 209.914s
+  training loss:		0.341064
+  validation loss:		0.359678
+Epoch 399 of 800 took 209.879s
+  training loss:		0.341037
+  validation loss:		0.350611
+Epoch 400 of 800 took 209.904s
+  training loss:		0.340138
+  validation loss:		0.349932
+Epoch 401 of 800 took 209.873s
+  training loss:		0.340461
+  validation loss:		0.350642
+('Average Reconstruction Error -- ', 0.41559938076582648)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 402 of 800 took 209.393s
+  training loss:		0.340930
+  validation loss:		0.351391
+Epoch 403 of 800 took 209.388s
+  training loss:		0.339473
+  validation loss:		0.354731
+Epoch 404 of 800 took 209.448s
+  training loss:		0.340206
+  validation loss:		0.351911
+Epoch 405 of 800 took 209.592s
+  training loss:		0.339505
+  validation loss:		0.354737
+Epoch 406 of 800 took 209.528s
+  training loss:		0.339571
+  validation loss:		0.353574
+Epoch 407 of 800 took 209.702s
+  training loss:		0.339773
+  validation loss:		0.350444
+Epoch 408 of 800 took 209.631s
+  training loss:		0.339021
+  validation loss:		0.351359
+Epoch 409 of 800 took 209.680s
+  training loss:		0.339810
+  validation loss:		0.351638
+Epoch 410 of 800 took 209.574s
+  training loss:		0.338743
+  validation loss:		0.358318
+Epoch 411 of 800 took 209.588s
+  training loss:		0.339458
+  validation loss:		0.354922
+('Average Reconstruction Error -- ', 0.41375143671216741)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 412 of 800 took 209.709s
+  training loss:		0.338086
+  validation loss:		0.352950
+Epoch 413 of 800 took 209.685s
+  training loss:		0.338432
+  validation loss:		0.351684
+Epoch 414 of 800 took 209.660s
+  training loss:		0.338877
+  validation loss:		0.350048
+Epoch 415 of 800 took 209.814s
+  training loss:		0.338689
+  validation loss:		0.349210
+Epoch 416 of 800 took 209.807s
+  training loss:		0.337608
+  validation loss:		0.350189
+Epoch 417 of 800 took 209.817s
+  training loss:		0.338708
+  validation loss:		0.359193
+Epoch 418 of 800 took 209.856s
+  training loss:		0.338196
+  validation loss:		0.359134
+Epoch 419 of 800 took 209.954s
+  training loss:		0.337721
+  validation loss:		0.351138
+Epoch 420 of 800 took 209.847s
+  training loss:		0.338138
+  validation loss:		0.347895
+Epoch 421 of 800 took 209.971s
+  training loss:		0.337161
+  validation loss:		0.349287
+('Average Reconstruction Error -- ', 0.41195595480013331)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 422 of 800 took 211.171s
+  training loss:		0.337594
+  validation loss:		0.350713
+Epoch 423 of 800 took 211.312s
+  training loss:		0.337290
+  validation loss:		0.356468
+Epoch 424 of 800 took 211.208s
+  training loss:		0.337236
+  validation loss:		0.358129
+Epoch 425 of 800 took 211.346s
+  training loss:		0.337101
+  validation loss:		0.352113
+Epoch 426 of 800 took 211.192s
+  training loss:		0.336950
+  validation loss:		0.350046
+Epoch 427 of 800 took 211.167s
+  training loss:		0.337269
+  validation loss:		0.353500
+Epoch 428 of 800 took 211.269s
+  training loss:		0.336462
+  validation loss:		0.352406
+Epoch 429 of 800 took 211.112s
+  training loss:		0.336782
+  validation loss:		0.349485
+Epoch 430 of 800 took 211.175s
+  training loss:		0.336919
+  validation loss:		0.347133
+Epoch 431 of 800 took 211.160s
+  training loss:		0.336230
+  validation loss:		0.348285
+('Average Reconstruction Error -- ', 0.41021645118572975)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 432 of 800 took 211.267s
+  training loss:		0.335709
+  validation loss:		0.352693
+Epoch 433 of 800 took 211.328s
+  training loss:		0.335704
+  validation loss:		0.345757
+Epoch 434 of 800 took 211.331s
+  training loss:		0.335788
+  validation loss:		0.345846
+Epoch 435 of 800 took 211.394s
+  training loss:		0.336389
+  validation loss:		0.346740
+Epoch 436 of 800 took 211.451s
+  training loss:		0.335880
+  validation loss:		0.347078
+Epoch 437 of 800 took 211.451s
+  training loss:		0.335255
+  validation loss:		0.347327
+Epoch 438 of 800 took 211.522s
+  training loss:		0.335872
+  validation loss:		0.347079
+Epoch 439 of 800 took 213.408s
+  training loss:		0.335571
+  validation loss:		0.344615
+Epoch 440 of 800 took 211.470s
+  training loss:		0.335175
+  validation loss:		0.345433
+Epoch 441 of 800 took 211.598s
+  training loss:		0.335351
+  validation loss:		0.347535
+('Average Reconstruction Error -- ', 0.40852604455933034)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 442 of 800 took 214.886s
+  training loss:		0.334503
+  validation loss:		0.352425
+Epoch 443 of 800 took 211.111s
+  training loss:		0.333976
+  validation loss:		0.351528
+Epoch 444 of 800 took 211.310s
+  training loss:		0.334991
+  validation loss:		0.348628
+Epoch 445 of 800 took 211.302s
+  training loss:		0.334360
+  validation loss:		0.344917
+Epoch 446 of 800 took 211.261s
+  training loss:		0.334008
+  validation loss:		0.360906
+Epoch 447 of 800 took 211.377s
+  training loss:		0.334565
+  validation loss:		0.349893
+Epoch 448 of 800 took 211.456s
+  training loss:		0.334649
+  validation loss:		0.355554
+Epoch 449 of 800 took 211.486s
+  training loss:		0.333522
+  validation loss:		0.348819
+Epoch 450 of 800 took 211.466s
+  training loss:		0.334511
+  validation loss:		0.351183
+Epoch 451 of 800 took 211.368s
+  training loss:		0.333367
+  validation loss:		0.349237
+('Average Reconstruction Error -- ', 0.40687901709273966)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 452 of 800 took 211.454s
+  training loss:		0.334158
+  validation loss:		0.354577
+Epoch 453 of 800 took 211.391s
+  training loss:		0.334513
+  validation loss:		0.355724
+Epoch 454 of 800 took 211.539s
+  training loss:		0.332943
+  validation loss:		0.344640
+Epoch 455 of 800 took 211.350s
+  training loss:		0.333600
+  validation loss:		0.349982
+Epoch 456 of 800 took 211.457s
+  training loss:		0.333150
+  validation loss:		0.350445
+Epoch 457 of 800 took 211.613s
+  training loss:		0.332525
+  validation loss:		0.343602
+Epoch 458 of 800 took 211.519s
+  training loss:		0.333152
+  validation loss:		0.345556
+Epoch 459 of 800 took 211.601s
+  training loss:		0.333076
+  validation loss:		0.343285
+Epoch 460 of 800 took 211.669s
+  training loss:		0.333204
+  validation loss:		0.344443
+Epoch 461 of 800 took 211.695s
+  training loss:		0.333048
+  validation loss:		0.344789
+('Average Reconstruction Error -- ', 0.4052837403893591)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 462 of 800 took 213.331s
+  training loss:		0.332145
+  validation loss:		0.343256
+Epoch 463 of 800 took 214.693s
+  training loss:		0.332414
+  validation loss:		0.342317
+Epoch 464 of 800 took 213.219s
+  training loss:		0.332859
+  validation loss:		0.346397
+Epoch 465 of 800 took 213.257s
+  training loss:		0.332486
+  validation loss:		0.348769
+Epoch 466 of 800 took 213.468s
+  training loss:		0.331269
+  validation loss:		0.346273
+Epoch 467 of 800 took 213.283s
+  training loss:		0.332115
+  validation loss:		0.346951
+Epoch 468 of 800 took 213.249s
+  training loss:		0.331435
+  validation loss:		0.343154
+Epoch 469 of 800 took 213.326s
+  training loss:		0.331309
+  validation loss:		0.344307
+Epoch 470 of 800 took 213.318s
+  training loss:		0.331811
+  validation loss:		0.344037
+Epoch 471 of 800 took 213.232s
+  training loss:		0.331894
+  validation loss:		0.345166
+('Average Reconstruction Error -- ', 0.40372726436987078)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 472 of 800 took 211.538s
+  training loss:		0.331536
+  validation loss:		0.351281
+Epoch 473 of 800 took 211.631s
+  training loss:		0.331312
+  validation loss:		0.350959
+Epoch 474 of 800 took 211.655s
+  training loss:		0.331070
+  validation loss:		0.345257
+Epoch 475 of 800 took 211.512s
+  training loss:		0.330717
+  validation loss:		0.343239
+Epoch 476 of 800 took 211.613s
+  training loss:		0.331032
+  validation loss:		0.351648
+Epoch 477 of 800 took 211.610s
+  training loss:		0.331070
+  validation loss:		0.344925
+Epoch 478 of 800 took 211.660s
+  training loss:		0.329776
+  validation loss:		0.341172
+Epoch 479 of 800 took 211.592s
+  training loss:		0.330395
+  validation loss:		0.341999
+Epoch 480 of 800 took 211.751s
+  training loss:		0.330877
+  validation loss:		0.340275
+Epoch 481 of 800 took 211.588s
+  training loss:		0.330349
+  validation loss:		0.341773
+('Average Reconstruction Error -- ', 0.40221138510027526)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 482 of 800 took 211.685s
+  training loss:		0.330501
+  validation loss:		0.342174
+Epoch 483 of 800 took 211.580s
+  training loss:		0.330642
+  validation loss:		0.344816
+Epoch 484 of 800 took 211.514s
+  training loss:		0.329558
+  validation loss:		0.339613
+Epoch 485 of 800 took 211.724s
+  training loss:		0.330198
+  validation loss:		0.345715
+Epoch 486 of 800 took 211.662s
+  training loss:		0.329444
+  validation loss:		0.343184
+Epoch 487 of 800 took 211.668s
+  training loss:		0.330112
+  validation loss:		0.340651
+Epoch 488 of 800 took 211.635s
+  training loss:		0.329167
+  validation loss:		0.341290
+Epoch 489 of 800 took 211.817s
+  training loss:		0.329773
+  validation loss:		0.342402
+Epoch 490 of 800 took 211.738s
+  training loss:		0.329160
+  validation loss:		0.340360
+Epoch 491 of 800 took 211.927s
+  training loss:		0.329034
+  validation loss:		0.342219
+('Average Reconstruction Error -- ', 0.40073577218152517)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 492 of 800 took 211.686s
+  training loss:		0.330274
+  validation loss:		0.339593
+Epoch 493 of 800 took 212.471s
+  training loss:		0.328390
+  validation loss:		0.339191
+Epoch 494 of 800 took 215.518s
+  training loss:		0.328878
+  validation loss:		0.341511
+Epoch 495 of 800 took 215.302s
+  training loss:		0.329309
+  validation loss:		0.341366
+Epoch 496 of 800 took 216.155s
+  training loss:		0.328417
+  validation loss:		0.346718
+Epoch 497 of 800 took 216.784s
+  training loss:		0.328097
+  validation loss:		0.351093
+Epoch 498 of 800 took 216.970s
+  training loss:		0.329291
+  validation loss:		0.347964
+Epoch 499 of 800 took 217.636s
+  training loss:		0.328591
+  validation loss:		0.339738
+Epoch 500 of 800 took 214.112s
+  training loss:		0.328047
+  validation loss:		0.344200
+Epoch 501 of 800 took 216.891s
+  training loss:		0.327945
+  validation loss:		0.345368
+('Average Reconstruction Error -- ', 0.39929840647647497)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 502 of 800 took 213.474s
+  training loss:		0.328727
+  validation loss:		0.339894
+Epoch 503 of 800 took 214.843s
+  training loss:		0.327812
+  validation loss:		0.340559
+Epoch 504 of 800 took 215.453s
+  training loss:		0.327793
+  validation loss:		0.342737
+Epoch 505 of 800 took 213.697s
+  training loss:		0.327320
+  validation loss:		0.344175
+Epoch 506 of 800 took 215.069s
+  training loss:		0.327596
+  validation loss:		0.341879
+Epoch 507 of 800 took 213.982s
+  training loss:		0.327154
+  validation loss:		0.340956
+Epoch 508 of 800 took 211.805s
+  training loss:		0.327799
+  validation loss:		0.343677
+Epoch 509 of 800 took 211.782s
+  training loss:		0.327379
+  validation loss:		0.339925
+Epoch 510 of 800 took 211.680s
+  training loss:		0.327095
+  validation loss:		0.342554
+Epoch 511 of 800 took 211.689s
+  training loss:		0.328221
+  validation loss:		0.340229
+('Average Reconstruction Error -- ', 0.39789706122727303)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 512 of 800 took 224.767s
+  training loss:		0.326660
+  validation loss:		0.351590
+Epoch 513 of 800 took 217.698s
+  training loss:		0.327234
+  validation loss:		0.337394
+Epoch 514 of 800 took 215.177s
+  training loss:		0.326536
+  validation loss:		0.338041
+Epoch 515 of 800 took 215.956s
+  training loss:		0.327033
+  validation loss:		0.343904
+Epoch 516 of 800 took 217.631s
+  training loss:		0.326931
+  validation loss:		0.338599
+Epoch 517 of 800 took 215.075s
+  training loss:		0.325963
+  validation loss:		0.340664
+Epoch 518 of 800 took 214.168s
+  training loss:		0.326264
+  validation loss:		0.339736
+Epoch 519 of 800 took 214.797s
+  training loss:		0.326286
+  validation loss:		0.342010
+Epoch 520 of 800 took 215.252s
+  training loss:		0.325991
+  validation loss:		0.338945
+Epoch 521 of 800 took 215.294s
+  training loss:		0.325509
+  validation loss:		0.338616
+('Average Reconstruction Error -- ', 0.39652553980223282)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 522 of 800 took 214.757s
+  training loss:		0.327028
+  validation loss:		0.337741
+Epoch 523 of 800 took 215.152s
+  training loss:		0.325829
+  validation loss:		0.337668
+Epoch 524 of 800 took 212.501s
+  training loss:		0.325567
+  validation loss:		0.337108
+Epoch 525 of 800 took 212.622s
+  training loss:		0.325814
+  validation loss:		0.337573
+Epoch 526 of 800 took 212.477s
+  training loss:		0.325656
+  validation loss:		0.339600
+Epoch 527 of 800 took 212.680s
+  training loss:		0.325181
+  validation loss:		0.342791
+Epoch 528 of 800 took 212.677s
+  training loss:		0.325353
+  validation loss:		0.347468
+Epoch 529 of 800 took 212.569s
+  training loss:		0.325128
+  validation loss:		0.341817
+Epoch 530 of 800 took 212.629s
+  training loss:		0.325116
+  validation loss:		0.338062
+Epoch 531 of 800 took 212.630s
+  training loss:		0.325874
+  validation loss:		0.344186
+('Average Reconstruction Error -- ', 0.3951908728163574)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 532 of 800 took 219.529s
+  training loss:		0.324814
+  validation loss:		0.336130
+Epoch 533 of 800 took 215.333s
+  training loss:		0.325096
+  validation loss:		0.335490
+Epoch 534 of 800 took 215.471s
+  training loss:		0.324588
+  validation loss:		0.337498
+Epoch 535 of 800 took 214.423s
+  training loss:		0.323892
+  validation loss:		0.336548
+Epoch 536 of 800 took 215.672s
+  training loss:		0.324504
+  validation loss:		0.336207
+Epoch 537 of 800 took 214.922s
+  training loss:		0.324579
+  validation loss:		0.340714
+Epoch 538 of 800 took 213.269s
+  training loss:		0.323475
+  validation loss:		0.340548
+Epoch 539 of 800 took 213.145s
+  training loss:		0.323935
+  validation loss:		0.335211
+Epoch 540 of 800 took 213.418s
+  training loss:		0.324865
+  validation loss:		0.334795
+Epoch 541 of 800 took 213.412s
+  training loss:		0.323999
+  validation loss:		0.335452
+('Average Reconstruction Error -- ', 0.39388188552587217)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 542 of 800 took 214.357s
+  training loss:		0.323989
+  validation loss:		0.335773
+Epoch 543 of 800 took 214.317s
+  training loss:		0.323737
+  validation loss:		0.340276
+Epoch 544 of 800 took 214.964s
+  training loss:		0.324040
+  validation loss:		0.338336
+Epoch 545 of 800 took 215.309s
+  training loss:		0.323070
+  validation loss:		0.336582
+Epoch 546 of 800 took 215.604s
+  training loss:		0.323285
+  validation loss:		0.338025
+Epoch 547 of 800 took 215.001s
+  training loss:		0.323398
+  validation loss:		0.333714
+Epoch 548 of 800 took 215.224s
+  training loss:		0.323188
+  validation loss:		0.335991
+Epoch 549 of 800 took 216.102s
+  training loss:		0.323065
+  validation loss:		0.338064
+Epoch 550 of 800 took 215.031s
+  training loss:		0.322839
+  validation loss:		0.338179
+Epoch 551 of 800 took 216.560s
+  training loss:		0.323046
+  validation loss:		0.336338
+('Average Reconstruction Error -- ', 0.39260209820334463)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 552 of 800 took 217.420s
+  training loss:		0.322698
+  validation loss:		0.337403
+Epoch 553 of 800 took 215.086s
+  training loss:		0.322603
+  validation loss:		0.341762
+Epoch 554 of 800 took 214.782s
+  training loss:		0.322443
+  validation loss:		0.344676
+Epoch 555 of 800 took 215.447s
+  training loss:		0.323026
+  validation loss:		0.339986
+Epoch 556 of 800 took 216.532s
+  training loss:		0.322704
+  validation loss:		0.350238
+Epoch 557 of 800 took 218.375s
+  training loss:		0.322198
+  validation loss:		0.338107
+Epoch 558 of 800 took 216.856s
+  training loss:		0.323360
+  validation loss:		0.333132
+Epoch 559 of 800 took 224.291s
+  training loss:		0.322014
+  validation loss:		0.334971
+Epoch 560 of 800 took 216.939s
+  training loss:		0.322099
+  validation loss:		0.337944
+Epoch 561 of 800 took 217.273s
+  training loss:		0.321674
+  validation loss:		0.344549
+('Average Reconstruction Error -- ', 0.39135218437746511)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 562 of 800 took 215.888s
+  training loss:		0.322334
+  validation loss:		0.338640
+Epoch 563 of 800 took 217.384s
+  training loss:		0.321517
+  validation loss:		0.347569
+Epoch 564 of 800 took 215.936s
+  training loss:		0.321947
+  validation loss:		0.334957
+Epoch 565 of 800 took 218.945s
+  training loss:		0.322003
+  validation loss:		0.337211
+Epoch 566 of 800 took 214.403s
+  training loss:		0.321547
+  validation loss:		0.333301
+Epoch 567 of 800 took 215.575s
+  training loss:		0.321842
+  validation loss:		0.332201
+Epoch 568 of 800 took 214.348s
+  training loss:		0.320854
+  validation loss:		0.332333
+Epoch 569 of 800 took 216.161s
+  training loss:		0.321682
+  validation loss:		0.332825
+Epoch 570 of 800 took 215.481s
+  training loss:		0.320684
+  validation loss:		0.334924
+Epoch 571 of 800 took 214.848s
+  training loss:		0.321212
+  validation loss:		0.334672
+('Average Reconstruction Error -- ', 0.39012994347380731)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 572 of 800 took 219.118s
+  training loss:		0.321132
+  validation loss:		0.334324
+Epoch 573 of 800 took 217.293s
+  training loss:		0.320531
+  validation loss:		0.334730
+Epoch 574 of 800 took 215.740s
+  training loss:		0.321408
+  validation loss:		0.340022
+Epoch 575 of 800 took 216.796s
+  training loss:		0.321296
+  validation loss:		0.337675
+Epoch 576 of 800 took 220.595s
+  training loss:		0.320333
+  validation loss:		0.335343
+Epoch 577 of 800 took 217.651s
+  training loss:		0.320221
+  validation loss:		0.336935
+Epoch 578 of 800 took 214.001s
+  training loss:		0.320174
+  validation loss:		0.337184
+Epoch 579 of 800 took 215.525s
+  training loss:		0.320326
+  validation loss:		0.332892
+Epoch 580 of 800 took 214.012s
+  training loss:		0.319960
+  validation loss:		0.331463
+Epoch 581 of 800 took 213.569s
+  training loss:		0.320279
+  validation loss:		0.335679
+('Average Reconstruction Error -- ', 0.38893262881177643)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 582 of 800 took 213.651s
+  training loss:		0.320439
+  validation loss:		0.331681
+Epoch 583 of 800 took 214.898s
+  training loss:		0.319841
+  validation loss:		0.332825
+Epoch 584 of 800 took 217.531s
+  training loss:		0.319847
+  validation loss:		0.333163
+Epoch 585 of 800 took 214.111s
+  training loss:		0.319920
+  validation loss:		0.338163
+Epoch 586 of 800 took 214.779s
+  training loss:		0.319799
+  validation loss:		0.349849
+Epoch 587 of 800 took 214.204s
+  training loss:		0.319389
+  validation loss:		0.333329
+Epoch 588 of 800 took 213.654s
+  training loss:		0.319326
+  validation loss:		0.334468
+Epoch 589 of 800 took 214.716s
+  training loss:		0.318932
+  validation loss:		0.336865
+Epoch 590 of 800 took 213.847s
+  training loss:		0.319809
+  validation loss:		0.332928
+Epoch 591 of 800 took 213.659s
+  training loss:		0.319000
+  validation loss:		0.332333
+('Average Reconstruction Error -- ', 0.38776000018082163)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 592 of 800 took 214.816s
+  training loss:		0.319007
+  validation loss:		0.334756
+Epoch 593 of 800 took 214.659s
+  training loss:		0.319055
+  validation loss:		0.332815
+Epoch 594 of 800 took 214.685s
+  training loss:		0.318888
+  validation loss:		0.339935
+Epoch 595 of 800 took 214.481s
+  training loss:		0.318887
+  validation loss:		0.336414
+Epoch 596 of 800 took 213.911s
+  training loss:		0.318567
+  validation loss:		0.331741
+Epoch 597 of 800 took 215.080s
+  training loss:		0.318531
+  validation loss:		0.329563
+Epoch 598 of 800 took 219.012s
+  training loss:		0.318034
+  validation loss:		0.332560
+Epoch 599 of 800 took 220.009s
+  training loss:		0.317788
+  validation loss:		0.332912
+Epoch 600 of 800 took 216.853s
+  training loss:		0.318734
+  validation loss:		0.328323
+Epoch 601 of 800 took 215.260s
+  training loss:		0.317688
+  validation loss:		0.330581
+('Average Reconstruction Error -- ', 0.38660788654314704)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 602 of 800 took 214.994s
+  training loss:		0.318793
+  validation loss:		0.329258
+Epoch 603 of 800 took 216.809s
+  training loss:		0.317741
+  validation loss:		0.329938
+Epoch 604 of 800 took 216.180s
+  training loss:		0.318111
+  validation loss:		0.332431
+Epoch 605 of 800 took 215.251s
+  training loss:		0.318107
+  validation loss:		0.328150
+Epoch 606 of 800 took 215.969s
+  training loss:		0.318329
+  validation loss:		0.330452
+Epoch 607 of 800 took 215.848s
+  training loss:		0.317301
+  validation loss:		0.330924
+Epoch 608 of 800 took 217.228s
+  training loss:		0.316628
+  validation loss:		0.327542
+Epoch 609 of 800 took 215.317s
+  training loss:		0.317714
+  validation loss:		0.328249
+Epoch 610 of 800 took 214.919s
+  training loss:		0.317864
+  validation loss:		0.336738
+Epoch 611 of 800 took 217.085s
+  training loss:		0.316776
+  validation loss:		0.334471
+('Average Reconstruction Error -- ', 0.3854806911098822)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 612 of 800 took 214.815s
+  training loss:		0.318094
+  validation loss:		0.335160
+Epoch 613 of 800 took 213.875s
+  training loss:		0.317011
+  validation loss:		0.330246
+Epoch 614 of 800 took 214.750s
+  training loss:		0.316880
+  validation loss:		0.328135
+Epoch 615 of 800 took 213.979s
+  training loss:		0.317246
+  validation loss:		0.329298
+Epoch 616 of 800 took 214.088s
+  training loss:		0.316856
+  validation loss:		0.333066
+Epoch 617 of 800 took 216.194s
+  training loss:		0.317019
+  validation loss:		0.335559
+Epoch 618 of 800 took 215.074s
+  training loss:		0.316684
+  validation loss:		0.329826
+Epoch 619 of 800 took 214.087s
+  training loss:		0.316484
+  validation loss:		0.329199
+Epoch 620 of 800 took 214.099s
+  training loss:		0.316332
+  validation loss:		0.331835
+Epoch 621 of 800 took 214.044s
+  training loss:		0.316652
+  validation loss:		0.333894
+('Average Reconstruction Error -- ', 0.38437674862763177)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 622 of 800 took 215.519s
+  training loss:		0.315793
+  validation loss:		0.330829
+Epoch 623 of 800 took 218.818s
+  training loss:		0.315899
+  validation loss:		0.333262
+Epoch 624 of 800 took 215.703s
+  training loss:		0.316345
+  validation loss:		0.328408
+Epoch 625 of 800 took 215.207s
+  training loss:		0.316144
+  validation loss:		0.327746
+Epoch 626 of 800 took 218.505s
+  training loss:		0.315871
+  validation loss:		0.329432
+Epoch 627 of 800 took 215.298s
+  training loss:		0.315976
+  validation loss:		0.332033
+Epoch 628 of 800 took 219.568s
+  training loss:		0.315295
+  validation loss:		0.329783
+Epoch 629 of 800 took 218.030s
+  training loss:		0.315690
+  validation loss:		0.327781
+Epoch 630 of 800 took 215.210s
+  training loss:		0.315775
+  validation loss:		0.328658
+Epoch 631 of 800 took 216.301s
+  training loss:		0.315337
+  validation loss:		0.326202
+('Average Reconstruction Error -- ', 0.38329014743651774)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 632 of 800 took 215.607s
+  training loss:		0.314969
+  validation loss:		0.331369
+Epoch 633 of 800 took 215.880s
+  training loss:		0.315834
+  validation loss:		0.329875
+Epoch 634 of 800 took 215.285s
+  training loss:		0.314481
+  validation loss:		0.329106
+Epoch 635 of 800 took 215.497s
+  training loss:		0.315894
+  validation loss:		0.328997
+Epoch 636 of 800 took 215.873s
+  training loss:		0.314892
+  validation loss:		0.330025
+Epoch 637 of 800 took 217.729s
+  training loss:		0.314809
+  validation loss:		0.325755
+Epoch 638 of 800 took 216.511s
+  training loss:		0.314366
+  validation loss:		0.327129
+Epoch 639 of 800 took 219.147s
+  training loss:		0.314213
+  validation loss:		0.331144
+Epoch 640 of 800 took 215.235s
+  training loss:		0.314467
+  validation loss:		0.331289
+Epoch 641 of 800 took 217.456s
+  training loss:		0.314810
+  validation loss:		0.330689
+('Average Reconstruction Error -- ', 0.38222280426551453)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 642 of 800 took 215.001s
+  training loss:		0.314249
+  validation loss:		0.325476
+Epoch 643 of 800 took 214.656s
+  training loss:		0.314209
+  validation loss:		0.333588
+Epoch 644 of 800 took 214.285s
+  training loss:		0.314067
+  validation loss:		0.332158
+Epoch 645 of 800 took 214.350s
+  training loss:		0.314522
+  validation loss:		0.334821
+Epoch 646 of 800 took 214.526s
+  training loss:		0.313889
+  validation loss:		0.329340
+Epoch 647 of 800 took 214.372s
+  training loss:		0.313439
+  validation loss:		0.328417
+Epoch 648 of 800 took 215.830s
+  training loss:		0.314624
+  validation loss:		0.326936
+Epoch 649 of 800 took 213.813s
+  training loss:		0.313519
+  validation loss:		0.333866
+Epoch 650 of 800 took 213.731s
+  training loss:		0.313797
+  validation loss:		0.329167
+Epoch 651 of 800 took 213.877s
+  training loss:		0.313486
+  validation loss:		0.326524
+('Average Reconstruction Error -- ', 0.38117452883273656)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 652 of 800 took 215.045s
+  training loss:		0.313216
+  validation loss:		0.324164
+Epoch 653 of 800 took 214.816s
+  training loss:		0.313841
+  validation loss:		0.327287
+Epoch 654 of 800 took 214.809s
+  training loss:		0.313696
+  validation loss:		0.333274
+Epoch 655 of 800 took 214.794s
+  training loss:		0.313414
+  validation loss:		0.327173
+Epoch 656 of 800 took 214.983s
+  training loss:		0.313203
+  validation loss:		0.328755
+Epoch 657 of 800 took 214.870s
+  training loss:		0.312827
+  validation loss:		0.328323
+Epoch 658 of 800 took 215.089s
+  training loss:		0.313135
+  validation loss:		0.337899
+Epoch 659 of 800 took 214.941s
+  training loss:		0.313701
+  validation loss:		0.327284
+Epoch 660 of 800 took 214.986s
+  training loss:		0.312522
+  validation loss:		0.327723
+Epoch 661 of 800 took 214.922s
+  training loss:		0.312765
+  validation loss:		0.326983
+('Average Reconstruction Error -- ', 0.38014665137419146)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 662 of 800 took 213.528s
+  training loss:		0.312946
+  validation loss:		0.337543
+Epoch 663 of 800 took 213.692s
+  training loss:		0.312062
+  validation loss:		0.323779
+Epoch 664 of 800 took 213.696s
+  training loss:		0.312907
+  validation loss:		0.323406
+Epoch 665 of 800 took 213.612s
+  training loss:		0.312533
+  validation loss:		0.322860
+Epoch 666 of 800 took 213.595s
+  training loss:		0.312273
+  validation loss:		0.326220
+Epoch 667 of 800 took 213.495s
+  training loss:		0.312457
+  validation loss:		0.329887
+Epoch 668 of 800 took 213.755s
+  training loss:		0.312429
+  validation loss:		0.327739
+Epoch 669 of 800 took 213.571s
+  training loss:		0.311515
+  validation loss:		0.324802
+Epoch 670 of 800 took 213.549s
+  training loss:		0.311017
+  validation loss:		0.327041
+Epoch 671 of 800 took 213.657s
+  training loss:		0.312331
+  validation loss:		0.322277
+('Average Reconstruction Error -- ', 0.3791347327665891)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 672 of 800 took 214.709s
+  training loss:		0.311495
+  validation loss:		0.326976
+Epoch 673 of 800 took 214.620s
+  training loss:		0.311317
+  validation loss:		0.324257
+Epoch 674 of 800 took 214.616s
+  training loss:		0.311510
+  validation loss:		0.325110
+Epoch 675 of 800 took 214.503s
+  training loss:		0.311700
+  validation loss:		0.332478
+Epoch 676 of 800 took 214.529s
+  training loss:		0.311100
+  validation loss:		0.326953
+Epoch 677 of 800 took 214.632s
+  training loss:		0.311233
+  validation loss:		0.326771
+Epoch 678 of 800 took 214.460s
+  training loss:		0.311803
+  validation loss:		0.322918
+Epoch 679 of 800 took 214.707s
+  training loss:		0.310968
+  validation loss:		0.323457
+Epoch 680 of 800 took 214.504s
+  training loss:		0.310608
+  validation loss:		0.322889
+Epoch 681 of 800 took 214.628s
+  training loss:		0.311111
+  validation loss:		0.323303
+('Average Reconstruction Error -- ', 0.37813840058287101)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 682 of 800 took 214.141s
+  training loss:		0.312077
+  validation loss:		0.335241
+Epoch 683 of 800 took 214.004s
+  training loss:		0.310681
+  validation loss:		0.321887
+Epoch 684 of 800 took 213.941s
+  training loss:		0.310063
+  validation loss:		0.321653
+Epoch 685 of 800 took 214.196s
+  training loss:		0.310629
+  validation loss:		0.325443
+Epoch 686 of 800 took 214.120s
+  training loss:		0.310803
+  validation loss:		0.321758
+Epoch 687 of 800 took 214.025s
+  training loss:		0.309954
+  validation loss:		0.327843
+Epoch 688 of 800 took 214.033s
+  training loss:		0.310399
+  validation loss:		0.326106
+Epoch 689 of 800 took 214.125s
+  training loss:		0.310070
+  validation loss:		0.323870
+Epoch 690 of 800 took 214.070s
+  training loss:		0.310368
+  validation loss:		0.332839
+Epoch 691 of 800 took 213.860s
+  training loss:		0.311125
+  validation loss:		0.322949
+('Average Reconstruction Error -- ', 0.37716124333811935)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 692 of 800 took 214.493s
+  training loss:		0.309927
+  validation loss:		0.323713
+Epoch 693 of 800 took 214.441s
+  training loss:		0.309196
+  validation loss:		0.321402
+Epoch 694 of 800 took 214.472s
+  training loss:		0.309901
+  validation loss:		0.322337
+Epoch 695 of 800 took 214.365s
+  training loss:		0.310453
+  validation loss:		0.323804
+Epoch 696 of 800 took 214.327s
+  training loss:		0.309436
+  validation loss:		0.319509
+Epoch 697 of 800 took 214.428s
+  training loss:		0.309205
+  validation loss:		0.318694
+Epoch 698 of 800 took 214.296s
+  training loss:		0.309398
+  validation loss:		0.322995
+Epoch 699 of 800 took 214.225s
+  training loss:		0.309897
+  validation loss:		0.328289
+Epoch 700 of 800 took 214.180s
+  training loss:		0.308604
+  validation loss:		0.324882
+Epoch 701 of 800 took 214.212s
+  training loss:		0.309605
+  validation loss:		0.322545
+('Average Reconstruction Error -- ', 0.37619692175524971)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 702 of 800 took 214.157s
+  training loss:		0.309519
+  validation loss:		0.320812
+Epoch 703 of 800 took 214.212s
+  training loss:		0.308930
+  validation loss:		0.326153
+Epoch 704 of 800 took 214.192s
+  training loss:		0.309310
+  validation loss:		0.324181
+Epoch 705 of 800 took 214.278s
+  training loss:		0.308955
+  validation loss:		0.327369
+Epoch 706 of 800 took 214.255s
+  training loss:		0.308652
+  validation loss:		0.329633
+Epoch 707 of 800 took 214.155s
+  training loss:		0.308780
+  validation loss:		0.320987
+Epoch 708 of 800 took 214.085s
+  training loss:		0.308682
+  validation loss:		0.321283
+Epoch 709 of 800 took 214.316s
+  training loss:		0.308975
+  validation loss:		0.321899
+Epoch 710 of 800 took 214.330s
+  training loss:		0.308002
+  validation loss:		0.318839
+Epoch 711 of 800 took 214.244s
+  training loss:		0.308276
+  validation loss:		0.321186
+('Average Reconstruction Error -- ', 0.37524911750743778)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 712 of 800 took 214.425s
+  training loss:		0.308595
+  validation loss:		0.319660
+Epoch 713 of 800 took 214.559s
+  training loss:		0.308400
+  validation loss:		0.320526
+Epoch 714 of 800 took 214.421s
+  training loss:		0.307479
+  validation loss:		0.321336
+Epoch 715 of 800 took 214.516s
+  training loss:		0.308302
+  validation loss:		0.320510
+Epoch 716 of 800 took 214.575s
+  training loss:		0.307686
+  validation loss:		0.318836
+Epoch 717 of 800 took 214.447s
+  training loss:		0.308235
+  validation loss:		0.319878
+Epoch 718 of 800 took 214.405s
+  training loss:		0.307589
+  validation loss:		0.327148
+Epoch 719 of 800 took 214.287s
+  training loss:		0.308184
+  validation loss:		0.329976
+Epoch 720 of 800 took 214.431s
+  training loss:		0.308032
+  validation loss:		0.330863
+Epoch 721 of 800 took 214.548s
+  training loss:		0.307548
+  validation loss:		0.319111
+('Average Reconstruction Error -- ', 0.37431646598181556)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 722 of 800 took 213.809s
+  training loss:		0.307306
+  validation loss:		0.317949
+Epoch 723 of 800 took 213.848s
+  training loss:		0.307363
+  validation loss:		0.323587
+Epoch 724 of 800 took 213.943s
+  training loss:		0.307591
+  validation loss:		0.323782
+Epoch 725 of 800 took 213.874s
+  training loss:		0.306950
+  validation loss:		0.318963
+Epoch 726 of 800 took 213.664s
+  training loss:		0.306906
+  validation loss:		0.327259
+Epoch 727 of 800 took 213.838s
+  training loss:		0.307463
+  validation loss:		0.319323
+Epoch 728 of 800 took 213.693s
+  training loss:		0.306421
+  validation loss:		0.327728
+Epoch 729 of 800 took 213.799s
+  training loss:		0.307690
+  validation loss:		0.318379
+Epoch 730 of 800 took 213.914s
+  training loss:		0.306037
+  validation loss:		0.317342
+Epoch 731 of 800 took 213.830s
+  training loss:		0.306805
+  validation loss:		0.319968
+('Average Reconstruction Error -- ', 0.37339631265215495)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 732 of 800 took 213.404s
+  training loss:		0.307593
+  validation loss:		0.324398
+Epoch 733 of 800 took 213.708s
+  training loss:		0.306327
+  validation loss:		0.317880
+Epoch 734 of 800 took 213.614s
+  training loss:		0.306547
+  validation loss:		0.315519
+Epoch 735 of 800 took 213.542s
+  training loss:		0.307081
+  validation loss:		0.315581
+Epoch 736 of 800 took 213.507s
+  training loss:		0.306693
+  validation loss:		0.322202
+Epoch 737 of 800 took 213.460s
+  training loss:		0.306655
+  validation loss:		0.326762
+Epoch 738 of 800 took 213.665s
+  training loss:		0.306235
+  validation loss:		0.317454
+Epoch 739 of 800 took 213.611s
+  training loss:		0.306055
+  validation loss:		0.325764
+Epoch 740 of 800 took 213.622s
+  training loss:		0.306039
+  validation loss:		0.324561
+Epoch 741 of 800 took 213.594s
+  training loss:		0.306157
+  validation loss:		0.322098
+('Average Reconstruction Error -- ', 0.37249404504241307)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 742 of 800 took 214.204s
+  training loss:		0.305706
+  validation loss:		0.317057
+Epoch 743 of 800 took 214.315s
+  training loss:		0.306045
+  validation loss:		0.321285
+Epoch 744 of 800 took 214.243s
+  training loss:		0.305433
+  validation loss:		0.317675
+Epoch 745 of 800 took 214.260s
+  training loss:		0.305590
+  validation loss:		0.316202
+Epoch 746 of 800 took 214.311s
+  training loss:		0.305286
+  validation loss:		0.317469
+Epoch 747 of 800 took 214.305s
+  training loss:		0.305380
+  validation loss:		0.320007
+Epoch 748 of 800 took 214.217s
+  training loss:		0.305575
+  validation loss:		0.318735
+Epoch 749 of 800 took 214.264s
+  training loss:		0.305987
+  validation loss:		0.325029
+Epoch 750 of 800 took 214.198s
+  training loss:		0.305389
+  validation loss:		0.317574
+Epoch 751 of 800 took 214.093s
+  training loss:		0.304577
+  validation loss:		0.318859
+('Average Reconstruction Error -- ', 0.37160193766369159)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 752 of 800 took 212.563s
+  training loss:		0.305480
+  validation loss:		0.315625
+Epoch 753 of 800 took 212.658s
+  training loss:		0.305162
+  validation loss:		0.319771
+Epoch 754 of 800 took 212.623s
+  training loss:		0.305205
+  validation loss:		0.317251
+Epoch 755 of 800 took 212.741s
+  training loss:		0.304432
+  validation loss:		0.320859
+Epoch 756 of 800 took 212.846s
+  training loss:		0.305100
+  validation loss:		0.318508
+Epoch 757 of 800 took 212.688s
+  training loss:		0.305022
+  validation loss:		0.318627
+Epoch 758 of 800 took 212.633s
+  training loss:		0.304125
+  validation loss:		0.315600
+Epoch 759 of 800 took 212.717s
+  training loss:		0.305209
+  validation loss:		0.317295
+Epoch 760 of 800 took 212.849s
+  training loss:		0.304905
+  validation loss:		0.314929
+Epoch 761 of 800 took 212.846s
+  training loss:		0.304389
+  validation loss:		0.315073
+('Average Reconstruction Error -- ', 0.37072547291799257)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 762 of 800 took 214.404s
+  training loss:		0.304586
+  validation loss:		0.317403
+Epoch 763 of 800 took 214.128s
+  training loss:		0.304234
+  validation loss:		0.319068
+Epoch 764 of 800 took 214.045s
+  training loss:		0.304261
+  validation loss:		0.317696
+Epoch 765 of 800 took 214.167s
+  training loss:		0.303661
+  validation loss:		0.315616
+Epoch 766 of 800 took 214.171s
+  training loss:		0.303844
+  validation loss:		0.319602
+Epoch 767 of 800 took 214.272s
+  training loss:		0.304009
+  validation loss:		0.317596
+Epoch 768 of 800 took 214.135s
+  training loss:		0.304337
+  validation loss:		0.315987
+Epoch 769 of 800 took 214.194s
+  training loss:		0.303622
+  validation loss:		0.316609
+Epoch 770 of 800 took 214.240s
+  training loss:		0.303439
+  validation loss:		0.319673
+Epoch 771 of 800 took 214.171s
+  training loss:		0.303461
+  validation loss:		0.320522
+('Average Reconstruction Error -- ', 0.36985932578635711)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 772 of 800 took 213.808s
+  training loss:		0.304044
+  validation loss:		0.319263
+Epoch 773 of 800 took 213.355s
+  training loss:		0.303548
+  validation loss:		0.323496
+Epoch 774 of 800 took 213.632s
+  training loss:		0.303993
+  validation loss:		0.318210
+Epoch 775 of 800 took 213.507s
+  training loss:		0.303001
+  validation loss:		0.313357
+Epoch 776 of 800 took 213.582s
+  training loss:		0.302909
+  validation loss:		0.312872
+Epoch 777 of 800 took 213.446s
+  training loss:		0.303315
+  validation loss:		0.320533
+Epoch 778 of 800 took 213.481s
+  training loss:		0.302830
+  validation loss:		0.320120
+Epoch 779 of 800 took 213.303s
+  training loss:		0.304436
+  validation loss:		0.324953
+Epoch 780 of 800 took 213.350s
+  training loss:		0.303057
+  validation loss:		0.319574
+Epoch 781 of 800 took 213.465s
+  training loss:		0.303216
+  validation loss:		0.319381
+('Average Reconstruction Error -- ', 0.36900882176159483)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 782 of 800 took 213.850s
+  training loss:		0.302843
+  validation loss:		0.317855
+Epoch 783 of 800 took 213.805s
+  training loss:		0.302245
+  validation loss:		0.322492
+Epoch 784 of 800 took 214.028s
+  training loss:		0.302743
+  validation loss:		0.327145
+Epoch 785 of 800 took 213.831s
+  training loss:		0.302127
+  validation loss:		0.316810
+Epoch 786 of 800 took 213.855s
+  training loss:		0.302958
+  validation loss:		0.316677
+Epoch 787 of 800 took 213.710s
+  training loss:		0.302542
+  validation loss:		0.316762
+Epoch 788 of 800 took 213.862s
+  training loss:		0.302414
+  validation loss:		0.319357
+Epoch 789 of 800 took 213.854s
+  training loss:		0.301880
+  validation loss:		0.317996
+Epoch 790 of 800 took 213.955s
+  training loss:		0.303506
+  validation loss:		0.313370
+Epoch 791 of 800 took 213.931s
+  training loss:		0.301919
+  validation loss:		0.314622
+('Average Reconstruction Error -- ', 0.3681682240079403)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Saving reconstructed images .........
+Saving histogram of reconstructed image.....
+Epoch 792 of 800 took 213.565s
+  training loss:		0.301886
+  validation loss:		0.316958
+Epoch 793 of 800 took 213.657s
+  training loss:		0.302172
+  validation loss:		0.312812
+Epoch 794 of 800 took 213.769s
+  training loss:		0.301678
+  validation loss:		0.315029
+Epoch 795 of 800 took 213.685s
+  training loss:		0.301880
+  validation loss:		0.312500
+Epoch 796 of 800 took 213.660s
+  training loss:		0.302121
+  validation loss:		0.319311
+Epoch 797 of 800 took 213.861s
+  training loss:		0.301872
+  validation loss:		0.320641
+Epoch 798 of 800 took 213.633s
+  training loss:		0.301899
+  validation loss:		0.318446
+Epoch 799 of 800 took 213.704s
+  training loss:		0.302116
+  validation loss:		0.317503
+Epoch 800 of 800 took 213.838s
+  training loss:		0.301426
+  validation loss:		0.319479
+Creating hdf5 file for pred images and saving to ./output_files/.......
+Visualizing Saliency map .........
+Saving T-sne vector
+Visualizing t-sne
+('BN VECTOR ------', (1000, 2048))
+('Tsne vector shape ----------- ', (1000, 2))
+('Done -- ', 0, '/', 1000)
+('Done -- ', 100, '/', 1000)
+('Done -- ', 200, '/', 1000)
+('Done -- ', 300, '/', 1000)
+('Done -- ', 400, '/', 1000)
+('Done -- ', 500, '/', 1000)
+('Done -- ', 600, '/', 1000)
+('Done -- ', 700, '/', 1000)
+('Done -- ', 800, '/', 1000)
+('Done -- ', 900, '/', 1000)
+Creating hdf5 file for Salinecy maps saving to ./output_files/.......

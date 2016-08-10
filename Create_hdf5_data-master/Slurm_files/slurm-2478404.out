@@ -1,0 +1,130 @@
+The no corruption code for file dAE.py ran for 4.25m
+('Calling ', 'normalized_data.h5', '......')
+... loading data
+Printing Train set  [[-0.01192936  0.04222802  0.02708294 ..., -0.19124368 -0.10504689
+  -0.15137926]
+ [-0.01057465 -0.14316248 -0.10411913 ..., -0.01485521  0.01530538
+   0.06022365]
+ [ 0.0557068   0.27179684  0.19131898 ...,  0.08482909  0.10881923
+   0.03820324]
+ ..., 
+ [-0.01017692 -0.12107509 -0.13732674 ..., -0.02985386 -0.12656212
+  -0.09359577]
+ [-0.02024922 -0.02451657  0.08745872 ..., -0.02140495 -0.0060667
+  -0.02612032]
+ [-0.04439969 -0.1769916  -0.20425011 ...,  0.08570087 -0.07248146
+  -0.05293814]]
+X_train shape  (1000, 16384)
+Printing shared_dataset  <TensorType(float64, matrix)>
+Final Training Set  <TensorType(float64, matrix)>
+Learning rate:  0.05
+Life is a Bitch!  <TensorType(float64, matrix)>
+Building model with 0 percent Corruption...... 
+Training epoch 0, cost  -835.021772752
+Training epoch 1, cost  -4990.63491011
+Training epoch 2, cost  -8521.20735678
+Training epoch 3, cost  -11913.6657543
+Training epoch 4, cost  -15261.7393044
+Training epoch 5, cost  -18604.4903816
+Training epoch 6, cost  -21959.5224504
+Training epoch 7, cost  -25291.8257213
+Training epoch 8, cost  -28643.1325671
+Training epoch 9, cost  -32009.3533156
+Training epoch 10, cost  -35383.6861592
+Training epoch 11, cost  -38755.3442833
+Training epoch 12, cost  -42145.8256188
+Training epoch 13, cost  -45528.2952739
+Training epoch 14, cost  -48921.2272825
+Training epoch 15, cost  -52323.7642199
+Training epoch 16, cost  -55720.7086195
+Training epoch 17, cost  -59114.8099927
+Training epoch 18, cost  -62531.0968266
+Training epoch 19, cost  -65949.3789215
+Training epoch 20, cost  -69358.7291405
+Training epoch 21, cost  -72786.0451214
+Training epoch 22, cost  -76206.5509552
+Training epoch 23, cost  -79632.3379876
+Training epoch 24, cost  -83064.0729162
+Training epoch 25, cost  -86505.9150865
+Training epoch 26, cost  -89938.5640167
+Training epoch 27, cost  -93365.2052819
+Training epoch 28, cost  -96805.5655617
+Training epoch 29, cost  -100249.279815
+Training epoch 30, cost  -103688.22905
+Training epoch 31, cost  -107136.286064
+Training epoch 32, cost  -110583.412297
+Training epoch 33, cost  -114037.103637
+Training epoch 34, cost  -117485.266826
+Training epoch 35, cost  -120939.820847
+Training epoch 36, cost  -124390.104179
+Training epoch 37, cost  -127840.136064
+Training epoch 38, cost  -131297.898698
+Training epoch 39, cost  -134759.660758
+Training epoch 40, cost  -138215.42343
+Training epoch 41, cost  -141674.369529
+Training epoch 42, cost  -145147.879843
+Training epoch 43, cost  -148606.554318
+Training epoch 44, cost  -152066.410014
+Training epoch 45, cost  -155539.213409
+Training epoch 46, cost  -159009.313459
+Training epoch 47, cost  -162481.714895
+Training epoch 48, cost  -165946.16971
+Training epoch 49, cost  -169415.959269
+Training epoch 50, cost  -172891.394157
+Training epoch 51, cost  -176352.825719
+Training epoch 52, cost  -179834.492552
+Training epoch 53, cost  -183309.375692
+Training epoch 54, cost  -186801.471298
+Training epoch 55, cost  -190253.422668
+Training epoch 56, cost  -193734.233355
+Training epoch 57, cost  -197212.259753
+Training epoch 58, cost  -200676.880429
+Training epoch 59, cost  -204175.291403
+Training epoch 60, cost  -207647.559452
+Training epoch 61, cost  -211133.394217
+Training epoch 62, cost  -214611.135969
+Training epoch 63, cost  -218078.712448
+Training epoch 64, cost  -221575.638638
+Training epoch 65, cost  -225055.605437
+Training epoch 66, cost  -228535.674122
+Training epoch 67, cost  -232019.148502
+Training epoch 68, cost  -235509.083405
+Training epoch 69, cost  -239007.039172
+Training epoch 70, cost  -242485.837263
+Training epoch 71, cost  -245973.5749
+Training epoch 72, cost  -249468.477696
+Training epoch 73, cost  -252933.982085
+Training epoch 74, cost  -256450.211244
+Training epoch 75, cost  -259920.327591
+Training epoch 76, cost  -263427.167271
+Training epoch 77, cost  -266936.215387
+Training epoch 78, cost  -270409.165132
+Training epoch 79, cost  -273899.061905
+Training epoch 80, cost  -277405.251653
+Training epoch 81, cost  -280910.474345
+Training epoch 82, cost  -284400.696594
+Training epoch 83, cost  -287894.292854
+Training epoch 84, cost  -291386.49019
+Training epoch 85, cost  -294879.030744
+Training epoch 86, cost  -298378.480514
+Training epoch 87, cost  -301842.233521
+Training epoch 88, cost  -305364.093049
+Training epoch 89, cost  -308876.438006
+Training epoch 90, cost  -312384.528153
+Training epoch 91, cost  -315878.194835
+Training epoch 92, cost  -319371.467511
+Training epoch 93, cost  -322860.99709
+Training epoch 94, cost  -326390.40551
+Training epoch 95, cost  -329868.013355
+Training epoch 96, cost  -333395.518968
+Training epoch 97, cost  -336865.516015
+Training epoch 98, cost  -340362.491951
+Training epoch 99, cost  -343854.676025
+Traceback (most recent call last):
+  File "dAE.py", line 379, in <module>
+    test_dA()
+  File "dAE.py", line 371, in test_dA
+    tile_spacing=(1, 1)))
+  File "/global/u1/s/ssingh79/DeepLearningTutorials-master/code/utils.py", line 128, in tile_raster_images
+    this_img = this_x.reshape(img_shape)
+ValueError: total size of new array must be unchanged

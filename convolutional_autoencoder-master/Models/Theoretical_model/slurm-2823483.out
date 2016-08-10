@@ -1,0 +1,2432 @@
+/global/u1/s/ssingh79/convolutional_autoencoder-master/Models/Theoretical_model/embed_tsne.py:45: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  if(G[embed_x,embed_y]!=1.0):
+/global/u1/s/ssingh79/convolutional_autoencoder-master/Models/Theoretical_model/embed_tsne.py:57: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  G[embed_x:embed_x+s, embed_y:embed_y+s] = I
+Loading data...
+('Calling ', 'train_data_64k.h5', '......')
+('Printing Train set ', array([[-0.01032324,  0.00679525,  0.0022744 , ..., -0.00186596,
+        -0.00139782, -0.00295408],
+       [ 0.03064897,  0.00953815,  0.03919139, ..., -0.04416131,
+        -0.01501628, -0.03169146],
+       [-0.00054488,  0.03779386,  0.03071115, ...,  0.03494589,
+        -0.00192948, -0.01491482],
+       ..., 
+       [-0.01792001, -0.0332757 , -0.03511935, ..., -0.02660589,
+        -0.02870286, -0.0296263 ],
+       [-0.01097497, -0.01258439, -0.03759458, ...,  0.01413019,
+        -0.02485162, -0.02055037],
+       [-0.04255074, -0.04967483, -0.02673387, ...,  0.01248583,
+         0.0289001 , -0.00986743]]))
+('X_train 1 shape ', (64000, 16384))
+('Printing Train set ', array([[-0.02512396, -0.03287205, -0.03316736, ...,  0.10065543,
+         0.02794481,  0.00411595],
+       [ 0.02518618,  0.00925795,  0.0307598 , ..., -0.03124851,
+        -0.03897436, -0.03171649],
+       [ 0.05087735,  0.06243372,  0.09598123, ..., -0.01340537,
+         0.02301167,  0.05911352],
+       ..., 
+       [ 0.01281872, -0.00571466, -0.03530059, ..., -0.02591705,
+        -0.0062293 ,  0.01869127],
+       [-0.05095224, -0.0446883 , -0.04354183, ..., -0.01251224,
+        -0.01232889,  0.03422774],
+       [-0.0315671 , -0.03121806, -0.03767376, ..., -0.00516524,
+         0.00659046, -0.00170965]]))
+('X_train 2 shape ', (64000, 16384))
+('Theoretical model 1', (50, 16384))
+('Theoretical model 1', (50, 16384))
+('Training Set : ', array([[-0.00446486, -0.01578049, -0.02695766, ..., -0.01086715,
+        -0.00609201, -0.01491591],
+       [-0.01390937,  0.0264623 ,  0.02714935, ...,  0.00615692,
+         0.02763193,  0.04812901],
+       [ 0.00757176,  0.03017456,  0.03160006, ..., -0.04143022,
+        -0.02717287, -0.04363219],
+       ..., 
+       [-0.0279242 , -0.00498024,  0.02834823, ..., -0.02092174,
+        -0.00258123, -0.00389883],
+       [ 0.00745145,  0.01629954, -0.01594659, ..., -0.03622532,
+        -0.02483778, -0.01980451],
+       [ 0.16143508,  0.04752476,  0.02612232, ...,  0.00104487,
+         0.01613577, -0.02179727]]))
+((80, 16384), (80,))
+('Validation Set : ', array([[-0.02668206, -0.03368014, -0.03918121, ...,  0.00390487,
+        -0.01690364, -0.02211341],
+       [ 0.12368543,  0.1399979 ,  0.07845096, ..., -0.04409742,
+        -0.03894012, -0.02548463],
+       [-0.00708593,  0.00817839, -0.00195002, ..., -0.00676661,
+        -0.01525473,  0.0427505 ],
+       ..., 
+       [ 0.00861842,  0.03650783,  0.04635513, ...,  0.00220077,
+         0.04302705,  0.0349959 ],
+       [ 0.01537413,  0.00950716,  0.05552373, ..., -0.01183574,
+         0.02159074, -0.0020149 ],
+       [ 0.00127551, -0.01465179, -0.0074979 , ..., -0.0233776 ,
+         0.00851659, -0.01293317]]))
+((10, 16384), (10,))
+('Test Set : ', array([[ -2.29324289e-02,  -3.21648503e-03,  -1.65657827e-03, ...,
+         -3.75900306e-02,  -4.81790304e-02,  -3.64563242e-02],
+       [  4.24531139e-02,   3.07176039e-02,   3.30905952e-02, ...,
+          1.16406016e-04,  -2.03270148e-02,  -4.76065325e-03],
+       [  1.05649777e-01,   1.80822790e-01,   3.60289395e-01, ...,
+         -3.70409265e-02,  -4.62798476e-02,  -4.67698537e-02],
+       ..., 
+       [  1.55476350e-02,   8.42942484e-03,  -1.00207618e-02, ...,
+         -3.93268615e-02,  -1.82078946e-02,  -2.32490823e-02],
+       [  5.90558350e-02,   3.86171900e-02,   1.82820745e-02, ...,
+         -1.18079800e-02,  -1.38000743e-02,   1.66346338e-02],
+       [ -1.01687741e-02,   5.77988941e-03,   2.54022852e-02, ...,
+          1.53647317e-02,   2.82804240e-02,   4.05153334e-02]]))
+((10, 16384), (10,))
+[ 0.01191201  0.01446943  0.01566996 ..., -0.01609027 -0.01449088
+ -0.0127563 ]
+[ 0.00232163  0.00280564  0.00345941 ...,  0.00045264  0.00050432
+  0.00063995]
+('Normalized Training data : ', array([[-0.33988693, -0.57109514, -0.72475328, ...,  0.2454999 ,
+         0.37399729, -0.08536927],
+       [-0.53589899,  0.22641623,  0.19517217, ...,  1.04567475,
+         1.87570776,  2.40679749],
+       [-0.09007783,  0.29650093,  0.27084289, ..., -1.19104236,
+        -0.56472264, -1.22052444],
+       ..., 
+       [-0.82676391, -0.36719461,  0.21555543, ..., -0.22709152,
+         0.53033079,  0.35013608],
+       [-0.09257488,  0.03455116, -0.53754343, ..., -0.94639853,
+        -0.46074223, -0.27861581],
+       [ 3.10321342,  0.62405921,  0.1777106 , ...,  0.80539554,
+         1.36378961, -0.35738965]]))
+('Mean : ', -1.2403272853234171e-17)
+('min : ', -2.8949165815210907)
+('max : ', 8.3645013636072019)
+('Valid set min : ', -2.7673780402759469)
+('Valid set max : ', 15.854298114655897)
+('Test set min : ', -2.8556345597752442)
+('Test set max : ', 21.730693449201738)
+((80, 1, 128, 128), (80,))
+((10, 1, 128, 128), (10,))
+((10, 1, 128, 128), (10,))
+Saving sampled training images.......
+Building model and compiling functions.........
+('Input shape : ', (None, 1, 128, 128))
+('Conv layer 1 : ', (None, 32, 128, 128))
+('Max pool 1 : ', (None, 32, 64, 64))
+('Conv layer 2 : ', (None, 32, 64, 64))
+('Max pool 2 : ', (None, 32, 32, 32))
+('Conv layer 3 : ', (None, 64, 32, 32))
+('Max pool 3 : ', (None, 64, 16, 16))
+('Conv layer 4 : ', (None, 64, 16, 16))
+('Max pool 4 : ', (None, 64, 8, 8))
+('Fully Connected layer: ', (None, 2048))
+('Fully Connected layer: ', (None, 512))
+('Softmax layer: ', (None, 2))
+Created Lasagne Layers & Network established !!! 
+('Get the output layer : ', Softmax.0)
+('Get all the parameters : ', [W, b, W, b, W, b, W, b, W, b, W, b, W, b])
+Starting training...
+Epoch 1 of 500 took 5.911s
+  training loss:		1.207927
+  validation loss:		1.211002
+  validation accuracy:		53.75 %
+('Average Reconstruction Error -- ', 1.2079266060137215)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 2 of 500 took 6.289s
+  training loss:		1.203961
+  validation loss:		1.180868
+  validation accuracy:		53.75 %
+Epoch 3 of 500 took 6.030s
+  training loss:		1.224331
+  validation loss:		1.194755
+  validation accuracy:		53.75 %
+Epoch 4 of 500 took 5.663s
+  training loss:		1.189506
+  validation loss:		1.165332
+  validation accuracy:		53.75 %
+Epoch 5 of 500 took 5.591s
+  training loss:		1.151115
+  validation loss:		1.141172
+  validation accuracy:		53.75 %
+Epoch 6 of 500 took 5.620s
+  training loss:		1.140550
+  validation loss:		1.101260
+  validation accuracy:		53.75 %
+Epoch 7 of 500 took 5.604s
+  training loss:		1.109996
+  validation loss:		1.085368
+  validation accuracy:		53.75 %
+Epoch 8 of 500 took 5.590s
+  training loss:		1.080913
+  validation loss:		1.054281
+  validation accuracy:		53.75 %
+Epoch 9 of 500 took 6.282s
+  training loss:		1.045449
+  validation loss:		1.025807
+  validation accuracy:		53.75 %
+Epoch 10 of 500 took 5.690s
+  training loss:		1.037699
+  validation loss:		0.984826
+  validation accuracy:		53.75 %
+Epoch 11 of 500 took 5.603s
+  training loss:		0.988966
+  validation loss:		0.958134
+  validation accuracy:		53.75 %
+('Average Reconstruction Error -- ', 1.1254921151212232)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 12 of 500 took 5.737s
+  training loss:		0.950462
+  validation loss:		0.924268
+  validation accuracy:		53.75 %
+Epoch 13 of 500 took 5.603s
+  training loss:		0.933742
+  validation loss:		0.913737
+  validation accuracy:		53.75 %
+Epoch 14 of 500 took 5.605s
+  training loss:		0.897124
+  validation loss:		0.876822
+  validation accuracy:		53.75 %
+Epoch 15 of 500 took 5.610s
+  training loss:		0.878550
+  validation loss:		0.846079
+  validation accuracy:		53.75 %
+Epoch 16 of 500 took 5.575s
+  training loss:		0.850323
+  validation loss:		0.827879
+  validation accuracy:		53.75 %
+Epoch 17 of 500 took 5.615s
+  training loss:		0.830953
+  validation loss:		0.799484
+  validation accuracy:		53.75 %
+Epoch 18 of 500 took 5.600s
+  training loss:		0.795762
+  validation loss:		0.778843
+  validation accuracy:		53.75 %
+Epoch 19 of 500 took 5.607s
+  training loss:		0.776789
+  validation loss:		0.762115
+  validation accuracy:		53.75 %
+Epoch 20 of 500 took 5.607s
+  training loss:		0.764854
+  validation loss:		0.760118
+  validation accuracy:		53.75 %
+Epoch 21 of 500 took 5.601s
+  training loss:		0.759290
+  validation loss:		0.734119
+  validation accuracy:		53.75 %
+('Average Reconstruction Error -- ', 0.99134575907773004)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 22 of 500 took 5.787s
+  training loss:		0.735008
+  validation loss:		0.735175
+  validation accuracy:		53.75 %
+Epoch 23 of 500 took 5.611s
+  training loss:		0.730617
+  validation loss:		0.716818
+  validation accuracy:		53.75 %
+Epoch 24 of 500 took 5.581s
+  training loss:		0.709040
+  validation loss:		0.701489
+  validation accuracy:		53.75 %
+Epoch 25 of 500 took 5.608s
+  training loss:		0.702222
+  validation loss:		0.688327
+  validation accuracy:		53.75 %
+Epoch 26 of 500 took 5.612s
+  training loss:		0.697657
+  validation loss:		0.680096
+  validation accuracy:		55.00 %
+Epoch 27 of 500 took 5.594s
+  training loss:		0.680743
+  validation loss:		0.680402
+  validation accuracy:		52.50 %
+Epoch 28 of 500 took 5.606s
+  training loss:		0.690831
+  validation loss:		0.681173
+  validation accuracy:		52.50 %
+Epoch 29 of 500 took 5.597s
+  training loss:		0.675285
+  validation loss:		0.671920
+  validation accuracy:		52.50 %
+Epoch 30 of 500 took 5.606s
+  training loss:		0.667964
+  validation loss:		0.666907
+  validation accuracy:		55.00 %
+Epoch 31 of 500 took 5.605s
+  training loss:		0.682199
+  validation loss:		0.666352
+  validation accuracy:		48.75 %
+('Average Reconstruction Error -- ', 0.89644609054201241)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 32 of 500 took 5.710s
+  training loss:		0.669398
+  validation loss:		0.671598
+  validation accuracy:		50.00 %
+Epoch 33 of 500 took 5.767s
+  training loss:		0.662584
+  validation loss:		0.651730
+  validation accuracy:		56.25 %
+Epoch 34 of 500 took 5.603s
+  training loss:		0.661211
+  validation loss:		0.657283
+  validation accuracy:		50.00 %
+Epoch 35 of 500 took 5.613s
+  training loss:		0.670082
+  validation loss:		0.645430
+  validation accuracy:		57.50 %
+Epoch 36 of 500 took 5.632s
+  training loss:		0.663317
+  validation loss:		0.658146
+  validation accuracy:		58.75 %
+Epoch 37 of 500 took 5.761s
+  training loss:		0.656208
+  validation loss:		0.658807
+  validation accuracy:		58.75 %
+Epoch 38 of 500 took 5.612s
+  training loss:		0.674781
+  validation loss:		0.660763
+  validation accuracy:		53.75 %
+Epoch 39 of 500 took 5.609s
+  training loss:		0.664383
+  validation loss:		0.658508
+  validation accuracy:		58.75 %
+Epoch 40 of 500 took 5.960s
+  training loss:		0.654019
+  validation loss:		0.658259
+  validation accuracy:		58.75 %
+Epoch 41 of 500 took 5.649s
+  training loss:		0.655868
+  validation loss:		0.667897
+  validation accuracy:		53.75 %
+('Average Reconstruction Error -- ', 0.83955315602645908)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 42 of 500 took 5.926s
+  training loss:		0.658115
+  validation loss:		0.668651
+  validation accuracy:		56.25 %
+Epoch 43 of 500 took 5.686s
+  training loss:		0.655447
+  validation loss:		0.663195
+  validation accuracy:		58.75 %
+Epoch 44 of 500 took 5.655s
+  training loss:		0.656386
+  validation loss:		0.653483
+  validation accuracy:		60.00 %
+Epoch 45 of 500 took 5.735s
+  training loss:		0.653716
+  validation loss:		0.662706
+  validation accuracy:		62.50 %
+Epoch 46 of 500 took 6.319s
+  training loss:		0.658345
+  validation loss:		0.660187
+  validation accuracy:		60.00 %
+Epoch 47 of 500 took 6.463s
+  training loss:		0.657631
+  validation loss:		0.663305
+  validation accuracy:		55.00 %
+Epoch 48 of 500 took 5.632s
+  training loss:		0.669250
+  validation loss:		0.649833
+  validation accuracy:		58.75 %
+Epoch 49 of 500 took 6.183s
+  training loss:		0.653929
+  validation loss:		0.663067
+  validation accuracy:		57.50 %
+Epoch 50 of 500 took 6.696s
+  training loss:		0.658670
+  validation loss:		0.651440
+  validation accuracy:		57.50 %
+Epoch 51 of 500 took 6.083s
+  training loss:		0.650348
+  validation loss:		0.653687
+  validation accuracy:		61.25 %
+('Average Reconstruction Error -- ', 0.80379442480280161)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 52 of 500 took 5.678s
+  training loss:		0.656202
+  validation loss:		0.658784
+  validation accuracy:		56.25 %
+Epoch 53 of 500 took 5.556s
+  training loss:		0.643759
+  validation loss:		0.657143
+  validation accuracy:		60.00 %
+Epoch 54 of 500 took 5.596s
+  training loss:		0.649749
+  validation loss:		0.651896
+  validation accuracy:		57.50 %
+Epoch 55 of 500 took 5.617s
+  training loss:		0.657338
+  validation loss:		0.647483
+  validation accuracy:		62.50 %
+Epoch 56 of 500 took 5.603s
+  training loss:		0.648097
+  validation loss:		0.642899
+  validation accuracy:		63.75 %
+Epoch 57 of 500 took 5.582s
+  training loss:		0.655515
+  validation loss:		0.642666
+  validation accuracy:		60.00 %
+Epoch 58 of 500 took 5.548s
+  training loss:		0.651596
+  validation loss:		0.645340
+  validation accuracy:		63.75 %
+Epoch 59 of 500 took 5.616s
+  training loss:		0.653305
+  validation loss:		0.653026
+  validation accuracy:		57.50 %
+Epoch 60 of 500 took 5.589s
+  training loss:		0.647698
+  validation loss:		0.649293
+  validation accuracy:		63.75 %
+Epoch 61 of 500 took 5.596s
+  training loss:		0.656555
+  validation loss:		0.648098
+  validation accuracy:		67.50 %
+('Average Reconstruction Error -- ', 0.7789070510323417)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 62 of 500 took 5.886s
+  training loss:		0.641060
+  validation loss:		0.649683
+  validation accuracy:		61.25 %
+Epoch 63 of 500 took 5.806s
+  training loss:		0.645753
+  validation loss:		0.649321
+  validation accuracy:		62.50 %
+Epoch 64 of 500 took 5.803s
+  training loss:		0.653432
+  validation loss:		0.644718
+  validation accuracy:		57.50 %
+Epoch 65 of 500 took 5.801s
+  training loss:		0.649328
+  validation loss:		0.636135
+  validation accuracy:		66.25 %
+Epoch 66 of 500 took 5.800s
+  training loss:		0.642078
+  validation loss:		0.639518
+  validation accuracy:		63.75 %
+Epoch 67 of 500 took 5.801s
+  training loss:		0.647387
+  validation loss:		0.638609
+  validation accuracy:		67.50 %
+Epoch 68 of 500 took 5.734s
+  training loss:		0.639804
+  validation loss:		0.651210
+  validation accuracy:		55.00 %
+Epoch 69 of 500 took 5.665s
+  training loss:		0.646123
+  validation loss:		0.638520
+  validation accuracy:		67.50 %
+Epoch 70 of 500 took 5.806s
+  training loss:		0.644366
+  validation loss:		0.637266
+  validation accuracy:		65.00 %
+Epoch 71 of 500 took 5.759s
+  training loss:		0.637994
+  validation loss:		0.633975
+  validation accuracy:		62.50 %
+('Average Reconstruction Error -- ', 0.7600092334858416)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 72 of 500 took 5.692s
+  training loss:		0.649114
+  validation loss:		0.640415
+  validation accuracy:		57.50 %
+Epoch 73 of 500 took 5.789s
+  training loss:		0.641272
+  validation loss:		0.653659
+  validation accuracy:		58.75 %
+Epoch 74 of 500 took 5.595s
+  training loss:		0.640710
+  validation loss:		0.641810
+  validation accuracy:		62.50 %
+Epoch 75 of 500 took 5.632s
+  training loss:		0.634139
+  validation loss:		0.634875
+  validation accuracy:		61.25 %
+Epoch 76 of 500 took 5.794s
+  training loss:		0.650056
+  validation loss:		0.634314
+  validation accuracy:		68.75 %
+Epoch 77 of 500 took 5.794s
+  training loss:		0.638648
+  validation loss:		0.639878
+  validation accuracy:		61.25 %
+Epoch 78 of 500 took 5.780s
+  training loss:		0.634528
+  validation loss:		0.635877
+  validation accuracy:		61.25 %
+Epoch 79 of 500 took 5.607s
+  training loss:		0.641834
+  validation loss:		0.641532
+  validation accuracy:		65.00 %
+Epoch 80 of 500 took 5.591s
+  training loss:		0.630979
+  validation loss:		0.633233
+  validation accuracy:		62.50 %
+Epoch 81 of 500 took 5.613s
+  training loss:		0.628252
+  validation loss:		0.631876
+  validation accuracy:		62.50 %
+('Average Reconstruction Error -- ', 0.74506404503783241)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 82 of 500 took 5.670s
+  training loss:		0.642004
+  validation loss:		0.622005
+  validation accuracy:		66.25 %
+Epoch 83 of 500 took 5.586s
+  training loss:		0.633953
+  validation loss:		0.635710
+  validation accuracy:		66.25 %
+Epoch 84 of 500 took 5.589s
+  training loss:		0.632044
+  validation loss:		0.644069
+  validation accuracy:		63.75 %
+Epoch 85 of 500 took 5.604s
+  training loss:		0.639254
+  validation loss:		0.641226
+  validation accuracy:		60.00 %
+Epoch 86 of 500 took 5.600s
+  training loss:		0.642930
+  validation loss:		0.620025
+  validation accuracy:		65.00 %
+Epoch 87 of 500 took 5.606s
+  training loss:		0.639161
+  validation loss:		0.621575
+  validation accuracy:		68.75 %
+Epoch 88 of 500 took 5.592s
+  training loss:		0.630896
+  validation loss:		0.624698
+  validation accuracy:		65.00 %
+Epoch 89 of 500 took 5.619s
+  training loss:		0.630619
+  validation loss:		0.635004
+  validation accuracy:		60.00 %
+Epoch 90 of 500 took 5.597s
+  training loss:		0.617142
+  validation loss:		0.635291
+  validation accuracy:		62.50 %
+Epoch 91 of 500 took 5.597s
+  training loss:		0.630465
+  validation loss:		0.622876
+  validation accuracy:		66.25 %
+('Average Reconstruction Error -- ', 0.73284237063394375)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 92 of 500 took 5.732s
+  training loss:		0.629617
+  validation loss:		0.631354
+  validation accuracy:		61.25 %
+Epoch 93 of 500 took 5.797s
+  training loss:		0.626990
+  validation loss:		0.631251
+  validation accuracy:		58.75 %
+Epoch 94 of 500 took 5.767s
+  training loss:		0.627482
+  validation loss:		0.627762
+  validation accuracy:		68.75 %
+Epoch 95 of 500 took 5.711s
+  training loss:		0.616250
+  validation loss:		0.630854
+  validation accuracy:		63.75 %
+Epoch 96 of 500 took 5.613s
+  training loss:		0.628520
+  validation loss:		0.622728
+  validation accuracy:		70.00 %
+Epoch 97 of 500 took 5.600s
+  training loss:		0.618297
+  validation loss:		0.630342
+  validation accuracy:		63.75 %
+Epoch 98 of 500 took 5.603s
+  training loss:		0.627078
+  validation loss:		0.628914
+  validation accuracy:		65.00 %
+Epoch 99 of 500 took 5.603s
+  training loss:		0.629845
+  validation loss:		0.629417
+  validation accuracy:		63.75 %
+Epoch 100 of 500 took 5.609s
+  training loss:		0.634208
+  validation loss:		0.636581
+  validation accuracy:		58.75 %
+Epoch 101 of 500 took 5.600s
+  training loss:		0.642578
+  validation loss:		0.628254
+  validation accuracy:		67.50 %
+('Average Reconstruction Error -- ', 0.72247051851910116)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 102 of 500 took 5.802s
+  training loss:		0.624803
+  validation loss:		0.617635
+  validation accuracy:		67.50 %
+Epoch 103 of 500 took 5.806s
+  training loss:		0.630106
+  validation loss:		0.626303
+  validation accuracy:		62.50 %
+Epoch 104 of 500 took 6.270s
+  training loss:		0.623478
+  validation loss:		0.630973
+  validation accuracy:		62.50 %
+Epoch 105 of 500 took 5.687s
+  training loss:		0.622917
+  validation loss:		0.622611
+  validation accuracy:		66.25 %
+Epoch 106 of 500 took 6.576s
+  training loss:		0.624795
+  validation loss:		0.629195
+  validation accuracy:		63.75 %
+Epoch 107 of 500 took 5.689s
+  training loss:		0.633192
+  validation loss:		0.626510
+  validation accuracy:		67.50 %
+Epoch 108 of 500 took 5.715s
+  training loss:		0.625839
+  validation loss:		0.629889
+  validation accuracy:		65.00 %
+Epoch 109 of 500 took 5.640s
+  training loss:		0.625946
+  validation loss:		0.616668
+  validation accuracy:		67.50 %
+Epoch 110 of 500 took 5.794s
+  training loss:		0.619442
+  validation loss:		0.616478
+  validation accuracy:		68.75 %
+Epoch 111 of 500 took 5.798s
+  training loss:		0.626039
+  validation loss:		0.622331
+  validation accuracy:		65.00 %
+('Average Reconstruction Error -- ', 0.71374847278789533)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 112 of 500 took 5.759s
+  training loss:		0.625640
+  validation loss:		0.623578
+  validation accuracy:		67.50 %
+Epoch 113 of 500 took 5.801s
+  training loss:		0.622418
+  validation loss:		0.619393
+  validation accuracy:		72.50 %
+Epoch 114 of 500 took 5.787s
+  training loss:		0.629293
+  validation loss:		0.617548
+  validation accuracy:		71.25 %
+Epoch 115 of 500 took 5.611s
+  training loss:		0.623469
+  validation loss:		0.612606
+  validation accuracy:		71.25 %
+Epoch 116 of 500 took 5.784s
+  training loss:		0.619762
+  validation loss:		0.614968
+  validation accuracy:		73.75 %
+Epoch 117 of 500 took 5.615s
+  training loss:		0.623006
+  validation loss:		0.624173
+  validation accuracy:		66.25 %
+Epoch 118 of 500 took 5.803s
+  training loss:		0.617993
+  validation loss:		0.616653
+  validation accuracy:		67.50 %
+Epoch 119 of 500 took 5.799s
+  training loss:		0.628252
+  validation loss:		0.608648
+  validation accuracy:		70.00 %
+Epoch 120 of 500 took 5.603s
+  training loss:		0.614278
+  validation loss:		0.613432
+  validation accuracy:		72.50 %
+Epoch 121 of 500 took 5.787s
+  training loss:		0.614318
+  validation loss:		0.615463
+  validation accuracy:		75.00 %
+('Average Reconstruction Error -- ', 0.70615296316420606)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 122 of 500 took 5.701s
+  training loss:		0.618645
+  validation loss:		0.630581
+  validation accuracy:		71.25 %
+Epoch 123 of 500 took 5.600s
+  training loss:		0.620260
+  validation loss:		0.622259
+  validation accuracy:		71.25 %
+Epoch 124 of 500 took 5.599s
+  training loss:		0.617077
+  validation loss:		0.618667
+  validation accuracy:		72.50 %
+Epoch 125 of 500 took 6.238s
+  training loss:		0.620561
+  validation loss:		0.610627
+  validation accuracy:		72.50 %
+Epoch 126 of 500 took 5.698s
+  training loss:		0.630061
+  validation loss:		0.616109
+  validation accuracy:		75.00 %
+Epoch 127 of 500 took 5.678s
+  training loss:		0.615497
+  validation loss:		0.618331
+  validation accuracy:		72.50 %
+Epoch 128 of 500 took 5.592s
+  training loss:		0.620116
+  validation loss:		0.610876
+  validation accuracy:		66.25 %
+Epoch 129 of 500 took 5.614s
+  training loss:		0.604581
+  validation loss:		0.606618
+  validation accuracy:		75.00 %
+Epoch 130 of 500 took 5.577s
+  training loss:		0.612646
+  validation loss:		0.608065
+  validation accuracy:		76.25 %
+Epoch 131 of 500 took 5.642s
+  training loss:		0.611989
+  validation loss:		0.610978
+  validation accuracy:		71.25 %
+('Average Reconstruction Error -- ', 0.69935835022158999)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 132 of 500 took 7.071s
+  training loss:		0.617910
+  validation loss:		0.615507
+  validation accuracy:		72.50 %
+Epoch 133 of 500 took 5.991s
+  training loss:		0.611111
+  validation loss:		0.610363
+  validation accuracy:		67.50 %
+Epoch 134 of 500 took 5.994s
+  training loss:		0.608903
+  validation loss:		0.621750
+  validation accuracy:		71.25 %
+Epoch 135 of 500 took 6.264s
+  training loss:		0.614408
+  validation loss:		0.615619
+  validation accuracy:		76.25 %
+Epoch 136 of 500 took 6.694s
+  training loss:		0.612270
+  validation loss:		0.620350
+  validation accuracy:		72.50 %
+Epoch 137 of 500 took 6.239s
+  training loss:		0.606026
+  validation loss:		0.614322
+  validation accuracy:		73.75 %
+Epoch 138 of 500 took 6.019s
+  training loss:		0.600544
+  validation loss:		0.608957
+  validation accuracy:		73.75 %
+Epoch 139 of 500 took 5.835s
+  training loss:		0.619345
+  validation loss:		0.615590
+  validation accuracy:		67.50 %
+Epoch 140 of 500 took 5.724s
+  training loss:		0.602552
+  validation loss:		0.618661
+  validation accuracy:		67.50 %
+Epoch 141 of 500 took 5.528s
+  training loss:		0.612719
+  validation loss:		0.606073
+  validation accuracy:		67.50 %
+('Average Reconstruction Error -- ', 0.6930619292630843)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 142 of 500 took 5.637s
+  training loss:		0.606727
+  validation loss:		0.605427
+  validation accuracy:		72.50 %
+Epoch 143 of 500 took 5.948s
+  training loss:		0.593830
+  validation loss:		0.604049
+  validation accuracy:		72.50 %
+Epoch 144 of 500 took 5.806s
+  training loss:		0.602588
+  validation loss:		0.600016
+  validation accuracy:		71.25 %
+Epoch 145 of 500 took 5.698s
+  training loss:		0.607301
+  validation loss:		0.604786
+  validation accuracy:		76.25 %
+Epoch 146 of 500 took 5.793s
+  training loss:		0.603496
+  validation loss:		0.607412
+  validation accuracy:		73.75 %
+Epoch 147 of 500 took 5.813s
+  training loss:		0.597534
+  validation loss:		0.613441
+  validation accuracy:		70.00 %
+Epoch 148 of 500 took 5.774s
+  training loss:		0.604177
+  validation loss:		0.611920
+  validation accuracy:		72.50 %
+Epoch 149 of 500 took 5.644s
+  training loss:		0.609522
+  validation loss:		0.591748
+  validation accuracy:		81.25 %
+Epoch 150 of 500 took 5.779s
+  training loss:		0.609373
+  validation loss:		0.603856
+  validation accuracy:		73.75 %
+Epoch 151 of 500 took 5.777s
+  training loss:		0.602659
+  validation loss:		0.602054
+  validation accuracy:		71.25 %
+('Average Reconstruction Error -- ', 0.68714529547136372)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 152 of 500 took 7.026s
+  training loss:		0.606182
+  validation loss:		0.606607
+  validation accuracy:		75.00 %
+Epoch 153 of 500 took 6.293s
+  training loss:		0.608043
+  validation loss:		0.606962
+  validation accuracy:		75.00 %
+Epoch 154 of 500 took 6.305s
+  training loss:		0.604390
+  validation loss:		0.614802
+  validation accuracy:		68.75 %
+Epoch 155 of 500 took 5.906s
+  training loss:		0.606188
+  validation loss:		0.600949
+  validation accuracy:		73.75 %
+Epoch 156 of 500 took 5.775s
+  training loss:		0.606029
+  validation loss:		0.605109
+  validation accuracy:		73.75 %
+Epoch 157 of 500 took 5.779s
+  training loss:		0.603135
+  validation loss:		0.604775
+  validation accuracy:		77.50 %
+Epoch 158 of 500 took 5.638s
+  training loss:		0.612098
+  validation loss:		0.596735
+  validation accuracy:		80.00 %
+Epoch 159 of 500 took 5.586s
+  training loss:		0.606412
+  validation loss:		0.611369
+  validation accuracy:		68.75 %
+Epoch 160 of 500 took 5.930s
+  training loss:		0.600693
+  validation loss:		0.588325
+  validation accuracy:		82.50 %
+Epoch 161 of 500 took 5.646s
+  training loss:		0.591396
+  validation loss:		0.615310
+  validation accuracy:		72.50 %
+('Average Reconstruction Error -- ', 0.68200935456528533)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 162 of 500 took 5.779s
+  training loss:		0.592814
+  validation loss:		0.593683
+  validation accuracy:		73.75 %
+Epoch 163 of 500 took 5.610s
+  training loss:		0.607693
+  validation loss:		0.592579
+  validation accuracy:		76.25 %
+Epoch 164 of 500 took 5.496s
+  training loss:		0.592899
+  validation loss:		0.602356
+  validation accuracy:		75.00 %
+Epoch 165 of 500 took 6.351s
+  training loss:		0.603833
+  validation loss:		0.593198
+  validation accuracy:		80.00 %
+Epoch 166 of 500 took 6.225s
+  training loss:		0.596957
+  validation loss:		0.596952
+  validation accuracy:		78.75 %
+Epoch 167 of 500 took 5.976s
+  training loss:		0.597068
+  validation loss:		0.590336
+  validation accuracy:		77.50 %
+Epoch 168 of 500 took 5.632s
+  training loss:		0.604008
+  validation loss:		0.603565
+  validation accuracy:		80.00 %
+Epoch 169 of 500 took 5.585s
+  training loss:		0.600089
+  validation loss:		0.591520
+  validation accuracy:		77.50 %
+Epoch 170 of 500 took 5.414s
+  training loss:		0.593780
+  validation loss:		0.604759
+  validation accuracy:		70.00 %
+Epoch 171 of 500 took 5.587s
+  training loss:		0.601481
+  validation loss:		0.598069
+  validation accuracy:		77.50 %
+('Average Reconstruction Error -- ', 0.67715864028209383)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 172 of 500 took 5.493s
+  training loss:		0.587521
+  validation loss:		0.598582
+  validation accuracy:		72.50 %
+Epoch 173 of 500 took 5.597s
+  training loss:		0.591610
+  validation loss:		0.593378
+  validation accuracy:		80.00 %
+Epoch 174 of 500 took 5.607s
+  training loss:		0.599777
+  validation loss:		0.589969
+  validation accuracy:		78.75 %
+Epoch 175 of 500 took 5.601s
+  training loss:		0.607263
+  validation loss:		0.601300
+  validation accuracy:		72.50 %
+Epoch 176 of 500 took 5.595s
+  training loss:		0.601566
+  validation loss:		0.599814
+  validation accuracy:		73.75 %
+Epoch 177 of 500 took 5.602s
+  training loss:		0.592551
+  validation loss:		0.591314
+  validation accuracy:		78.75 %
+Epoch 178 of 500 took 5.601s
+  training loss:		0.603010
+  validation loss:		0.598365
+  validation accuracy:		68.75 %
+Epoch 179 of 500 took 5.605s
+  training loss:		0.604177
+  validation loss:		0.584310
+  validation accuracy:		81.25 %
+Epoch 180 of 500 took 5.596s
+  training loss:		0.597900
+  validation loss:		0.591051
+  validation accuracy:		75.00 %
+Epoch 181 of 500 took 5.608s
+  training loss:		0.597718
+  validation loss:		0.595220
+  validation accuracy:		76.25 %
+('Average Reconstruction Error -- ', 0.67280233588888338)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 182 of 500 took 5.485s
+  training loss:		0.584685
+  validation loss:		0.598419
+  validation accuracy:		78.75 %
+Epoch 183 of 500 took 5.595s
+  training loss:		0.586508
+  validation loss:		0.587655
+  validation accuracy:		78.75 %
+Epoch 184 of 500 took 5.602s
+  training loss:		0.595522
+  validation loss:		0.595854
+  validation accuracy:		73.75 %
+Epoch 185 of 500 took 5.599s
+  training loss:		0.584530
+  validation loss:		0.596842
+  validation accuracy:		76.25 %
+Epoch 186 of 500 took 5.599s
+  training loss:		0.593083
+  validation loss:		0.595404
+  validation accuracy:		76.25 %
+Epoch 187 of 500 took 5.604s
+  training loss:		0.587053
+  validation loss:		0.593327
+  validation accuracy:		77.50 %
+Epoch 188 of 500 took 5.601s
+  training loss:		0.590835
+  validation loss:		0.589331
+  validation accuracy:		77.50 %
+Epoch 189 of 500 took 5.601s
+  training loss:		0.589581
+  validation loss:		0.587833
+  validation accuracy:		82.50 %
+Epoch 190 of 500 took 5.607s
+  training loss:		0.589017
+  validation loss:		0.582419
+  validation accuracy:		85.00 %
+Epoch 191 of 500 took 5.599s
+  training loss:		0.591169
+  validation loss:		0.597690
+  validation accuracy:		71.25 %
+('Average Reconstruction Error -- ', 0.66842516022706711)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 192 of 500 took 5.586s
+  training loss:		0.595679
+  validation loss:		0.590174
+  validation accuracy:		78.75 %
+Epoch 193 of 500 took 5.601s
+  training loss:		0.578287
+  validation loss:		0.589568
+  validation accuracy:		82.50 %
+Epoch 194 of 500 took 5.600s
+  training loss:		0.590474
+  validation loss:		0.584219
+  validation accuracy:		81.25 %
+Epoch 195 of 500 took 5.602s
+  training loss:		0.587735
+  validation loss:		0.579644
+  validation accuracy:		85.00 %
+Epoch 196 of 500 took 5.602s
+  training loss:		0.594719
+  validation loss:		0.591484
+  validation accuracy:		73.75 %
+Epoch 197 of 500 took 5.600s
+  training loss:		0.582697
+  validation loss:		0.593511
+  validation accuracy:		80.00 %
+Epoch 198 of 500 took 5.604s
+  training loss:		0.593779
+  validation loss:		0.584929
+  validation accuracy:		82.50 %
+Epoch 199 of 500 took 5.611s
+  training loss:		0.595529
+  validation loss:		0.574647
+  validation accuracy:		78.75 %
+Epoch 200 of 500 took 5.592s
+  training loss:		0.604499
+  validation loss:		0.579453
+  validation accuracy:		83.75 %
+Epoch 201 of 500 took 5.596s
+  training loss:		0.577856
+  validation loss:		0.590600
+  validation accuracy:		77.50 %
+('Average Reconstruction Error -- ', 0.66452964555296867)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 202 of 500 took 5.544s
+  training loss:		0.576691
+  validation loss:		0.584937
+  validation accuracy:		81.25 %
+Epoch 203 of 500 took 5.605s
+  training loss:		0.604751
+  validation loss:		0.579847
+  validation accuracy:		85.00 %
+Epoch 204 of 500 took 5.595s
+  training loss:		0.567927
+  validation loss:		0.583383
+  validation accuracy:		77.50 %
+Epoch 205 of 500 took 5.615s
+  training loss:		0.579877
+  validation loss:		0.593808
+  validation accuracy:		72.50 %
+Epoch 206 of 500 took 5.592s
+  training loss:		0.587113
+  validation loss:		0.579529
+  validation accuracy:		83.75 %
+Epoch 207 of 500 took 5.601s
+  training loss:		0.584976
+  validation loss:		0.570527
+  validation accuracy:		82.50 %
+Epoch 208 of 500 took 5.603s
+  training loss:		0.583699
+  validation loss:		0.586984
+  validation accuracy:		80.00 %
+Epoch 209 of 500 took 5.609s
+  training loss:		0.584634
+  validation loss:		0.583664
+  validation accuracy:		82.50 %
+Epoch 210 of 500 took 5.587s
+  training loss:		0.590545
+  validation loss:		0.580117
+  validation accuracy:		80.00 %
+Epoch 211 of 500 took 5.606s
+  training loss:		0.579134
+  validation loss:		0.584657
+  validation accuracy:		81.25 %
+('Average Reconstruction Error -- ', 0.66070998429217465)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 212 of 500 took 5.628s
+  training loss:		0.580036
+  validation loss:		0.584432
+  validation accuracy:		81.25 %
+Epoch 213 of 500 took 5.599s
+  training loss:		0.590367
+  validation loss:		0.580379
+  validation accuracy:		78.75 %
+Epoch 214 of 500 took 5.607s
+  training loss:		0.577504
+  validation loss:		0.581400
+  validation accuracy:		85.00 %
+Epoch 215 of 500 took 5.601s
+  training loss:		0.581486
+  validation loss:		0.585693
+  validation accuracy:		80.00 %
+Epoch 216 of 500 took 5.599s
+  training loss:		0.580394
+  validation loss:		0.580935
+  validation accuracy:		77.50 %
+Epoch 217 of 500 took 5.602s
+  training loss:		0.574261
+  validation loss:		0.583601
+  validation accuracy:		80.00 %
+Epoch 218 of 500 took 5.600s
+  training loss:		0.580957
+  validation loss:		0.583093
+  validation accuracy:		81.25 %
+Epoch 219 of 500 took 5.605s
+  training loss:		0.577985
+  validation loss:		0.575966
+  validation accuracy:		81.25 %
+Epoch 220 of 500 took 5.598s
+  training loss:		0.585805
+  validation loss:		0.586273
+  validation accuracy:		75.00 %
+Epoch 221 of 500 took 5.602s
+  training loss:		0.576275
+  validation loss:		0.576380
+  validation accuracy:		85.00 %
+('Average Reconstruction Error -- ', 0.65708088719334556)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 222 of 500 took 5.545s
+  training loss:		0.578550
+  validation loss:		0.574756
+  validation accuracy:		81.25 %
+Epoch 223 of 500 took 5.597s
+  training loss:		0.578590
+  validation loss:		0.576791
+  validation accuracy:		82.50 %
+Epoch 224 of 500 took 5.604s
+  training loss:		0.572822
+  validation loss:		0.582170
+  validation accuracy:		82.50 %
+Epoch 225 of 500 took 5.601s
+  training loss:		0.572860
+  validation loss:		0.575438
+  validation accuracy:		78.75 %
+Epoch 226 of 500 took 5.604s
+  training loss:		0.580339
+  validation loss:		0.571990
+  validation accuracy:		78.75 %
+Epoch 227 of 500 took 5.601s
+  training loss:		0.574931
+  validation loss:		0.588924
+  validation accuracy:		75.00 %
+Epoch 228 of 500 took 5.602s
+  training loss:		0.578766
+  validation loss:		0.579228
+  validation accuracy:		83.75 %
+Epoch 229 of 500 took 5.602s
+  training loss:		0.576385
+  validation loss:		0.572458
+  validation accuracy:		77.50 %
+Epoch 230 of 500 took 5.600s
+  training loss:		0.577831
+  validation loss:		0.570143
+  validation accuracy:		78.75 %
+Epoch 231 of 500 took 5.602s
+  training loss:		0.578959
+  validation loss:		0.575340
+  validation accuracy:		83.75 %
+('Average Reconstruction Error -- ', 0.6536143292530433)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 232 of 500 took 5.593s
+  training loss:		0.569002
+  validation loss:		0.570138
+  validation accuracy:		80.00 %
+Epoch 233 of 500 took 5.602s
+  training loss:		0.571398
+  validation loss:		0.570823
+  validation accuracy:		81.25 %
+Epoch 234 of 500 took 5.603s
+  training loss:		0.582431
+  validation loss:		0.571786
+  validation accuracy:		85.00 %
+Epoch 235 of 500 took 5.602s
+  training loss:		0.576638
+  validation loss:		0.577002
+  validation accuracy:		76.25 %
+Epoch 236 of 500 took 5.605s
+  training loss:		0.570235
+  validation loss:		0.566875
+  validation accuracy:		85.00 %
+Epoch 237 of 500 took 5.599s
+  training loss:		0.574280
+  validation loss:		0.569788
+  validation accuracy:		81.25 %
+Epoch 238 of 500 took 5.599s
+  training loss:		0.571334
+  validation loss:		0.570178
+  validation accuracy:		85.00 %
+Epoch 239 of 500 took 5.602s
+  training loss:		0.581161
+  validation loss:		0.568823
+  validation accuracy:		83.75 %
+Epoch 240 of 500 took 5.605s
+  training loss:		0.577503
+  validation loss:		0.565810
+  validation accuracy:		77.50 %
+Epoch 241 of 500 took 5.600s
+  training loss:		0.571356
+  validation loss:		0.567451
+  validation accuracy:		82.50 %
+('Average Reconstruction Error -- ', 0.65033297699635562)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 242 of 500 took 5.520s
+  training loss:		0.579006
+  validation loss:		0.574204
+  validation accuracy:		81.25 %
+Epoch 243 of 500 took 5.593s
+  training loss:		0.569042
+  validation loss:		0.565958
+  validation accuracy:		80.00 %
+Epoch 244 of 500 took 5.603s
+  training loss:		0.563396
+  validation loss:		0.557312
+  validation accuracy:		83.75 %
+Epoch 245 of 500 took 5.777s
+  training loss:		0.571312
+  validation loss:		0.566522
+  validation accuracy:		81.25 %
+Epoch 246 of 500 took 5.716s
+  training loss:		0.582133
+  validation loss:		0.571663
+  validation accuracy:		76.25 %
+Epoch 247 of 500 took 5.613s
+  training loss:		0.565926
+  validation loss:		0.571386
+  validation accuracy:		81.25 %
+Epoch 248 of 500 took 5.604s
+  training loss:		0.574751
+  validation loss:		0.569853
+  validation accuracy:		83.75 %
+Epoch 249 of 500 took 5.599s
+  training loss:		0.580049
+  validation loss:		0.560358
+  validation accuracy:		86.25 %
+Epoch 250 of 500 took 5.520s
+  training loss:		0.571029
+  validation loss:		0.570828
+  validation accuracy:		81.25 %
+Epoch 251 of 500 took 5.667s
+  training loss:		0.571183
+  validation loss:		0.567978
+  validation accuracy:		82.50 %
+('Average Reconstruction Error -- ', 0.6472433247908842)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 252 of 500 took 5.800s
+  training loss:		0.563136
+  validation loss:		0.573611
+  validation accuracy:		82.50 %
+Epoch 253 of 500 took 5.835s
+  training loss:		0.575716
+  validation loss:		0.563782
+  validation accuracy:		83.75 %
+Epoch 254 of 500 took 5.774s
+  training loss:		0.566424
+  validation loss:		0.575827
+  validation accuracy:		80.00 %
+Epoch 255 of 500 took 5.811s
+  training loss:		0.561734
+  validation loss:		0.562218
+  validation accuracy:		85.00 %
+Epoch 256 of 500 took 5.803s
+  training loss:		0.568258
+  validation loss:		0.568509
+  validation accuracy:		81.25 %
+Epoch 257 of 500 took 5.799s
+  training loss:		0.572496
+  validation loss:		0.567363
+  validation accuracy:		85.00 %
+Epoch 258 of 500 took 5.802s
+  training loss:		0.578708
+  validation loss:		0.562656
+  validation accuracy:		83.75 %
+Epoch 259 of 500 took 5.696s
+  training loss:		0.564849
+  validation loss:		0.562475
+  validation accuracy:		82.50 %
+Epoch 260 of 500 took 5.699s
+  training loss:		0.547889
+  validation loss:		0.562082
+  validation accuracy:		82.50 %
+Epoch 261 of 500 took 5.811s
+  training loss:		0.570995
+  validation loss:		0.570442
+  validation accuracy:		80.00 %
+('Average Reconstruction Error -- ', 0.64416965685764505)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 262 of 500 took 5.733s
+  training loss:		0.562653
+  validation loss:		0.572713
+  validation accuracy:		81.25 %
+Epoch 263 of 500 took 5.582s
+  training loss:		0.556652
+  validation loss:		0.566982
+  validation accuracy:		82.50 %
+Epoch 264 of 500 took 5.797s
+  training loss:		0.567153
+  validation loss:		0.556246
+  validation accuracy:		78.75 %
+Epoch 265 of 500 took 5.819s
+  training loss:		0.564058
+  validation loss:		0.547366
+  validation accuracy:		86.25 %
+Epoch 266 of 500 took 5.795s
+  training loss:		0.557692
+  validation loss:		0.558378
+  validation accuracy:		80.00 %
+Epoch 267 of 500 took 5.790s
+  training loss:		0.562548
+  validation loss:		0.567411
+  validation accuracy:		80.00 %
+Epoch 268 of 500 took 5.615s
+  training loss:		0.567494
+  validation loss:		0.564099
+  validation accuracy:		82.50 %
+Epoch 269 of 500 took 5.586s
+  training loss:		0.557817
+  validation loss:		0.549775
+  validation accuracy:		83.75 %
+Epoch 270 of 500 took 5.803s
+  training loss:		0.560205
+  validation loss:		0.562682
+  validation accuracy:		83.75 %
+Epoch 271 of 500 took 5.609s
+  training loss:		0.573777
+  validation loss:		0.557769
+  validation accuracy:		85.00 %
+('Average Reconstruction Error -- ', 0.64117464926993573)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 272 of 500 took 5.862s
+  training loss:		0.560466
+  validation loss:		0.562787
+  validation accuracy:		82.50 %
+Epoch 273 of 500 took 5.800s
+  training loss:		0.564920
+  validation loss:		0.552041
+  validation accuracy:		81.25 %
+Epoch 274 of 500 took 5.800s
+  training loss:		0.564886
+  validation loss:		0.552617
+  validation accuracy:		86.25 %
+Epoch 275 of 500 took 5.804s
+  training loss:		0.558276
+  validation loss:		0.553602
+  validation accuracy:		83.75 %
+Epoch 276 of 500 took 5.790s
+  training loss:		0.549687
+  validation loss:		0.563664
+  validation accuracy:		82.50 %
+Epoch 277 of 500 took 5.813s
+  training loss:		0.559057
+  validation loss:		0.561210
+  validation accuracy:		77.50 %
+Epoch 278 of 500 took 5.785s
+  training loss:		0.556484
+  validation loss:		0.553691
+  validation accuracy:		83.75 %
+Epoch 279 of 500 took 5.813s
+  training loss:		0.555714
+  validation loss:		0.552561
+  validation accuracy:		82.50 %
+Epoch 280 of 500 took 5.795s
+  training loss:		0.580365
+  validation loss:		0.559667
+  validation accuracy:		81.25 %
+Epoch 281 of 500 took 5.795s
+  training loss:		0.564141
+  validation loss:		0.555255
+  validation accuracy:		83.75 %
+('Average Reconstruction Error -- ', 0.63833568334971857)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 282 of 500 took 5.708s
+  training loss:		0.562370
+  validation loss:		0.555112
+  validation accuracy:		81.25 %
+Epoch 283 of 500 took 5.799s
+  training loss:		0.562327
+  validation loss:		0.556531
+  validation accuracy:		83.75 %
+Epoch 284 of 500 took 5.616s
+  training loss:		0.563804
+  validation loss:		0.546037
+  validation accuracy:		83.75 %
+Epoch 285 of 500 took 5.782s
+  training loss:		0.544816
+  validation loss:		0.560979
+  validation accuracy:		81.25 %
+Epoch 286 of 500 took 5.625s
+  training loss:		0.563511
+  validation loss:		0.552352
+  validation accuracy:		85.00 %
+Epoch 287 of 500 took 5.800s
+  training loss:		0.564161
+  validation loss:		0.553915
+  validation accuracy:		85.00 %
+Epoch 288 of 500 took 5.705s
+  training loss:		0.555415
+  validation loss:		0.559507
+  validation accuracy:		82.50 %
+Epoch 289 of 500 took 5.691s
+  training loss:		0.557323
+  validation loss:		0.549449
+  validation accuracy:		81.25 %
+Epoch 290 of 500 took 5.803s
+  training loss:		0.552825
+  validation loss:		0.562447
+  validation accuracy:		86.25 %
+Epoch 291 of 500 took 5.604s
+  training loss:		0.559195
+  validation loss:		0.551474
+  validation accuracy:		82.50 %
+('Average Reconstruction Error -- ', 0.63559475622824146)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 292 of 500 took 5.583s
+  training loss:		0.548330
+  validation loss:		0.551122
+  validation accuracy:		83.75 %
+Epoch 293 of 500 took 5.592s
+  training loss:		0.552858
+  validation loss:		0.545914
+  validation accuracy:		86.25 %
+Epoch 294 of 500 took 5.667s
+  training loss:		0.558823
+  validation loss:		0.549912
+  validation accuracy:		85.00 %
+Epoch 295 of 500 took 5.580s
+  training loss:		0.541243
+  validation loss:		0.541735
+  validation accuracy:		85.00 %
+Epoch 296 of 500 took 5.609s
+  training loss:		0.557052
+  validation loss:		0.549737
+  validation accuracy:		86.25 %
+Epoch 297 of 500 took 5.611s
+  training loss:		0.553331
+  validation loss:		0.549827
+  validation accuracy:		83.75 %
+Epoch 298 of 500 took 5.802s
+  training loss:		0.554885
+  validation loss:		0.554494
+  validation accuracy:		80.00 %
+Epoch 299 of 500 took 5.589s
+  training loss:		0.550934
+  validation loss:		0.552136
+  validation accuracy:		82.50 %
+Epoch 300 of 500 took 5.791s
+  training loss:		0.556992
+  validation loss:		0.548995
+  validation accuracy:		87.50 %
+Epoch 301 of 500 took 5.611s
+  training loss:		0.555226
+  validation loss:		0.553920
+  validation accuracy:		80.00 %
+('Average Reconstruction Error -- ', 0.63284966015796817)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 302 of 500 took 5.770s
+  training loss:		0.529285
+  validation loss:		0.560916
+  validation accuracy:		81.25 %
+Epoch 303 of 500 took 5.589s
+  training loss:		0.558033
+  validation loss:		0.538394
+  validation accuracy:		85.00 %
+Epoch 304 of 500 took 5.808s
+  training loss:		0.547537
+  validation loss:		0.564708
+  validation accuracy:		77.50 %
+Epoch 305 of 500 took 5.721s
+  training loss:		0.545642
+  validation loss:		0.549657
+  validation accuracy:		82.50 %
+Epoch 306 of 500 took 5.688s
+  training loss:		0.551332
+  validation loss:		0.540669
+  validation accuracy:		85.00 %
+Epoch 307 of 500 took 5.810s
+  training loss:		0.551055
+  validation loss:		0.554776
+  validation accuracy:		78.75 %
+Epoch 308 of 500 took 5.811s
+  training loss:		0.554336
+  validation loss:		0.544649
+  validation accuracy:		83.75 %
+Epoch 309 of 500 took 5.797s
+  training loss:		0.554915
+  validation loss:		0.556379
+  validation accuracy:		83.75 %
+Epoch 310 of 500 took 5.703s
+  training loss:		0.548080
+  validation loss:		0.540080
+  validation accuracy:		83.75 %
+Epoch 311 of 500 took 5.699s
+  training loss:		0.542330
+  validation loss:		0.554181
+  validation accuracy:		82.50 %
+('Average Reconstruction Error -- ', 0.6301295615394239)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 312 of 500 took 5.789s
+  training loss:		0.540891
+  validation loss:		0.542513
+  validation accuracy:		85.00 %
+Epoch 313 of 500 took 5.638s
+  training loss:		0.550980
+  validation loss:		0.548967
+  validation accuracy:		85.00 %
+Epoch 314 of 500 took 5.779s
+  training loss:		0.551817
+  validation loss:		0.546518
+  validation accuracy:		82.50 %
+Epoch 315 of 500 took 5.622s
+  training loss:		0.544772
+  validation loss:		0.549558
+  validation accuracy:		83.75 %
+Epoch 316 of 500 took 5.723s
+  training loss:		0.539099
+  validation loss:		0.546732
+  validation accuracy:		85.00 %
+Epoch 317 of 500 took 5.651s
+  training loss:		0.549991
+  validation loss:		0.545500
+  validation accuracy:		82.50 %
+Epoch 318 of 500 took 5.809s
+  training loss:		0.556368
+  validation loss:		0.558191
+  validation accuracy:		82.50 %
+Epoch 319 of 500 took 5.823s
+  training loss:		0.550122
+  validation loss:		0.547979
+  validation accuracy:		83.75 %
+Epoch 320 of 500 took 5.783s
+  training loss:		0.536251
+  validation loss:		0.546500
+  validation accuracy:		81.25 %
+Epoch 321 of 500 took 5.601s
+  training loss:		0.545445
+  validation loss:		0.543425
+  validation accuracy:		83.75 %
+('Average Reconstruction Error -- ', 0.62752657509944687)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 322 of 500 took 5.898s
+  training loss:		0.557702
+  validation loss:		0.541059
+  validation accuracy:		85.00 %
+Epoch 323 of 500 took 5.803s
+  training loss:		0.543087
+  validation loss:		0.540355
+  validation accuracy:		81.25 %
+Epoch 324 of 500 took 5.803s
+  training loss:		0.538267
+  validation loss:		0.538424
+  validation accuracy:		87.50 %
+Epoch 325 of 500 took 5.801s
+  training loss:		0.556182
+  validation loss:		0.542530
+  validation accuracy:		82.50 %
+Epoch 326 of 500 took 5.800s
+  training loss:		0.550816
+  validation loss:		0.536491
+  validation accuracy:		86.25 %
+Epoch 327 of 500 took 5.594s
+  training loss:		0.543978
+  validation loss:		0.542135
+  validation accuracy:		87.50 %
+Epoch 328 of 500 took 5.804s
+  training loss:		0.538229
+  validation loss:		0.543646
+  validation accuracy:		81.25 %
+Epoch 329 of 500 took 5.800s
+  training loss:		0.544872
+  validation loss:		0.541237
+  validation accuracy:		82.50 %
+Epoch 330 of 500 took 5.803s
+  training loss:		0.548604
+  validation loss:		0.539981
+  validation accuracy:		83.75 %
+Epoch 331 of 500 took 5.602s
+  training loss:		0.544224
+  validation loss:		0.543767
+  validation accuracy:		83.75 %
+('Average Reconstruction Error -- ', 0.62508154126981286)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 332 of 500 took 5.627s
+  training loss:		0.534871
+  validation loss:		0.538288
+  validation accuracy:		86.25 %
+Epoch 333 of 500 took 5.598s
+  training loss:		0.536536
+  validation loss:		0.544456
+  validation accuracy:		81.25 %
+Epoch 334 of 500 took 5.602s
+  training loss:		0.533590
+  validation loss:		0.544801
+  validation accuracy:		82.50 %
+Epoch 335 of 500 took 5.602s
+  training loss:		0.543677
+  validation loss:		0.548837
+  validation accuracy:		80.00 %
+Epoch 336 of 500 took 5.593s
+  training loss:		0.540634
+  validation loss:		0.533490
+  validation accuracy:		82.50 %
+Epoch 337 of 500 took 5.614s
+  training loss:		0.542992
+  validation loss:		0.539418
+  validation accuracy:		82.50 %
+Epoch 338 of 500 took 5.586s
+  training loss:		0.542861
+  validation loss:		0.541601
+  validation accuracy:		80.00 %
+Epoch 339 of 500 took 5.602s
+  training loss:		0.540617
+  validation loss:		0.534637
+  validation accuracy:		82.50 %
+Epoch 340 of 500 took 5.603s
+  training loss:		0.547047
+  validation loss:		0.541352
+  validation accuracy:		85.00 %
+Epoch 341 of 500 took 5.609s
+  training loss:		0.547465
+  validation loss:		0.544537
+  validation accuracy:		81.25 %
+('Average Reconstruction Error -- ', 0.62261666498509705)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 342 of 500 took 5.771s
+  training loss:		0.531299
+  validation loss:		0.538479
+  validation accuracy:		82.50 %
+Epoch 343 of 500 took 5.628s
+  training loss:		0.535908
+  validation loss:		0.537109
+  validation accuracy:		83.75 %
+Epoch 344 of 500 took 5.769s
+  training loss:		0.543928
+  validation loss:		0.534901
+  validation accuracy:		83.75 %
+Epoch 345 of 500 took 5.615s
+  training loss:		0.538281
+  validation loss:		0.538821
+  validation accuracy:		83.75 %
+Epoch 346 of 500 took 5.790s
+  training loss:		0.528894
+  validation loss:		0.530987
+  validation accuracy:		85.00 %
+Epoch 347 of 500 took 5.615s
+  training loss:		0.529839
+  validation loss:		0.540401
+  validation accuracy:		86.25 %
+Epoch 348 of 500 took 5.790s
+  training loss:		0.532102
+  validation loss:		0.537493
+  validation accuracy:		83.75 %
+Epoch 349 of 500 took 5.603s
+  training loss:		0.532692
+  validation loss:		0.538481
+  validation accuracy:		85.00 %
+Epoch 350 of 500 took 5.803s
+  training loss:		0.533665
+  validation loss:		0.543106
+  validation accuracy:		81.25 %
+Epoch 351 of 500 took 5.792s
+  training loss:		0.539088
+  validation loss:		0.528344
+  validation accuracy:		88.75 %
+('Average Reconstruction Error -- ', 0.62010820229999797)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 352 of 500 took 5.675s
+  training loss:		0.531779
+  validation loss:		0.542107
+  validation accuracy:		82.50 %
+Epoch 353 of 500 took 5.608s
+  training loss:		0.527953
+  validation loss:		0.533226
+  validation accuracy:		86.25 %
+Epoch 354 of 500 took 5.627s
+  training loss:		0.538222
+  validation loss:		0.538353
+  validation accuracy:		83.75 %
+Epoch 355 of 500 took 5.576s
+  training loss:		0.530196
+  validation loss:		0.536693
+  validation accuracy:		85.00 %
+Epoch 356 of 500 took 5.566s
+  training loss:		0.530942
+  validation loss:		0.534031
+  validation accuracy:		85.00 %
+Epoch 357 of 500 took 5.631s
+  training loss:		0.540091
+  validation loss:		0.536505
+  validation accuracy:		82.50 %
+Epoch 358 of 500 took 5.615s
+  training loss:		0.525936
+  validation loss:		0.531515
+  validation accuracy:		85.00 %
+Epoch 359 of 500 took 5.604s
+  training loss:		0.527429
+  validation loss:		0.529309
+  validation accuracy:		87.50 %
+Epoch 360 of 500 took 5.593s
+  training loss:		0.529466
+  validation loss:		0.537117
+  validation accuracy:		85.00 %
+Epoch 361 of 500 took 5.617s
+  training loss:		0.536245
+  validation loss:		0.534861
+  validation accuracy:		85.00 %
+('Average Reconstruction Error -- ', 0.61766270790968925)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 362 of 500 took 5.556s
+  training loss:		0.535829
+  validation loss:		0.534375
+  validation accuracy:		87.50 %
+Epoch 363 of 500 took 5.643s
+  training loss:		0.539712
+  validation loss:		0.533098
+  validation accuracy:		85.00 %
+Epoch 364 of 500 took 5.560s
+  training loss:		0.524722
+  validation loss:		0.529916
+  validation accuracy:		83.75 %
+Epoch 365 of 500 took 5.587s
+  training loss:		0.531080
+  validation loss:		0.521437
+  validation accuracy:		85.00 %
+Epoch 366 of 500 took 5.611s
+  training loss:		0.530215
+  validation loss:		0.523976
+  validation accuracy:		87.50 %
+Epoch 367 of 500 took 5.601s
+  training loss:		0.522226
+  validation loss:		0.542210
+  validation accuracy:		86.25 %
+Epoch 368 of 500 took 5.647s
+  training loss:		0.531064
+  validation loss:		0.529348
+  validation accuracy:		86.25 %
+Epoch 369 of 500 took 5.611s
+  training loss:		0.530143
+  validation loss:		0.527919
+  validation accuracy:		82.50 %
+Epoch 370 of 500 took 5.610s
+  training loss:		0.536115
+  validation loss:		0.525009
+  validation accuracy:		82.50 %
+Epoch 371 of 500 took 5.597s
+  training loss:		0.531951
+  validation loss:		0.520903
+  validation accuracy:		87.50 %
+('Average Reconstruction Error -- ', 0.61533502763680337)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 372 of 500 took 5.718s
+  training loss:		0.526578
+  validation loss:		0.521696
+  validation accuracy:		86.25 %
+Epoch 373 of 500 took 5.784s
+  training loss:		0.535831
+  validation loss:		0.525099
+  validation accuracy:		87.50 %
+Epoch 374 of 500 took 5.609s
+  training loss:		0.536030
+  validation loss:		0.534125
+  validation accuracy:		82.50 %
+Epoch 375 of 500 took 5.613s
+  training loss:		0.524102
+  validation loss:		0.534393
+  validation accuracy:		83.75 %
+Epoch 376 of 500 took 5.592s
+  training loss:		0.529903
+  validation loss:		0.528329
+  validation accuracy:		85.00 %
+Epoch 377 of 500 took 5.594s
+  training loss:		0.524260
+  validation loss:		0.519476
+  validation accuracy:		90.00 %
+Epoch 378 of 500 took 5.620s
+  training loss:		0.530242
+  validation loss:		0.526466
+  validation accuracy:		85.00 %
+Epoch 379 of 500 took 5.783s
+  training loss:		0.532194
+  validation loss:		0.517597
+  validation accuracy:		86.25 %
+Epoch 380 of 500 took 5.618s
+  training loss:		0.527652
+  validation loss:		0.526910
+  validation accuracy:		82.50 %
+Epoch 381 of 500 took 5.585s
+  training loss:		0.537728
+  validation loss:		0.523682
+  validation accuracy:		87.50 %
+('Average Reconstruction Error -- ', 0.61310712936391043)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 382 of 500 took 5.622s
+  training loss:		0.529364
+  validation loss:		0.519576
+  validation accuracy:		81.25 %
+Epoch 383 of 500 took 5.683s
+  training loss:		0.532539
+  validation loss:		0.518476
+  validation accuracy:		87.50 %
+Epoch 384 of 500 took 5.713s
+  training loss:		0.525792
+  validation loss:		0.519062
+  validation accuracy:		83.75 %
+Epoch 385 of 500 took 5.661s
+  training loss:		0.531180
+  validation loss:		0.528229
+  validation accuracy:		83.75 %
+Epoch 386 of 500 took 5.557s
+  training loss:		0.521402
+  validation loss:		0.524302
+  validation accuracy:		83.75 %
+Epoch 387 of 500 took 5.585s
+  training loss:		0.527030
+  validation loss:		0.516936
+  validation accuracy:		83.75 %
+Epoch 388 of 500 took 5.610s
+  training loss:		0.519017
+  validation loss:		0.523056
+  validation accuracy:		83.75 %
+Epoch 389 of 500 took 5.696s
+  training loss:		0.523915
+  validation loss:		0.519089
+  validation accuracy:		86.25 %
+Epoch 390 of 500 took 5.802s
+  training loss:		0.519400
+  validation loss:		0.532937
+  validation accuracy:		82.50 %
+Epoch 391 of 500 took 6.349s
+  training loss:		0.520323
+  validation loss:		0.521358
+  validation accuracy:		86.25 %
+('Average Reconstruction Error -- ', 0.6108536536066661)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 392 of 500 took 6.932s
+  training loss:		0.534330
+  validation loss:		0.534243
+  validation accuracy:		83.75 %
+Epoch 393 of 500 took 6.734s
+  training loss:		0.525641
+  validation loss:		0.521704
+  validation accuracy:		83.75 %
+Epoch 394 of 500 took 5.932s
+  training loss:		0.518351
+  validation loss:		0.524449
+  validation accuracy:		82.50 %
+Epoch 395 of 500 took 5.795s
+  training loss:		0.514055
+  validation loss:		0.517994
+  validation accuracy:		85.00 %
+Epoch 396 of 500 took 5.774s
+  training loss:		0.531699
+  validation loss:		0.516665
+  validation accuracy:		86.25 %
+Epoch 397 of 500 took 5.825s
+  training loss:		0.529366
+  validation loss:		0.534257
+  validation accuracy:		86.25 %
+Epoch 398 of 500 took 5.792s
+  training loss:		0.520621
+  validation loss:		0.524539
+  validation accuracy:		85.00 %
+Epoch 399 of 500 took 5.796s
+  training loss:		0.516063
+  validation loss:		0.516771
+  validation accuracy:		87.50 %
+Epoch 400 of 500 took 5.809s
+  training loss:		0.512428
+  validation loss:		0.520087
+  validation accuracy:		85.00 %
+Epoch 401 of 500 took 5.693s
+  training loss:		0.511844
+  validation loss:		0.515067
+  validation accuracy:		83.75 %
+('Average Reconstruction Error -- ', 0.60862388105018317)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 402 of 500 took 5.667s
+  training loss:		0.525468
+  validation loss:		0.533286
+  validation accuracy:		83.75 %
+Epoch 403 of 500 took 5.601s
+  training loss:		0.519103
+  validation loss:		0.517594
+  validation accuracy:		83.75 %
+Epoch 404 of 500 took 5.796s
+  training loss:		0.522717
+  validation loss:		0.517809
+  validation accuracy:		88.75 %
+Epoch 405 of 500 took 5.800s
+  training loss:		0.522233
+  validation loss:		0.522317
+  validation accuracy:		86.25 %
+Epoch 406 of 500 took 5.612s
+  training loss:		0.507336
+  validation loss:		0.514184
+  validation accuracy:		87.50 %
+Epoch 407 of 500 took 5.801s
+  training loss:		0.506634
+  validation loss:		0.515117
+  validation accuracy:		85.00 %
+Epoch 408 of 500 took 5.627s
+  training loss:		0.523344
+  validation loss:		0.511599
+  validation accuracy:		87.50 %
+Epoch 409 of 500 took 5.786s
+  training loss:		0.514847
+  validation loss:		0.518763
+  validation accuracy:		82.50 %
+Epoch 410 of 500 took 5.616s
+  training loss:		0.523700
+  validation loss:		0.524139
+  validation accuracy:		86.25 %
+Epoch 411 of 500 took 5.795s
+  training loss:		0.530792
+  validation loss:		0.516420
+  validation accuracy:		88.75 %
+('Average Reconstruction Error -- ', 0.60645827199469537)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 412 of 500 took 5.763s
+  training loss:		0.521402
+  validation loss:		0.516632
+  validation accuracy:		85.00 %
+Epoch 413 of 500 took 6.206s
+  training loss:		0.515410
+  validation loss:		0.513238
+  validation accuracy:		86.25 %
+Epoch 414 of 500 took 6.035s
+  training loss:		0.509754
+  validation loss:		0.507515
+  validation accuracy:		85.00 %
+Epoch 415 of 500 took 5.793s
+  training loss:		0.511802
+  validation loss:		0.520324
+  validation accuracy:		86.25 %
+Epoch 416 of 500 took 6.088s
+  training loss:		0.518601
+  validation loss:		0.514026
+  validation accuracy:		85.00 %
+Epoch 417 of 500 took 5.965s
+  training loss:		0.513728
+  validation loss:		0.523138
+  validation accuracy:		85.00 %
+Epoch 418 of 500 took 6.023s
+  training loss:		0.513906
+  validation loss:		0.516833
+  validation accuracy:		85.00 %
+Epoch 419 of 500 took 5.746s
+  training loss:		0.520370
+  validation loss:		0.518577
+  validation accuracy:		85.00 %
+Epoch 420 of 500 took 5.773s
+  training loss:		0.521963
+  validation loss:		0.507572
+  validation accuracy:		82.50 %
+Epoch 421 of 500 took 6.201s
+  training loss:		0.506264
+  validation loss:		0.526382
+  validation accuracy:		83.75 %
+('Average Reconstruction Error -- ', 0.60429346669915773)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 422 of 500 took 5.883s
+  training loss:		0.516521
+  validation loss:		0.522377
+  validation accuracy:		83.75 %
+Epoch 423 of 500 took 5.804s
+  training loss:		0.516390
+  validation loss:		0.510990
+  validation accuracy:		87.50 %
+Epoch 424 of 500 took 5.793s
+  training loss:		0.523400
+  validation loss:		0.511487
+  validation accuracy:		83.75 %
+Epoch 425 of 500 took 5.785s
+  training loss:		0.500628
+  validation loss:		0.505447
+  validation accuracy:		91.25 %
+Epoch 426 of 500 took 5.815s
+  training loss:		0.496671
+  validation loss:		0.510883
+  validation accuracy:		87.50 %
+Epoch 427 of 500 took 5.788s
+  training loss:		0.504434
+  validation loss:		0.512984
+  validation accuracy:		82.50 %
+Epoch 428 of 500 took 5.795s
+  training loss:		0.517063
+  validation loss:		0.512056
+  validation accuracy:		82.50 %
+Epoch 429 of 500 took 5.800s
+  training loss:		0.515294
+  validation loss:		0.510781
+  validation accuracy:		88.75 %
+Epoch 430 of 500 took 5.602s
+  training loss:		0.509473
+  validation loss:		0.507485
+  validation accuracy:		82.50 %
+Epoch 431 of 500 took 5.809s
+  training loss:		0.505603
+  validation loss:		0.510462
+  validation accuracy:		83.75 %
+('Average Reconstruction Error -- ', 0.60211839122078403)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 432 of 500 took 5.776s
+  training loss:		0.521891
+  validation loss:		0.511870
+  validation accuracy:		87.50 %
+Epoch 433 of 500 took 5.797s
+  training loss:		0.514559
+  validation loss:		0.511626
+  validation accuracy:		85.00 %
+Epoch 434 of 500 took 5.613s
+  training loss:		0.499261
+  validation loss:		0.515270
+  validation accuracy:		85.00 %
+Epoch 435 of 500 took 5.779s
+  training loss:		0.513192
+  validation loss:		0.516590
+  validation accuracy:		85.00 %
+Epoch 436 of 500 took 5.601s
+  training loss:		0.505895
+  validation loss:		0.510460
+  validation accuracy:		85.00 %
+Epoch 437 of 500 took 5.801s
+  training loss:		0.508110
+  validation loss:		0.515192
+  validation accuracy:		86.25 %
+Epoch 438 of 500 took 5.800s
+  training loss:		0.509490
+  validation loss:		0.508137
+  validation accuracy:		91.25 %
+Epoch 439 of 500 took 5.807s
+  training loss:		0.506642
+  validation loss:		0.503451
+  validation accuracy:		87.50 %
+Epoch 440 of 500 took 5.800s
+  training loss:		0.505430
+  validation loss:		0.506497
+  validation accuracy:		86.25 %
+Epoch 441 of 500 took 5.801s
+  training loss:		0.505201
+  validation loss:		0.515400
+  validation accuracy:		83.75 %
+('Average Reconstruction Error -- ', 0.60000611616030486)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 442 of 500 took 5.695s
+  training loss:		0.518268
+  validation loss:		0.511899
+  validation accuracy:		85.00 %
+Epoch 443 of 500 took 5.606s
+  training loss:		0.514266
+  validation loss:		0.504125
+  validation accuracy:		86.25 %
+Epoch 444 of 500 took 5.795s
+  training loss:		0.512472
+  validation loss:		0.512118
+  validation accuracy:		83.75 %
+Epoch 445 of 500 took 5.802s
+  training loss:		0.507134
+  validation loss:		0.501968
+  validation accuracy:		87.50 %
+Epoch 446 of 500 took 5.622s
+  training loss:		0.508351
+  validation loss:		0.497708
+  validation accuracy:		85.00 %
+Epoch 447 of 500 took 5.783s
+  training loss:		0.502310
+  validation loss:		0.507757
+  validation accuracy:		85.00 %
+Epoch 448 of 500 took 5.621s
+  training loss:		0.505867
+  validation loss:		0.500903
+  validation accuracy:		83.75 %
+Epoch 449 of 500 took 5.784s
+  training loss:		0.507246
+  validation loss:		0.497871
+  validation accuracy:		87.50 %
+Epoch 450 of 500 took 5.618s
+  training loss:		0.501290
+  validation loss:		0.496334
+  validation accuracy:		85.00 %
+Epoch 451 of 500 took 5.789s
+  training loss:		0.501304
+  validation loss:		0.498488
+  validation accuracy:		87.50 %
+('Average Reconstruction Error -- ', 0.59796276161998707)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 452 of 500 took 5.716s
+  training loss:		0.506277
+  validation loss:		0.495867
+  validation accuracy:		86.25 %
+Epoch 453 of 500 took 5.607s
+  training loss:		0.505410
+  validation loss:		0.502436
+  validation accuracy:		85.00 %
+Epoch 454 of 500 took 5.594s
+  training loss:		0.498880
+  validation loss:		0.502062
+  validation accuracy:		85.00 %
+Epoch 455 of 500 took 5.616s
+  training loss:		0.507464
+  validation loss:		0.518275
+  validation accuracy:		82.50 %
+Epoch 456 of 500 took 5.595s
+  training loss:		0.497831
+  validation loss:		0.506731
+  validation accuracy:		85.00 %
+Epoch 457 of 500 took 5.794s
+  training loss:		0.504747
+  validation loss:		0.504383
+  validation accuracy:		83.75 %
+Epoch 458 of 500 took 5.618s
+  training loss:		0.505488
+  validation loss:		0.496500
+  validation accuracy:		87.50 %
+Epoch 459 of 500 took 5.794s
+  training loss:		0.504464
+  validation loss:		0.500155
+  validation accuracy:		86.25 %
+Epoch 460 of 500 took 5.608s
+  training loss:		0.502139
+  validation loss:		0.508417
+  validation accuracy:		86.25 %
+Epoch 461 of 500 took 5.791s
+  training loss:		0.499004
+  validation loss:		0.501401
+  validation accuracy:		87.50 %
+('Average Reconstruction Error -- ', 0.59590652740701466)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 462 of 500 took 5.610s
+  training loss:		0.501485
+  validation loss:		0.499003
+  validation accuracy:		88.75 %
+Epoch 463 of 500 took 5.599s
+  training loss:		0.498334
+  validation loss:		0.508871
+  validation accuracy:		86.25 %
+Epoch 464 of 500 took 5.613s
+  training loss:		0.507712
+  validation loss:		0.510516
+  validation accuracy:		83.75 %
+Epoch 465 of 500 took 5.595s
+  training loss:		0.499031
+  validation loss:		0.499536
+  validation accuracy:		87.50 %
+Epoch 466 of 500 took 5.615s
+  training loss:		0.499489
+  validation loss:		0.508477
+  validation accuracy:		86.25 %
+Epoch 467 of 500 took 5.611s
+  training loss:		0.500176
+  validation loss:		0.500384
+  validation accuracy:		86.25 %
+Epoch 468 of 500 took 5.701s
+  training loss:		0.499569
+  validation loss:		0.499907
+  validation accuracy:		83.75 %
+Epoch 469 of 500 took 5.600s
+  training loss:		0.497214
+  validation loss:		0.494426
+  validation accuracy:		86.25 %
+Epoch 470 of 500 took 5.603s
+  training loss:		0.495173
+  validation loss:		0.497904
+  validation accuracy:		88.75 %
+Epoch 471 of 500 took 5.603s
+  training loss:		0.500664
+  validation loss:		0.505988
+  validation accuracy:		85.00 %
+('Average Reconstruction Error -- ', 0.59386784551429606)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 472 of 500 took 5.621s
+  training loss:		0.498739
+  validation loss:		0.497002
+  validation accuracy:		85.00 %
+Epoch 473 of 500 took 5.515s
+  training loss:		0.503231
+  validation loss:		0.493470
+  validation accuracy:		88.75 %
+Epoch 474 of 500 took 5.409s
+  training loss:		0.502945
+  validation loss:		0.499782
+  validation accuracy:		83.75 %
+Epoch 475 of 500 took 5.587s
+  training loss:		0.499985
+  validation loss:		0.488857
+  validation accuracy:		86.25 %
+Epoch 476 of 500 took 5.412s
+  training loss:		0.493549
+  validation loss:		0.492233
+  validation accuracy:		87.50 %
+Epoch 477 of 500 took 5.588s
+  training loss:		0.503730
+  validation loss:		0.488509
+  validation accuracy:		86.25 %
+Epoch 478 of 500 took 5.417s
+  training loss:		0.507366
+  validation loss:		0.498758
+  validation accuracy:		83.75 %
+Epoch 479 of 500 took 5.588s
+  training loss:		0.494661
+  validation loss:		0.505174
+  validation accuracy:		83.75 %
+Epoch 480 of 500 took 5.419s
+  training loss:		0.492411
+  validation loss:		0.488005
+  validation accuracy:		86.25 %
+Epoch 481 of 500 took 5.584s
+  training loss:		0.502562
+  validation loss:		0.499163
+  validation accuracy:		87.50 %
+('Average Reconstruction Error -- ', 0.59191462423673524)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 482 of 500 took 5.522s
+  training loss:		0.497649
+  validation loss:		0.497286
+  validation accuracy:		87.50 %
+Epoch 483 of 500 took 5.609s
+  training loss:		0.496059
+  validation loss:		0.499594
+  validation accuracy:		85.00 %
+Epoch 484 of 500 took 5.592s
+  training loss:		0.492702
+  validation loss:		0.505988
+  validation accuracy:		85.00 %
+Epoch 485 of 500 took 5.602s
+  training loss:		0.509261
+  validation loss:		0.488851
+  validation accuracy:		88.75 %
+Epoch 486 of 500 took 5.602s
+  training loss:		0.495111
+  validation loss:		0.499683
+  validation accuracy:		85.00 %
+Epoch 487 of 500 took 5.602s
+  training loss:		0.498003
+  validation loss:		0.492839
+  validation accuracy:		85.00 %
+Epoch 488 of 500 took 5.604s
+  training loss:		0.500771
+  validation loss:		0.496781
+  validation accuracy:		86.25 %
+Epoch 489 of 500 took 5.603s
+  training loss:		0.498364
+  validation loss:		0.496313
+  validation accuracy:		88.75 %
+Epoch 490 of 500 took 5.597s
+  training loss:		0.488976
+  validation loss:		0.491605
+  validation accuracy:		86.25 %
+Epoch 491 of 500 took 5.608s
+  training loss:		0.502242
+  validation loss:		0.487635
+  validation accuracy:		88.75 %
+('Average Reconstruction Error -- ', 0.59000014679777624)
+Plotting the learning curve .........
+Plotting the valid learning curve .........
+Plotting the accuracy curve .........
+Network Parameters saved!!!!!!!!
+Running prediction function on Validation data
+Epoch 492 of 500 took 5.700s
+  training loss:		0.494045
+  validation loss:		0.489037
+  validation accuracy:		90.00 %
+Epoch 493 of 500 took 5.560s
+  training loss:		0.491164
+  validation loss:		0.484680
+  validation accuracy:		88.75 %
+Epoch 494 of 500 took 5.595s
+  training loss:		0.507174
+  validation loss:		0.494658
+  validation accuracy:		85.00 %
+Epoch 495 of 500 took 5.601s
+  training loss:		0.491835
+  validation loss:		0.500131
+  validation accuracy:		86.25 %
+Epoch 496 of 500 took 5.599s
+  training loss:		0.498893
+  validation loss:		0.486563
+  validation accuracy:		87.50 %
+Epoch 497 of 500 took 5.603s
+  training loss:		0.495540
+  validation loss:		0.490528
+  validation accuracy:		85.00 %
+Epoch 498 of 500 took 5.597s
+  training loss:		0.496789
+  validation loss:		0.488938
+  validation accuracy:		87.50 %
+Epoch 499 of 500 took 5.602s
+  training loss:		0.489360
+  validation loss:		0.487671
+  validation accuracy:		87.50 %
+Epoch 500 of 500 took 5.604s
+  training loss:		0.481972
+  validation loss:		0.499507
+  validation accuracy:		85.00 %
+('Get all the Update Values : ', OrderedDict([(W, Elemwise{add,no_inplace}.0), (b, Elemwise{add,no_inplace}.0), (W, Elemwise{add,no_inplace}.0), (b, Elemwise{add,no_inplace}.0), (W, Elemwise{add,no_inplace}.0), (b, Elemwise{add,no_inplace}.0), (W, Elemwise{add,no_inplace}.0), (b, Elemwise{add,no_inplace}.0), (W, Elemwise{add,no_inplace}.0), (b, Elemwise{add,no_inplace}.0), (W, Elemwise{add,no_inplace}.0), (b, Elemwise{add,no_inplace}.0), (W, Elemwise{add,no_inplace}.0), (b, Elemwise{add,no_inplace}.0), (<TensorType(float64, 4D)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, vector)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, 4D)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, vector)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, 4D)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, vector)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, 4D)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, vector)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, matrix)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, vector)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, matrix)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, vector)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, matrix)>, Elemwise{sub,no_inplace}.0), (<TensorType(float64, vector)>, Elemwise{sub,no_inplace}.0)]))
+('Bottleneck params # 3 ', Softmax.0)
+Visualizing Saliency map .........
+Saving T-sne vector
+Visualizing t-sne
+('BN VECTOR ------', (80, 512))
+('Tsne vector shape ----------- ', (80, 2))
+('Done -- ', 0, '/', 80)
+Creating hdf5 file for Salinecy maps saving to ./output_files/.......

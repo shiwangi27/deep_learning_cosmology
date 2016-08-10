@@ -1,0 +1,1 @@
+data_dir = '/global/cscratch1/sd/ssingh79/data/'
