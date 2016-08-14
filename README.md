@@ -1,8 +1,10 @@
 # deep_learning_cosmology
-<b> Deep Learning on Cosmology Maps </b>
+<b> Deep Learning on Cosmology Maps </b> </br>
+
 This repo includes following model coded in Theano and Lasagne working at NERSC@Berkeley Labs. We ran code on <a href="http://www.nersc.gov/users/computational-systems/cori/">Cori</a>. </br>
-Denoising Convolutional Autoencoders </br>
-Supervised Convolutional NN </br>
+
+1. Denoising Convolutional Autoencoders </br>
+2. Supervised Convolutional Network Network </br>
 
 Also includes -- </br> 
 Visualization of features learned in Deep Learning </br> 
@@ -29,4 +31,8 @@ Have the deeplearing environment with the following installed : </br>
 7. matplotlib </br>
 
 References : 
+<a href= "https://lasagne.readthedocs.io/en/latest/">Lasagne </a> tutorials  </br>
+<a href= "http://www.nersc.gov/users/data-analytics/data-analytics/deep-learning/">Cori Deep Learning environment at NERSC </a>  </br>
+http://cs231n.github.io/  </br>
+https://github.com/Lasagne/Recipes  </br>
 
