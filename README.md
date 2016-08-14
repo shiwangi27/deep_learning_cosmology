@@ -30,9 +30,9 @@ Have the deeplearing environment with the following installed : </br>
 6. numpy </br>
 7. matplotlib </br>
 
-References : 
-<a href= "https://lasagne.readthedocs.io/en/latest/">Lasagne </a> tutorials  </br>
+References : </br>
+<a href= "https://lasagne.readthedocs.io/en/latest/">Lasagne Documentation </a>  </br>
 <a href= "http://www.nersc.gov/users/data-analytics/data-analytics/deep-learning/">Cori Deep Learning environment at NERSC </a>  </br>
 http://cs231n.github.io/  </br>
-https://github.com/Lasagne/Recipes  </br>
+https://github.com/Lasagne/Recipes </br>
 
