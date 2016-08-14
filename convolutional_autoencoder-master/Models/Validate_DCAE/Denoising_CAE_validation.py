@@ -27,6 +27,7 @@ from theano.tensor.shared_randomstreams import RandomStreams
 
 from visualize import *
 from embed_tsne import *
+from guided_backprop import * 
 
 import matplotlib
 matplotlib.use('Agg')
@@ -396,8 +397,12 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     print("Loading data...")
     X_train, X_valid, X_test = load_data(sample_size, split_percent, outfolder)
     
-    print("Saving sampled training images.......")
-    #save_training_images(X_train)
+    ##### Save the Stupid Test and Validation data!!!!!!!!!!!!!! 
+    test_valid_fpath = outputURL + outfolder + '/test_valid_data.h5'
+    with h5py.File(test_valid_fpath, 'w') as hf:
+        print("Creating h5 file for test and valid data & labels .......")
+        hf.create_dataset('X_valid', data = X_valid)
+        hf.create_dataset('X_test', data = X_test)
     
     # Prepare Theano variables for inputs
     input_var = T.tensor4('inputs')
@@ -464,12 +469,13 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     hidden_fn = theano.function([input_var], hidden_prediction)
     
     #Let's check the Saliency map!
-    inp = input_var
-    outp = hidden_prediction
-    max_outp = T.max(outp,axis=1)
-    saliency = theano.grad(max_outp.sum(), wrt=inp)
-    max_class = T.argmax(outp, axis=1)
-    saliency_fn = theano.function([inp], [saliency, max_class])
+    def compile_saliency_function(bottleneck_l):
+        inp = input_var
+        outp = lasagne.layers.get_output(bottleneck_l, deterministic=True)
+        max_outp = T.max(outp,axis=1)
+        saliency = theano.grad(max_outp.sum(), wrt=inp)
+        max_class = T.argmax(outp, axis=1)
+        return theano.function([inp], [saliency, max_class])
     
     #*****You may have to write multiple theano function to get the Prediction per se
     
@@ -555,15 +561,32 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     ################### Visualization code ######################## 
     
     # Save the Reconstruction images as hdf5 filessssss!!! 
+    norm_images_fpath = outputURL + outfolder + '/normalized_maps.h5'
     pred_images_fpath = outputURL + outfolder + '/reconstructed_maps.h5'
     sal_fpath  = outputURL + outfolder + '/saliency_maps.h5'
+ 
+    with h5py.File(norm_images_fpath,'w') as hf:
+        # X_train is the training set needed for unsupervised learning. 
+        print("Creating hdf5 file for norm images and saving to ./output_files/.......")
+        hf.create_dataset('norm_maps', data = X_valid[0:X_valid.shape[0]])
     
     with h5py.File(pred_images_fpath,'w') as hf:
         # X_train is the training set needed for unsupervised learning. 
         print("Creating hdf5 file for pred images and saving to ./output_files/.......")
         hf.create_dataset('recon_maps', data = pred_images[0:X_valid.shape[0]])
         
+    ######## SALIENCY MAPS ############
+    
+    # Using Guided Backprop compute the non-linearities again!
+    relu = lasagne.nonlinearities.rectify
+    relu_layers = [layer for layer in lasagne.layers.get_all_layers(network)
+                   if getattr(layer, 'nonlinearity', None) is relu]
+    modded_relu = GuidedBackprop(relu)  # important: only instantiate this once!
+    for layer in relu_layers:
+        layer.nonlinearity = modded_relu
+    
     # Visualizing Saliency map! 
+    saliency_fn = compile_saliency_function(bottleneck_l) 
     X_sal, max_class = saliency_fn(X_train)
     visualize_saliency_map(X_train, X_sal, max_class, outfolder)
     
@@ -582,6 +605,7 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     with h5py.File(sal_fpath,'w') as hf:
         # X_train is the training set needed for unsupervised learning. 
         print("Creating hdf5 file for Salinecy maps saving to ./output_files/.......")
+        hf.create_dataset('X_train', data = X_train[0:100])
         hf.create_dataset('X_sal', data = X_sal[0:100])
         hf.create_dataset('max_class', data = max_class[0:100])
     
@@ -607,5 +631,5 @@ if __name__ == '__main__':
         args = parser.parse_args(sys.argv[1:])
         main(**{k:v for (k,v) in vars(args).items() if v is not None})
     else:
-        main(num_epochs = 500, sample_size=500, batch_size = 128, learning_rate=5e-2, use_dropout=False, L2_lam = 1e-8, outfolder = 'Denoising_CAE_valid')  
+        main(num_epochs = 100, sample_size=100, batch_size = 80, learning_rate=5e-2, use_dropout=False, L2_lam = 1e-8, outfolder = 'Denoising_CAE_valid')  
         

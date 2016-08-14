@@ -52,13 +52,6 @@ def visualize_normalized_data(train_x, foldername):
     print("Saving normalized training image ...........")
     # Save the Reconstruction images as hdf5 filessssss!!! 
     
-    norm_images_fpath = outputURL + foldername + '/normalized_maps.h5'
-    
-    with h5py.File(norm_images_fpath,'w') as hf:
-        # X_train is the training set needed for unsupervised learning. 
-        print("Creating hdf5 file for 100 norm images and saving to ./output_files/.......")
-        hf.create_dataset('norm_maps', data = train_x[0:100])
-    
     print("Saving histogram of normalized image.....") 
     for i in range(0,5):
         norm_fpath = os.path.join(outputURL, foldername + norm_fname + str(i) + ext)

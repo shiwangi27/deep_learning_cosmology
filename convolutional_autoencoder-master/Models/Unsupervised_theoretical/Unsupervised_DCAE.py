@@ -6,8 +6,8 @@ import sys
 import h5py 
 import time
 
+#from tqdm import tqdm
 import numpy as np
-from sklearn import preprocessing
 
 import theano
 import theano.tensor as T
@@ -27,7 +27,9 @@ from theano.tensor.shared_randomstreams import RandomStreams
 
 from visualize import *
 from embed_tsne import *
-from guided_backprop import *
+from guided_backprop import * 
+
+from load_theoretical_models import load_data
 
 import matplotlib
 matplotlib.use('Agg')
@@ -41,143 +43,7 @@ outputURL = '/global/homes/s/ssingh79/convolutional_autoencoder-master/output_fi
 # The data is then split into Training and Validation sets. Remember this
 # is Unsupervised Learning so there are no Labels. 
 
-def load_data(sample_size=100, split_percent = 0.8, outfolder='Conv_ae_output'):
-
-    # Load the dataset
-    
-    # Here we give different data sets for the autoencoders
-    dataurl = '/global/homes/s/ssingh79/data/'
-    #hdf5file = 'conv_z02.h5'
-    #hdf5file = 'train_data_64k.h5'
-    hdf5file = 'si75_train_data_64k.h5'
-    filepath = os.path.join(dataurl, hdf5file)
-    
-    outpath = '/global/homes/s/ssingh79/convolutional_autoencoder-master/output_files/' + outfolder
-    if not os.path.isdir(outpath):
-        os.mkdir(outpath)
-    
-    print("Calling ", hdf5file, "......")
-    # Call the load_data method to get back the Final training set. 
-    dataset = filepath
-    
-    with h5py.File(dataset,'r') as hf:
-        #train_set = hf['X_train'][0:1000,0:65536]
-        train_set = hf['X_train'][:,:]
-        print("Printing Train set ", train_set)
-        print("X_train shape ", train_set.shape)
-   
-
-    #################### Preprocessing ###############################
-    # We first pass the train_set to reshape_data(), then training data is split into training set and validation set & then both the data sets are normalized. The reshape funtion then reshapes the falttened images into 2D images of (128,128) which is our final dataset that goes as input to the Network! :)
-    
-    def train_valid_split(train_set, sample_size, split_percent):
-        #Create Training set and Validation set: Randomly Sampling the images by %. 
-        X = np.random.randint(0,train_set.shape[0], sample_size)
-          
-        #Get the random indices of images.  
-        train_split = int(sample_size*split_percent)
-        valid_split = int(train_split + sample_size*((1 - split_percent)/2))
-        train_index = X[0:train_split]
-        valid_index = X[train_split:valid_split]
-        test_index = X[valid_split:sample_size]
-        
-        # Training set
-        train_x = train_set[train_index[:], : ]
-        print("Training Set : ", train_x)
-        print(train_x.shape) 
-
-        #Validation set
-        valid_x = train_set[valid_index[:], : ]
-        print("Validation Set : ", valid_x)
-        print(valid_x.shape)
-        
-        # Test set
-        test_x = train_set[test_index[:], : ]
-        print("Test Set : ", test_x)
-        print(test_x.shape)
-        
-        #visualize_raw_data(train_x)
-        visualize_raw_data(valid_x, outfolder)
-        
-        return train_x, valid_x, test_x
-    
-    def normalize(train_x, valid_x, test_x):
-        # Normalization of dataset goes here : 
-       
-        '''
-        # Calculate Mean from the training set for subtraction: 
-        train_x_mean = train_x.mean(axis=0)
-        # Subtract mean values from train, valid and test data 
-        train_x = train_x - train_x_mean
-        valid_x = valid_x - train_x_mean
-        test_x = test_x - train_x_mean
-        
-        # Divide the train, valid and test data with L2 norm! 
-        X_norm = np.linalg.norm(train_x, axis=0)
-        V_norm = np.linalg.norm(valid_x, axis=0)
-        
-        train_x = train_x/X_norm[np.newaxis,:]
-        valid_x = valid_x/X_norm[np.newaxis,:]
-        test_x = test_x/X_norm[np.newaxis,:]
-        
-        ###
-        X_norm_checker = np.linalg.norm(train_x, axis=0)
-        print(X_norm_checker)
-        
-        print("VARIENCE", np.var(train_x, axis=0))
-        '''
-        
-        scaler = preprocessing.StandardScaler().fit(train_x)
-        print(scaler.mean_)
-        print(scaler.var_)
-        train_x = scaler.transform(train_x)
-        valid_x = scaler.transform(valid_x)
-        test_x = scaler.transform(test_x)
-        
-        print("Normalized Training data : ", train_x)
-        print("Mean : ", np.mean( train_x))
-        print("Variance", np.var(train_x))
-        print("min : ", np.min(train_x))
-        print("max : ", np.max(train_x))
-        print("Valid set min : ", np.min(valid_x))
-        print("Valid set max : ", np.max(valid_x))
-        print("Test set min : ", np.min(test_x))
-        print("Test set max : ", np.max(test_x))
-        
-        return train_x, valid_x, test_x 
-    
-    def reshape_data(train_set):
-        # Call the train_valid_split creating random samples. 
-        train_x, valid_x, test_x = train_valid_split(train_set, sample_size, split_percent)
-        
-        # Normalize the training data and validation data. 
-        train_x, valid_x, test_x = normalize(train_x, valid_x, test_x) 
-        
-        # Here goes the code to Reshape to 2D images. Return the 2D images as 
-        # X_train and x_validation after reshaping. 
-        train_x = train_x.reshape(-1,1,128,128)
-        #print("After Reshaping, training data : ", train_x.shape)
-        valid_x = valid_x.reshape(-1,1,128,128)
-        #print("After Reshaping, validation data : ", valid_x.shape)
-        test_x = test_x.reshape(-1,1,128,128)
-        #print("After Reshaping, Testing data : ", test_x.shape)
-        
-        # Visualize the normlaized data. 
-        visualize_normalized_data(train_x, outfolder)
-        
-        return train_x, valid_x, test_x
-    
-    # Final dataset is here after all the preprocessing. 
-    train_x, valid_x, test_x = reshape_data(train_set)
-        
-    #print("Final Training data", train_x) 
-    print(train_x.shape)
-    #print("Final Validation data", valid_x) 
-    print(valid_x.shape)
-    #print("Final Validation data", test_x) 
-    print(test_x.shape)
-    
-    return train_x, valid_x, test_x 
+# see load_theoretical_models
 
 # ##################### Build the neural network model #######################
 # This script supports three types of models. For each one, we define a
@@ -196,12 +62,12 @@ def build_conv_ae(input_var=None, use_dropout=False):
     
     conv_num_filter_1 = 32
     conv_num_filter_2 = 32
-    conv_num_filter_3 = 64 # Change from 4 to 8 
+    conv_num_filter_3 = 32 # Change from 4 to 8 
     conv_num_filter_4 = 64
     dense_num_filter = 64 
     filter_size = 5
     hidden_units = 2048
-    reshape_units = 4096
+    reshape_units = 4096 
     
     corruption_p = 0.3 
     
@@ -357,7 +223,7 @@ def build_conv_ae(input_var=None, use_dropout=False):
     print("Created Lasagne Layers & Network established !!! ")
     
     
-    return l_deconv_fourth, l_dense_1, l_conv_first   
+    return l_deconv_fourth, l_dense_1
     
     
 # ############################# Batch iterator ###############################
@@ -395,14 +261,19 @@ def iterate_minibatches(inputs, batchsize, shuffle=False):
 def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 100, split_percent=0.8, L2_lam = 0.001, use_dropout=False, outfolder = 'Conv_ae_output'):
     # Load the dataset
     print("Loading data...")
-    X_train, X_valid, X_test = load_data(sample_size, split_percent, outfolder)
+    X_train, Y_train, X_valid, Y_valid, X_test, Y_test = load_data(sample_size, split_percent, outfolder)
     
     ##### Save the Stupid Test and Validation data!!!!!!!!!!!!!! 
     test_valid_fpath = outputURL + outfolder + '/test_valid_data.h5'
     with h5py.File(test_valid_fpath, 'w') as hf:
         print("Creating h5 file for test and valid data & labels .......")
         hf.create_dataset('X_valid', data = X_valid)
+        hf.create_dataset('Y_valid', data = Y_valid)
         hf.create_dataset('X_test', data = X_test)
+        hf.create_dataset('Y_test', data = Y_test)
+    
+    print("Saving sampled training images.......")
+    #save_training_images(X_train)
     
     # Prepare Theano variables for inputs
     input_var = T.tensor4('inputs')
@@ -410,7 +281,7 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     
     # Create neural network model 
     print("Building model and compiling functions.........")
-    network, bottleneck_l, layer_active_1 = build_conv_ae(input_var)
+    network, bottleneck_l = build_conv_ae(input_var)
     
     ######################### Training ##########################
     
@@ -481,9 +352,6 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     
     # Finally, launch the training loop.
     print("Starting training...")
-    
-    print("Slurm output :", "Sample size : ", sample_size, "Learning Rate : ", learning_rate) 
-    
     # Create array to append cost. 
     cost_plot = []
     valid_cost_plot = []
@@ -572,8 +440,8 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     
     with h5py.File(pred_images_fpath,'w') as hf:
         # X_train is the training set needed for unsupervised learning. 
-        print("Creating hdf5 file for pred images and saving to ./output_files/.......")
-        hf.create_dataset('recon_maps', data = pred_images[0:X_valid.shape[0]])
+        print("Creating hdf5 file for 100 pred images and saving to ./output_files/.......")
+        hf.create_dataset('recon_maps', data = pred_images[0:100])
         
     ######## SALIENCY MAPS ############
     
@@ -597,7 +465,7 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     np.savez(bn_fname, bn_vector)
     print("Visualizing t-sne")
     print("BN VECTOR ------", bn_vector.shape)
-    Tsne_vector = visualize_tsne(bn_vector, outfolder)
+    Tsne_vector = visualize_tsne(bn_vector, Y_valid, outfolder)
     # Embed Images into TSNE plot : 
     embed_img_into_tnse(X_valid, Tsne_vector, outfolder)
     
@@ -609,6 +477,7 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
         hf.create_dataset('X_sal', data = X_sal[0:100])
         hf.create_dataset('max_class', data = max_class[0:100])
     
+    
 ################# Run the code for Conv AE ####################
 # Specify all the parameters that you want to optimize in the main function. 
 # You can also use test.py to use this as a module and test with different parameters. 
@@ -619,7 +488,7 @@ if __name__ == '__main__':
     # If you want to specify command line arguments. 
     # Hyperparameter Optimizations here.
     if len(sys.argv) > 1:
-        import argparse 
+        import argparse
         parser = argparse.ArgumentParser(description='Command line options')
         parser.add_argument('--epochs', type=int, dest='num_epochs')
         parser.add_argument('--samples', type=int, dest='sample_size')
@@ -631,5 +500,5 @@ if __name__ == '__main__':
         args = parser.parse_args(sys.argv[1:])
         main(**{k:v for (k,v) in vars(args).items() if v is not None})
     else:
-        main(num_epochs = 800, sample_size=100, batch_size = 80, learning_rate=5e-2, use_dropout=False, L2_lam = 1e-8, outfolder = 'Denoising_CAE_valid')  
+        main(num_epochs = 300, sample_size=100, batch_size = 80, learning_rate=5e-2, use_dropout=False, L2_lam = 1e-8, outfolder = 'Classify_DCAE_fico_si85')  
         

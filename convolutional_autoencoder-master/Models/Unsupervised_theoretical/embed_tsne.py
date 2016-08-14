@@ -7,7 +7,6 @@ import matplotlib
 matplotlib.use('Agg')
 from matplotlib import pyplot as plt
 import matplotlib.image as mpimg
-from sklearn.preprocessing import minmax_scale
 
 outputURL = '/global/homes/s/ssingh79/convolutional_autoencoder-master/output_files/'
         
@@ -23,22 +22,9 @@ def embed_img_into_tnse(X_train, Tsne_vector, foldername):
     loc1 = Tsne_vector[:,0]
     loc2 = Tsne_vector[:,1]
     
-    #### Evan's code 
-    arr = X_train
-    
-    min_ = arr.min(axis=(0,2,3), keepdims=True)
-    max_ = arr.max(axis=(0,2,3), keepdims=True)
-    midrange = (max_ + min_) / 2.
-    
-    range_ = max_ - min_
-    
-    X_train = (arr - midrange) / (range_ /2.)
-    
-    #####
-    
     # Create an embedding Image G of Size=(S,S) to paste every image of size=(s,s)
     S = 2000
-    G = 2*np.ones((S,S)).astype('float')    
+    G = np.ones((S,S)).astype('float')    
     s = 50 
     #plt.imshow(G, cmap='Greys_r')
     
@@ -69,8 +55,8 @@ def embed_img_into_tnse(X_train, Tsne_vector, foldername):
         #I = img.thumbnail((s, s), Image.ANTIALIAS)
         
         G[embed_x:embed_x+s, embed_y:embed_y+s] = I 
-    name='hot'
-    plt.imshow(G, cmap=name) 
+    #name='hot'
+    plt.imshow(G) 
     plt.colorbar()
     embedTsne_fpath = os.path.join(outputURL, foldername + '/TSNE_embedded.png')
     plt.savefig(embedTsne_fpath)

@@ -21,7 +21,7 @@ from lasagne.layers import MaxPool2DLayer
 from lasagne.layers import ReshapeLayer 
 
 from lasagne.objectives import categorical_crossentropy
-from lasagne.regularization import regularize_layer_params_weighted, l2, l1
+from lasagne.regularization import regularize_layer_params_weighted, regularize_network_params, l2, l1
 
 from theano.tensor.shared_randomstreams import RandomStreams
 
@@ -68,25 +68,13 @@ def build_conv_ae(input_var=None, use_dropout=False):
     hidden_units_2 = 512 
     label_units = 2 
     
-    corruption_p = 0.3 
-    
-    # Input layer, specifying the expected input shape of the network
-    # (unspecified batchsize, 1 channel, 128 rows and 128 columns) and
-    # linking it to the given Theano variable `input_var`, if any:
-    rng = np.random.RandomState(498)
-    theano_rng = RandomStreams(rng.randint(2 ** 30))
-    #do denoising here
-    corrup_input = theano_rng.binomial(size=input_var.shape, n=1,
-                                        p=1 - corruption_p,
-                                        dtype=theano.config.floatX) * input_var
-    
     l_in = lasagne.layers.InputLayer(shape=(None, 1, 128, 128),
-                                     input_var=corrup_input)
+                                     input_var=input_var)
     
     print("Input shape : ", l_in.output_shape )
     
-    if use_dropout:
-        # Apply 20% dropout to the input data:
+    if use_dropout: 
+        # Apply 20% dropout to the input data: 
         l_in = lasagne.layers.DropoutLayer(l_in, p=0.2)
     
     #Formula : dim = {(image_size - filter_size + 2*padding)/stride} + 1 
@@ -169,6 +157,9 @@ def build_conv_ae(input_var=None, use_dropout=False):
     
     print("Fully Connected layer: ", l_dense_1.output_shape)
     
+    # Apply 20% dropout to the input data: 
+    l_dropout = lasagne.layers.DropoutLayer(l_dense_1, p=0.2)
+    
     l_dense_2 = lasagne.layers.DenseLayer(l_dense_1, 
                                        num_units=hidden_units_2, 
                                        nonlinearity=lasagne.nonlinearities.rectify, 
@@ -225,8 +216,14 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     print("Loading data...")
     X_train, Y_train, X_valid, Y_valid, X_test, Y_test = load_data(sample_size, split_percent, outfolder)
     
-    print("Saving sampled training images.......")
-    #save_training_images(X_train)
+    ##### Save the Stupid Test and Validation data!!!!!!!!!!!!!! 
+    test_valid_fpath = outputURL + outfolder + '/test_valid_data.h5'
+    with h5py.File(test_valid_fpath, 'w') as hf:
+        print("Creating h5 file for test and valid data & labels .......")
+        hf.create_dataset('X_valid', data = X_valid)
+        hf.create_dataset('Y_valid', data = Y_valid)
+        hf.create_dataset('X_test', data = X_test)
+        hf.create_dataset('Y_test', data = Y_test)        
     
     # Prepare Theano variables for inputs
     input_var = T.tensor4('inputs')
@@ -245,7 +242,8 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     print("Get the output layer : ", prediction)
     
     loss = lasagne.objectives.categorical_crossentropy(prediction, target_var)
-    loss = loss.mean()
+    loss = loss.mean() 
+    #loss = loss.mean() + L2_lam * lasagne.regularization.regularize_network_params(network, lasagne.regularization.l2)
     
     # We could add some weight decay as well here, see lasagne.regularization.
     #reg_layer = {bottleneck_l: L2_lam}
@@ -275,10 +273,6 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     test_acc = T.mean(T.eq(T.argmax(test_prediction, axis=1), target_var),
                       dtype=theano.config.floatX)
     
-    # As a bonus, also create an expression for the classification accuracy:
-    #test_acc = T.mean(T.eq(T.argmax(test_prediction, axis=1), target_var),
-    #                  dtype=theano.config.floatX)
-    
     #################### Theano functions ######################
     # Compile a function performing a training step on a mini-batch (by giving
     # the updates dictionary) and returning the corresponding training loss:
@@ -290,12 +284,11 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     # Create a theano funtion to get the prediction. 
     predict_fn = theano.function([input_var], test_prediction)
     
-    # T-SNE plots 
-    hidden_prediction = lasagne.layers.get_output(bottleneck_l, deterministic=True)
+    # Theano function for T-SNE plots 
+    hidden_prediction = lasagne.layers.get_output(network, deterministic=True)
     hidden_fn = theano.function([input_var], hidden_prediction)
     
     #Let's check the Saliency map!
-    
     def compile_saliency_function(bottleneck_l):
         inp = input_var
         outp = lasagne.layers.get_output(bottleneck_l, deterministic=True)
@@ -303,8 +296,10 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
         saliency = theano.grad(max_outp.sum(), wrt=inp)
         max_class = T.argmax(outp, axis=1)
         return theano.function([inp], [saliency, max_class])
-
-    #*****You may have to write multiple theano function to get the Prediction per se
+    
+    # Softmax Probability values ! 
+    softmax_pred = lasagne.layers.get_output(network, deterministic=True)
+    softmax_fn = theano.function([input_var], softmax_pred)
     
     # Finally, launch the training loop.
     print("Starting training...")
@@ -315,7 +310,9 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
     model_save_fname = outputURL + outfolder + '/model.npz'
     reconst_err_fname = outputURL + outfolder + '/reconst_error.npz'
     reconst_err_valid = outputURL + outfolder + '/reconst_error_valid.npz'
+    accuracy_fname = outputURL + outfolder + '/accuracy.npz'
     bn_fname = outputURL + outfolder + '/bottleneck_layer.npz'
+    softmax_probab_fname = outputURL + outfolder + '/softmax_probability.npz' 
     
     # We iterate over epochs:
     for epoch in range(num_epochs):
@@ -329,15 +326,16 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
             inputs, targets = batch
             train_err += train_fn(inputs, targets)  
             train_batches += 1
-            
+        
         # And a full pass over the validation data:
         #if (epoch%10==0):
         val_err = 0
         val_acc = 0
         val_batches = 0
         #val_batch_size = int(batch_size/(split_percent*10))
-        val_batch_size = X_valid.shape[0]
-        for batch in iterate_minibatches(X_train, Y_train, batch_size, shuffle=False):
+        #val_batch_size = X_valid.shape[0]   ### Don't forget to change this to 128 for larger training sample! 
+        val_batch_size  = 128 
+        for batch in iterate_minibatches(X_valid, Y_valid, val_batch_size, shuffle=False):
             inputs, targets = batch
             err, acc = val_fn(inputs, targets)
             val_err += err
@@ -368,21 +366,20 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
             # Dump the network weights to a file like this:
             np.savez(model_save_fname, *lasagne.layers.get_all_param_values(network)) 
             print("Network Parameters saved!!!!!!!!")
+            # Save the probabilities of the theoretical model 1 and 2. 
+            softmax_probab = softmax_fn(X_valid)
+            print("Saving softmax probabilities ...... ")
+            np.savez(softmax_probab_fname, softmax_probab)
             #visualize_filters(outfolder)
-            # Theano function predict gets the reconstructed output. 
-            print("Running prediction function on Validation data")
-            #pred_images = predict_fn(X_train)
-            # Reconstruction of images
-            #visualize_reconstruction(X_train, pred_images, outfolder)
               
-    print("Get all the Update Values : ", updates)
-    
-    # Save reconstruction error. 
-    np.savez(reconst_err_fname, cost_plot) 
-    np.savez(reconst_err_valid, valid_cost_plot)    
-    
+    #print("Get all the Update Values : ", updates)    
     #print("Network Parameters W and b : ", lasagne.layers.get_all_param_values(network)) 
     #print("Bottleneck params # 3 ", lasagne.layers.get_output(network)) 
+
+    # Save reconstruction error. 
+    np.savez(reconst_err_fname, cost_plot) 
+    np.savez(reconst_err_valid, valid_cost_plot)   
+    np.savez(accuracy_fname, accuracy_plot)
     
     ################### Visualization code ######################## 
     
@@ -404,26 +401,27 @@ def main(num_epochs = 300, learning_rate=0.05, batch_size = 80, sample_size = 10
         layer.nonlinearity = modded_relu
     
     # Visualizing Saliency map! 
-    saliency_fn = compile_saliency_function(network) 
+    saliency_fn = compile_saliency_function(bottleneck_l) 
     X_sal, max_class = saliency_fn(X_train)
     visualize_saliency_map(X_train, X_sal, max_class, outfolder)
     
     ######### Visualize TSNE ############ 
     print("Saving T-sne vector")
-    bn_vector = hidden_fn(X_train)
+    bn_vector = hidden_fn(X_valid)
     # Save the hidden layer output:
     np.savez(bn_fname, bn_vector)
     print("Visualizing t-sne")
     print("BN VECTOR ------", bn_vector.shape)
-    Tsne_vector = visualize_tsne(bn_vector, Y_train, outfolder)
+    Tsne_vector = visualize_tsne(bn_vector, Y_valid, outfolder)
     # Embed Images into TSNE plot : 
-    embed_img_into_tnse(X_train, Tsne_vector, outfolder)
+    embed_img_into_tnse(X_valid, Tsne_vector, outfolder)
     
     ## Save Saliency feature map! 
     sal_fpath  = outputURL + outfolder + '/saliency_maps.h5'
     with h5py.File(sal_fpath,'w') as hf:
         # X_train is the training set needed for unsupervised learning. 
         print("Creating hdf5 file for Salinecy maps saving to ./output_files/.......")
+        hf.create_dataset('X_train', data = X_train[0:100])
         hf.create_dataset('X_sal', data = X_sal[0:100])
         hf.create_dataset('max_class', data = max_class[0:100])
     
@@ -449,5 +447,5 @@ if __name__ == '__main__':
         args = parser.parse_args(sys.argv[1:])
         main(**{k:v for (k,v) in vars(args).items() if v is not None})
     else:
-        main(num_epochs = 300, sample_size=100, batch_size = 80, learning_rate=3e-4, use_dropout=False, L2_lam = 5e-4, outfolder = 'Supervised_CNN_1000') 
+        main(num_epochs = 500, sample_size=2000, batch_size = 128, learning_rate=3e-4, use_dropout=False, L2_lam = 1e-4, outfolder = 'Supervised_CNN') 
         

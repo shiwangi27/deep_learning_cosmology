@@ -36,9 +36,9 @@ def load_data(sample_size=1000, split_percent = 0.8, outfolder='Conv_ae_output')
         print("Printing Train set ", train_set_1)
         print("X_train 1 shape ", train_set_1.shape)
         
-    # '/global/cscratch1/sd/ssingh79/si85_data/si85_train_data_64k.h5'
-        
-    with h5py.File('/global/homes/s/ssingh79/data/si75_train_data_64k.h5', 'r') as hf:
+    print("Calling si85_train_data_64k.h5 ......")    
+    
+    with h5py.File('/global/cscratch1/sd/ssingh79/si85_data/si85_train_data_64k.h5', 'r') as hf:
         train_set_2 = hf['X_train'][:,:]
         print("Printing Train set ", train_set_2)
         print("X_train 2 shape ", train_set_2.shape)
@@ -56,7 +56,7 @@ def load_data(sample_size=1000, split_percent = 0.8, outfolder='Conv_ae_output')
         train_set_2 = train_set_2[X1[:], :]
         
         print('Theoretical model 1', train_set_1.shape) 
-        print('Theoretical model 1', train_set_2.shape)
+        print('Theoretical model 2', train_set_2.shape)
         
         # Create labels for model 1 and model 2
         train_y_1 = np.zeros((train_set_1.shape[0],1))

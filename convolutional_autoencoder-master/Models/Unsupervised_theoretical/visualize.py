@@ -21,6 +21,7 @@ rHist_fname = '/reconst_hist_'
 reconst_fname = '/ae_reconstruct_'
 lcurve_fname = '/learning_curve' 
 vcurve_fname = '/valid_curve'
+acurve_fname = '/accuracy_curve'
 filters_fname = '/vis_filters'
 tsne_fname = '/Tsne_plot'
 sal_fname = '/sal_map'
@@ -102,6 +103,21 @@ def visualize_validation_curve(cost_plot, valid_cost_plot, foldername):
     fig.savefig(vcurve_fpath)
     plt.close(fig)    
     
+def visualize_accuracy_curve(accuracy_plot, foldername):
+    print("Plotting the accuracy curve .........")
+    plt.style.use('bmh')
+    fig = plt.figure(figsize=(10, 10))
+    ax = fig.add_subplot(1,1,1) # one row, one column, first plot
+    ax.plot(accuracy_plot)
+    ax.set_title("Accuracy Curve")
+    ax.set_ylabel("Accuracy in %")
+    ax.set_xlabel("Epochs")
+    #ax.legend(['Training loss', 'Validation loss'], loc='upper right')
+    acurve_fpath = os.path.join(outputURL, foldername + acurve_fname + ext)
+    fig.savefig(acurve_fpath)
+    plt.close(fig)    
+    
+
 def visualize_filters(foldername):
     print("Visualizing the learnt filters ............")
     model_fname = os.path.join(outputURL, foldername + '/model.npz')
@@ -125,7 +141,8 @@ def visualize_filters(foldername):
     
 def visualize_reconstruction(train_images, pred_images, foldername):
      # Reconstruction of images
-    print("Saving reconstructed images .........")
+    print("Saving reconstructed images .........") 
+    print("Saving histogram of reconstructed image.....") 
 
     for i in range(0,5):
         reconst_fpath = os.path.join(outputURL, foldername + reconst_fname + str(i) + ext)
@@ -166,11 +183,13 @@ def visualize_activations(active_images, foldername):
         plt.savefig(active_fpath)
     plt.close()
         
-def visualize_tsne(bn_vector, foldername):
-    model = TSNE(n_components=2, random_state=0)
+def visualize_tsne(bn_vector, labels, foldername):
+    model = TSNE(n_components=2, random_state=0, n_iter=2000)
     Tsne_plot = model.fit_transform(bn_vector)
+    model_colors = labels #.reshape(labels.shape[0],1)
     plt.figure()
-    plt.scatter(Tsne_plot[:,0],Tsne_plot[:,1])
+    c_list = [('r' if a == 0 else 'b') for a in model_colors]
+    plt.scatter(Tsne_plot[:,0],Tsne_plot[:,1], color=c_list, s=100, alpha=.4)
     tsne_fpath = os.path.join(outputURL, foldername + tsne_fname + ext)
     plt.savefig(tsne_fpath)
     plt.close()
@@ -180,7 +199,7 @@ def visualize_tsne(bn_vector, foldername):
 def visualize_saliency_map(original_img, saliency, max_class, foldername):
     print("Visualizing Saliency map .........")
     saliency = saliency[0]
-    max_class = max_class[0]
+    max_class = max_class[0] 
     saliency = saliency[::-1].transpose(1, 2, 0)
     # plot the original image and the three saliency map variants
     plt.figure(figsize=(10, 10), facecolor='w')
