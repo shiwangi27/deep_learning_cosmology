@@ -1,25 +1,32 @@
 # deep_learning_cosmology
-Deep Learning on Cosmology Maps
+<b> Deep Learning on Cosmology Maps </b>
+This repo includes following model coded in Theano and Lasagne working at NERSC@Berkeley Labs. We ran code on <a href="http://www.nersc.gov/users/computational-systems/cori/">Cori</a>. </br>
+Denoising Convolutional Autoencoders </br>
+Supervised Convolutional NN </br>
+
+Also includes -- </br> 
+Visualization of features learned in Deep Learning </br> 
 
 To run on Cori, navigate to the model dir and do : </br>
 module load deeplearning </br>
 python <model_name>.py </br>
 
-To run on Edison, navigate to the model dir and do : 
-module load python
-module load scikit-learn 
-module load h5py 
-module load theano
-python <model_name>.py
+To run on Edison, navigate to the model dir and do : </br>
+module load python </br>
+module load scikit-learn </br> 
+module load h5py </br>
+module load theano </br>
+python <model_name>.py </br>
 
-To run the code in General : 
-Have the deeplearing environment with the following installed : 
-1. python3 
-2. theano 
-3. lasgane 
-4. scikit-learn
-5. h5py 
-6. numpy 
-7. matplotlib 
+To run the code in General : </br> 
+Have the deeplearing environment with the following installed : </br>
+1. python3 </br>
+2. theano </br>
+3. lasgane </br>
+4. scikit-learn </br>
+5. h5py </br>
+6. numpy </br>
+7. matplotlib </br>
 
+References : 
 
