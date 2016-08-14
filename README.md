@@ -1,9 +1,9 @@
 # deep_learning_cosmology
 Deep Learning on Cosmology Maps
 
-To run on Cori, navigate to the model dir and do : 
-module load deeplearning
-python <model_name>.py 
+To run on Cori, navigate to the model dir and do : </br>
+module load deeplearning </br>
+python <model_name>.py </br>
 
 To run on Edison, navigate to the model dir and do : 
 module load python
