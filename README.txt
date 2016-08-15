@@ -85,7 +85,7 @@ You can pretty much ignore other output files in the dir. Most of the output fil
 -------------------------------------------------------------------------------------------------------------------------
 
 GitHub link : https://github.com/shiwangi27/deep_learning_cosmology 
-Report link : https://docs.google.com/document/d/1EWgbhLEAFOGeBKI6J9TdP88B3kq9Rzo9ZN1xfpipT8c/edit?usp=sharing 
+ 
 
 
 
